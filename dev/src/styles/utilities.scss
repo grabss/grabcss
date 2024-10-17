@@ -36,10 +36,10 @@
 }
 
 @mixin generate-breakpoint-utilities($map, $prefix, $property) {
-  @each $breakpoint, $_ in $breakpoints {
+  @each $breakpoint, $_ in mediaquery.$breakpoints {
     @each $key, $value in $map {
       .#{$breakpoint}\:#{$prefix}-#{$key} {
-        @include breakpoint($breakpoint) {
+        @include mediaquery.mq($breakpoint) {
           #{$property}: $value !important;
         }
       }
@@ -48,41 +48,41 @@
 }
 
 @mixin generate-breakpoint-spaces-utilities($prefix, $property) {
-  @each $breakpoint, $_ in $breakpoints {
+  @each $breakpoint, $_ in mediaquery.$breakpoints {
     @each $key, $value in $spaces {
       .#{$breakpoint}\:#{$prefix}-#{$key} {
-        @include breakpoint($breakpoint) {
+        @include mediaquery.mq($breakpoint) {
           #{$property}: $value !important;
         }
       }
       .#{$breakpoint}\:#{$prefix}l-#{$key} {
-        @include breakpoint($breakpoint) {
+        @include mediaquery.mq($breakpoint) {
           #{$property}-left: $value !important;
         }
       }
       .#{$breakpoint}\:#{$prefix}r-#{$key} {
-        @include breakpoint($breakpoint) {
+        @include mediaquery.mq($breakpoint) {
           #{$property}-right: $value !important;
         }
       }
       .#{$breakpoint}\:#{$prefix}x-#{$key} {
-        @include breakpoint($breakpoint) {
+        @include mediaquery.mq($breakpoint) {
           #{$property}-right: $value !important;
           #{$property}-left: $value !important;
         }
       }
       .#{$breakpoint}\:#{$prefix}t-#{$key} {
-        @include breakpoint($breakpoint) {
+        @include mediaquery.mq($breakpoint) {
           #{$property}-top: $value !important;
         }
       }
       .#{$breakpoint}\:#{$prefix}b-#{$key} {
-        @include breakpoint($breakpoint) {
+        @include mediaquery.mq($breakpoint) {
           #{$property}-bottom: $value !important;
         }
       }
       .#{$breakpoint}\:#{$prefix}y-#{$key} {
-        @include breakpoint($breakpoint) {
+        @include mediaquery.mq($breakpoint) {
           #{$property}-top: $value !important;
           #{$property}-bottom: $value !important;
         }
@@ -203,33 +203,33 @@
 );
 
 // util for breakpoints
-@each $breakpoint, $_ in $breakpoints {
+@each $breakpoint, $_ in mediaquery.$breakpoints {
   .#{$breakpoint}\:flex-1 {
-    @include breakpoint($breakpoint) {
+    @include mediaquery.mq($breakpoint) {
       flex: 1 !important;
     }
   }
 
   .#{$breakpoint}\:flex-shrink-0 {
-    @include breakpoint($breakpoint) {
+    @include mediaquery.mq($breakpoint) {
       flex-shrink: 0 !important;
     }
   }
 
   .#{$breakpoint}\:w-100 {
-    @include breakpoint($breakpoint) {
+    @include mediaquery.mq($breakpoint) {
       width: 100% !important;
     }
   }
 
   .#{$breakpoint}\:w-fit-content {
-    @include breakpoint($breakpoint) {
+    @include mediaquery.mq($breakpoint) {
       width: fit-content !important;
     }
   }
 
   .#{$breakpoint}\:h-100 {
-    @include breakpoint($breakpoint) {
+    @include mediaquery.mq($breakpoint) {
       height: 100% !important;
     }
   }
