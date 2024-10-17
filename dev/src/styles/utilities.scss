@@ -35,7 +35,7 @@
   }
 }
 
-@mixin generate-breakpoint-utilities($breakpoints, $map, $prefix, $property) {
+@mixin generate-breakpoint-utilities($map, $prefix, $property) {
   @each $breakpoint, $_ in $breakpoints {
     @each $key, $value in $map {
       .#{$breakpoint}\:#{$prefix}-#{$key} {
@@ -47,12 +47,7 @@
   }
 }
 
-@mixin generate-breakpoint-margin-padding-utilities(
-  $breakpoints,
-  $map,
-  $prefix,
-  $property
-) {
+@mixin generate-breakpoint-margin-padding-utilities($map, $prefix, $property) {
   @each $breakpoint, $_ in $breakpoints {
     @each $key, $value in $map {
       .#{$breakpoint}\:#{$prefix}-#{$key} {
@@ -177,94 +172,31 @@
 }
 
 // breakpoints styles
-@include generate-breakpoint-utilities($breakpoints, $colors, 'text', 'color');
+@include generate-breakpoint-utilities($colors, 'text', 'color');
+@include generate-breakpoint-utilities($colors, 'bg', 'background-color');
+@include generate-breakpoint-utilities($font-sizes, 'fs', 'font-size');
+@include generate-breakpoint-utilities($font-weights, 'fw', 'font-weight');
+@include generate-breakpoint-utilities($text-directions, 'text', 'text-align');
+@include generate-breakpoint-utilities($line-heights, 'lh', 'line-height');
+@include generate-breakpoint-utilities($visibilities, 'v', 'visibility');
+@include generate-breakpoint-utilities($displays, 'd', 'display');
+@include generate-breakpoint-utilities($positions, 'ps', 'position');
+@include generate-breakpoint-margin-padding-utilities($spaces, 'm', 'margin');
+@include generate-breakpoint-margin-padding-utilities($spaces, 'p', 'padding');
+@include generate-breakpoint-utilities($white-spaces, 'ws', 'white-space');
+@include generate-breakpoint-utilities($word-breaks, 'wb', 'word-break');
 @include generate-breakpoint-utilities(
-  $breakpoints,
-  $colors,
-  'bg',
-  'background-color'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
-  $font-sizes,
-  'fs',
-  'font-size'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
-  $font-weights,
-  'fw',
-  'font-weight'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
-  $text-directions,
-  'text',
-  'text-align'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
-  $line-heights,
-  'lh',
-  'line-height'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
-  $visibilities,
-  'v',
-  'visibility'
-);
-@include generate-breakpoint-utilities($breakpoints, $displays, 'd', 'display');
-@include generate-breakpoint-utilities(
-  $breakpoints,
-  $positions,
-  'ps',
-  'position'
-);
-@include generate-breakpoint-margin-padding-utilities(
-  $breakpoints,
-  $spaces,
-  'm',
-  'margin'
-);
-@include generate-breakpoint-margin-padding-utilities(
-  $breakpoints,
-  $spaces,
-  'p',
-  'padding'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
-  $white-spaces,
-  'ws',
-  'white-space'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
-  $word-breaks,
-  'wb',
-  'word-break'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
   $flex-directions,
   'flex-direction',
   'flex-direction'
 );
+@include generate-breakpoint-utilities($flex-wraps, 'flex-wrap', 'flex-wrap');
 @include generate-breakpoint-utilities(
-  $breakpoints,
-  $flex-wraps,
-  'flex-wrap',
-  'flex-wrap'
-);
-@include generate-breakpoint-utilities(
-  $breakpoints,
   $justify-content-positions,
   'justify-content',
   'justify-content'
 );
 @include generate-breakpoint-utilities(
-  $breakpoints,
   $align-items-positions,
   'align-items',
   'align-items'
