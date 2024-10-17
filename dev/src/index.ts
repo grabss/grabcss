@@ -1,4 +1,4 @@
-import './styles/reset.scss'
+import 'the-new-css-reset/css/reset.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
