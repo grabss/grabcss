@@ -176,13 +176,13 @@
   // breakpoints: color & background-color
   @each $key, $value in $colors {
     .#{$breakpoint}\:text-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         color: $value !important;
       }
     }
 
     .#{$breakpoint}\:color-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         background-color: $value !important;
       }
     }
@@ -191,7 +191,7 @@
   // breakpoints: font-size
   @each $key, $value in $font-sizes {
     .#{$breakpoint}\:fs-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         font-size: $value !important;
       }
     }
@@ -200,7 +200,7 @@
   // breakpoints: font-weight
   @each $key, $value in $font-weights {
     .#{$breakpoint}\:fw-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         font-weight: $value !important;
       }
     }
@@ -209,7 +209,7 @@
   // breakpoints: background-color
   @each $key, $value in $colors {
     .#{$breakpoint}\:text-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         color: $value !important;
       }
     }
@@ -218,7 +218,7 @@
   // breakpoints: text-align
   @each $key, $value in $text-directions {
     .#{$breakpoint}\:text-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         text-align: $value !important;
       }
     }
@@ -227,7 +227,7 @@
   // breakpoints: line-height
   @each $key, $value in $line-heights {
     .#{$breakpoint}\:lh-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         line-height: $value !important;
       }
     }
@@ -243,7 +243,7 @@
   // breakpoints: display
   @each $key, $value in $displays {
     .#{$breakpoint}\:d-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         display: $value !important;
       }
     }
@@ -252,7 +252,7 @@
   // breakpoints: position
   @each $key, $value in $positions {
     .#{$breakpoint}\:ps-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         position: $value !important;
       }
     }
@@ -261,76 +261,76 @@
   // breakpoints: margin & padding
   @each $key, $value in $spaces {
     .#{$breakpoint}\:m-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         margin: $value !important;
       }
     }
     .#{$breakpoint}\:ml-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         margin-left: $value !important;
       }
     }
     .#{$breakpoint}\:mr-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         margin-right: $value !important;
       }
     }
     .#{$breakpoint}\:mx-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         margin-right: $value !important;
         margin-left: $value !important;
       }
     }
     .#{$breakpoint}\:mt-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         margin-top: $value !important;
       }
     }
     .#{$breakpoint}\:mb-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         margin-bottom: $value !important;
       }
     }
     .#{$breakpoint}\:my-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         margin-top: $value !important;
         margin-bottom: $value !important;
       }
     }
 
     .#{$breakpoint}\:p-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         padding: $value !important;
       }
     }
     .#{$breakpoint}\:pl-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         padding-left: $value !important;
       }
     }
     .#{$breakpoint}\:pr-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         padding-right: $value !important;
       }
     }
     .#{$breakpoint}\:px-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         padding-right: $value !important;
         padding-left: $value !important;
       }
     }
     .#{$breakpoint}\:pt-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         padding-top: $value !important;
       }
     }
     .#{$breakpoint}\:pb-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         padding-bottom: $value !important;
       }
     }
     .#{$breakpoint}\:py-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         padding-top: $value !important;
         padding-bottom: $value !important;
       }
@@ -340,7 +340,7 @@
   // breakpoints: white-space
   @each $key, $value in $white-spaces {
     .#{$breakpoint}\:ws-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         white-space: $value !important;
       }
     }
@@ -349,7 +349,7 @@
   // breakpoints: flex-directions
   @each $key, $value in $flex-directions {
     .#{$breakpoint}\:flex-direction-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         flex-direction: $value !important;
       }
     }
@@ -358,7 +358,7 @@
   // breakpoints: flex-wrap
   @each $key, $value in $flex-wraps {
     .#{$breakpoint}\:flex-wrap-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         flex-wrap: $value !important;
       }
     }
@@ -367,7 +367,7 @@
   // breakpoints: justify-content
   @each $key, $value in $justify-content-positions {
     .#{$breakpoint}\:justify-content-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         justify-content: $value !important;
       }
     }
@@ -376,7 +376,7 @@
   // breakpoints: align-items
   @each $key, $value in $align-items-positions {
     .#{$breakpoint}\:align-items-#{$key} {
-      @include mq($breakpoint) {
+      @include breakpoint($breakpoint) {
         align-items: $value !important;
       }
     }
@@ -384,31 +384,31 @@
 
   // breakpoints: util
   .#{$breakpoint}\:flex-1 {
-    @include mq($breakpoint) {
+    @include breakpoint($breakpoint) {
       flex: 1 !important;
     }
   }
 
   .#{$breakpoint}\:flex-shrink-0 {
-    @include mq($breakpoint) {
+    @include breakpoint($breakpoint) {
       flex-shrink: 0 !important;
     }
   }
 
   .#{$breakpoint}\:w-100 {
-    @include mq($breakpoint) {
+    @include breakpoint($breakpoint) {
       width: 100% !important;
     }
   }
 
   .#{$breakpoint}\:w-fit-content {
-    @include mq($breakpoint) {
+    @include breakpoint($breakpoint) {
       width: fit-content !important;
     }
   }
 
   .#{$breakpoint}\:h-100 {
-    @include mq($breakpoint) {
+    @include breakpoint($breakpoint) {
       height: 100% !important;
     }
   }
