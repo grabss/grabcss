@@ -1,20 +1,24 @@
 $color-primary: #00a596;
-$color-white: #ffffff;
+$color-secondary: #000000;
+$color-transparent: transparent;
 $color-black: #000000;
-$color-light-gray: #f0f0f0;
-$color-gray: #aaaaaa;
-$color-dark-gray: #666666;
-$color-background: #f5f5f5;
-$color-error: #d60707;
+$color-white: #ffffff;
+$color-gray: #f3f4f6;
+$color-link: #0064e6;
+$color-muted: #787878;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
 $colors: (
   'primary': $color-primary,
-  'white': $color-white,
+  'secondary': $color-secondary,
+  'transparent': $color-transparent,
   'black': $color-black,
-  'light-gray': $color-light-gray,
+  'white': $color-white,
   'gray': $color-gray,
-  'dark-gray': $color-dark-gray,
-  'background': $color-background,
-  'error': $color-error
+  'link': $color-link,
+  'muted': $color-muted,
+  'warning': $color-warning,
+  'danger': $color-danger
 ) !default;
 
 $font-size-xs: 12px;
