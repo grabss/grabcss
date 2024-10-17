@@ -1,0 +1,415 @@
+// color & background-color
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value !important;
+  }
+
+  .bg-#{$key} {
+    background-color: $value !important;
+  }
+}
+
+// font-size
+@each $key, $value in $font-sizes {
+  .fs-#{$key} {
+    font-size: $value !important;
+  }
+}
+
+// font-weight
+@each $key, $value in $font-weights {
+  .fw-#{$key} {
+    font-weight: $value !important;
+  }
+}
+
+// text-align
+@each $key, $value in $text-directions {
+  .text-#{$key} {
+    text-align: $value !important;
+  }
+}
+
+// line-height
+@each $key, $value in $line-heights {
+  .lh-#{$key} {
+    line-height: $value !important;
+  }
+}
+
+// visibility
+@each $key, $value in $visibilities {
+  .v-#{$key} {
+    visibility: $value !important;
+  }
+}
+
+// display
+@each $key, $value in $displays {
+  .d-#{$key} {
+    display: $value !important;
+  }
+}
+
+// position
+@each $key, $value in $positions {
+  .ps-#{$key} {
+    position: $value !important;
+  }
+}
+
+// margin & padding
+@each $key, $value in $spaces {
+  .m-#{$key} {
+    margin: $value !important;
+  }
+  .ml-#{$key} {
+    margin-left: $value !important;
+  }
+  .mr-#{$key} {
+    margin-right: $value !important;
+  }
+  .mx-#{$key} {
+    margin-right: $value !important;
+    margin-left: $value !important;
+  }
+  .mt-#{$key} {
+    margin-top: $value !important;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value !important;
+  }
+  .my-#{$key} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+  .p-#{$key} {
+    padding: $value !important;
+  }
+  .pl-#{$key} {
+    padding-left: $value !important;
+  }
+  .pr-#{$key} {
+    padding-right: $value !important;
+  }
+  .px-#{$key} {
+    padding-right: $value !important;
+    padding-left: $value !important;
+  }
+  .pt-#{$key} {
+    padding-top: $value !important;
+  }
+  .pb-#{$key} {
+    padding-bottom: $value !important;
+  }
+  .py-#{$key} {
+    padding-top: $value !important;
+    padding-bottom: $value !important;
+  }
+}
+
+// white-space
+@each $key, $value in $white-spaces {
+  .ws-#{$key} {
+    white-space: $value !important;
+  }
+}
+
+// word-break
+@each $key, $value in $word-breaks {
+  .wb-#{$key} {
+    word-break: $value !important;
+  }
+}
+
+// flex-direction
+@each $key, $value in $flex-directions {
+  .flex-direction-#{$key} {
+    flex-direction: $value !important;
+  }
+}
+
+// flex-wrap
+@each $key, $value in $flex-wraps {
+  .flex-wrap-#{$key} {
+    flex-wrap: $value !important;
+  }
+}
+
+// justify-content
+@each $key, $value in $justify-content-positions {
+  .justify-content-#{$key} {
+    justify-content: $value !important;
+  }
+}
+
+// align-items
+@each $key, $value in $align-items-positions {
+  .align-items-#{$key} {
+    align-items: $value !important;
+  }
+}
+
+// util
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-fit-content {
+  width: fit-content !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+// breakpoints styles
+@each $breakpoint, $_ in $breakpoints {
+  // breakpoints: color & background-color
+  @each $key, $value in $colors {
+    .#{$breakpoint}\:text-#{$key} {
+      @include mq($breakpoint) {
+        color: $value !important;
+      }
+    }
+
+    .#{$breakpoint}\:color-#{$key} {
+      @include mq($breakpoint) {
+        background-color: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: font-size
+  @each $key, $value in $font-sizes {
+    .#{$breakpoint}\:fs-#{$key} {
+      @include mq($breakpoint) {
+        font-size: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: font-weight
+  @each $key, $value in $font-weights {
+    .#{$breakpoint}\:fw-#{$key} {
+      @include mq($breakpoint) {
+        font-weight: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: background-color
+  @each $key, $value in $colors {
+    .#{$breakpoint}\:text-#{$key} {
+      @include mq($breakpoint) {
+        color: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: text-align
+  @each $key, $value in $text-directions {
+    .#{$breakpoint}\:text-#{$key} {
+      @include mq($breakpoint) {
+        text-align: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: line-height
+  @each $key, $value in $line-heights {
+    .#{$breakpoint}\:lh-#{$key} {
+      @include mq($breakpoint) {
+        line-height: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: visibility
+  @each $key, $value in $visibilities {
+    .#{$breakpoint}\:v-#{$key} {
+      visibility: $value !important;
+    }
+  }
+
+  // breakpoints: display
+  @each $key, $value in $displays {
+    .#{$breakpoint}\:d-#{$key} {
+      @include mq($breakpoint) {
+        display: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: position
+  @each $key, $value in $positions {
+    .#{$breakpoint}\:ps-#{$key} {
+      @include mq($breakpoint) {
+        position: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: margin & padding
+  @each $key, $value in $spaces {
+    .#{$breakpoint}\:m-#{$key} {
+      @include mq($breakpoint) {
+        margin: $value !important;
+      }
+    }
+    .#{$breakpoint}\:ml-#{$key} {
+      @include mq($breakpoint) {
+        margin-left: $value !important;
+      }
+    }
+    .#{$breakpoint}\:mr-#{$key} {
+      @include mq($breakpoint) {
+        margin-right: $value !important;
+      }
+    }
+    .#{$breakpoint}\:mx-#{$key} {
+      @include mq($breakpoint) {
+        margin-right: $value !important;
+        margin-left: $value !important;
+      }
+    }
+    .#{$breakpoint}\:mt-#{$key} {
+      @include mq($breakpoint) {
+        margin-top: $value !important;
+      }
+    }
+    .#{$breakpoint}\:mb-#{$key} {
+      @include mq($breakpoint) {
+        margin-bottom: $value !important;
+      }
+    }
+    .#{$breakpoint}\:my-#{$key} {
+      @include mq($breakpoint) {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+      }
+    }
+
+    .#{$breakpoint}\:p-#{$key} {
+      @include mq($breakpoint) {
+        padding: $value !important;
+      }
+    }
+    .#{$breakpoint}\:pl-#{$key} {
+      @include mq($breakpoint) {
+        padding-left: $value !important;
+      }
+    }
+    .#{$breakpoint}\:pr-#{$key} {
+      @include mq($breakpoint) {
+        padding-right: $value !important;
+      }
+    }
+    .#{$breakpoint}\:px-#{$key} {
+      @include mq($breakpoint) {
+        padding-right: $value !important;
+        padding-left: $value !important;
+      }
+    }
+    .#{$breakpoint}\:pt-#{$key} {
+      @include mq($breakpoint) {
+        padding-top: $value !important;
+      }
+    }
+    .#{$breakpoint}\:pb-#{$key} {
+      @include mq($breakpoint) {
+        padding-bottom: $value !important;
+      }
+    }
+    .#{$breakpoint}\:py-#{$key} {
+      @include mq($breakpoint) {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: white-space
+  @each $key, $value in $white-spaces {
+    .#{$breakpoint}\:ws-#{$key} {
+      @include mq($breakpoint) {
+        white-space: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: flex-directions
+  @each $key, $value in $flex-directions {
+    .#{$breakpoint}\:flex-direction-#{$key} {
+      @include mq($breakpoint) {
+        flex-direction: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: flex-wrap
+  @each $key, $value in $flex-wraps {
+    .#{$breakpoint}\:flex-wrap-#{$key} {
+      @include mq($breakpoint) {
+        flex-wrap: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: justify-content
+  @each $key, $value in $justify-content-positions {
+    .#{$breakpoint}\:justify-content-#{$key} {
+      @include mq($breakpoint) {
+        justify-content: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: align-items
+  @each $key, $value in $align-items-positions {
+    .#{$breakpoint}\:align-items-#{$key} {
+      @include mq($breakpoint) {
+        align-items: $value !important;
+      }
+    }
+  }
+
+  // breakpoints: util
+  .#{$breakpoint}\:flex-1 {
+    @include mq($breakpoint) {
+      flex: 1 !important;
+    }
+  }
+
+  .#{$breakpoint}\:flex-shrink-0 {
+    @include mq($breakpoint) {
+      flex-shrink: 0 !important;
+    }
+  }
+
+  .#{$breakpoint}\:w-100 {
+    @include mq($breakpoint) {
+      width: 100% !important;
+    }
+  }
+
+  .#{$breakpoint}\:w-fit-content {
+    @include mq($breakpoint) {
+      width: fit-content !important;
+    }
+  }
+
+  .#{$breakpoint}\:h-100 {
+    @include mq($breakpoint) {
+      height: 100% !important;
+    }
+  }
+}
