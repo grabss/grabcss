@@ -1,0 +1,151 @@
+$color-primary: #00a596;
+$color-secondary: #000000;
+$color-transparent: transparent;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray: #f3f4f6;
+$color-link: #0064e6;
+$color-muted: #787878;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
+$colors: (
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'transparent': $color-transparent,
+  'black': $color-black,
+  'white': $color-white,
+  'gray': $color-gray,
+  'link': $color-link,
+  'muted': $color-muted,
+  'warning': $color-warning,
+  'danger': $color-danger
+) !default;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 22px;
+$font-size-3xl: 24px;
+$font-size-4xl: 36px;
+$font-size-5xl: 40px;
+$font-sizes: (
+  'xs': $font-size-xs,
+  'sm': $font-size-sm,
+  'md': $font-size-md,
+  'lg': $font-size-lg,
+  'xl': $font-size-xl,
+  '2xl': $font-size-2xl,
+  '3xl': $font-size-3xl,
+  '4xl': $font-size-4xl,
+  '5xl': $font-size-5xl
+) !default;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weights: (
+  'normal': $font-weight-normal,
+  'bold': $font-weight-bold
+) !default;
+
+$text-directions: (
+  'left': left,
+  'center': center,
+  'right': right
+) !default;
+
+$line-height-default: 1;
+$line-height-xs: 1.2;
+$line-height-sm: 1.4;
+$line-height-md: 1.6;
+$line-heights: (
+  'default': $line-height-default,
+  'xs': $line-height-xs,
+  'sm': $line-height-sm,
+  'md': $line-height-md
+) !default;
+
+$visibilities: (
+  'visible': visible,
+  'hidden': hidden
+) !default;
+
+$displays: (
+  'none': none,
+  'contents': contents,
+  'inline': inline,
+  'inline-block': inline-block,
+  'block': block,
+  'flex': flex,
+  'table-cell': table-cell
+) !default;
+
+$positions: (
+  'static': static,
+  'relative': relative,
+  'absolute': absolute,
+  'fixed': fixed,
+  'sticky': sticky
+) !default;
+
+$spaces: (
+  'auto': auto,
+  'none': 0,
+  '2xs': 5px,
+  'xs': 10px,
+  'sm': 15px,
+  'md': 20px,
+  'lg': 25px,
+  'xl': 30px,
+  '2xl': 35px,
+  '3xl': 40px,
+  '4xl': 45px,
+  '5xl': 50px
+) !default;
+
+$white-spaces: (
+  'normal': normal,
+  'nowrap': nowrap,
+  'pre': pre,
+  'pre-wrap': pre-wrap,
+  'pre-line': pre-line
+) !default;
+
+$word-breaks: (
+  'normal': normal,
+  'break-all': break-all,
+  'keep-all': keep-all,
+  'break-word': break-word
+) !default;
+
+$flex-directions: (
+  'row': row,
+  'row-reverse': row-reverse,
+  'column': column,
+  'column-reverse': column-reverse
+) !default;
+
+$flex-wraps: (
+  'nowrap': nowrap,
+  'wrap': wrap,
+  'wrap-reverse': wrap-reverse
+) !default;
+
+$justify-content-positions: (
+  'start': start,
+  'center': center,
+  'end': end,
+  'flex-start': flex-start,
+  'flex-end': flex-end,
+  'space-between': space-between,
+  'space-around': space-around
+) !default;
+
+$align-items-positions: (
+  'start': start,
+  'center': center,
+  'end': end,
+  'flex-start': flex-start,
+  'flex-end': flex-end
+) !default;

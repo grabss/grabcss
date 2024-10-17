@@ -12,9 +12,11 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
+    "@types/node": "^22.7.6",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
+    "rollup-plugin-copy": "^3.5.0",
     "sass-embedded": "^1.80.1",
     "the-new-css-reset": "^1.11.3",
     "typescript": "^5.5.3",
