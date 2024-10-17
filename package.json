@@ -1,0 +1,13 @@
+{
+  "name": "grabcss",
+  "version": "0.0.0",
+  "author": "grabss Inc.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grabss/grabcss.git"
+  },
+  "workspaces": [
+    "dev"
+  ]
+}

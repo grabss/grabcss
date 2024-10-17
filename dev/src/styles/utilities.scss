@@ -1,0 +1,236 @@
+// mixins
+@mixin generate-utilities($map, $prefix, $property) {
+  @each $key, $value in $map {
+    .#{$prefix}-#{$key} {
+      #{$property}: $value !important;
+    }
+  }
+}
+
+@mixin generate-spaces-utilities($prefix, $property) {
+  @each $key, $value in $spaces {
+    .#{$prefix}-#{$key} {
+      #{$property}: $value !important;
+    }
+    .#{$prefix}l-#{$key} {
+      #{$property}-left: $value !important;
+    }
+    .#{$prefix}r-#{$key} {
+      #{$property}-right: $value !important;
+    }
+    .#{$prefix}x-#{$key} {
+      #{$property}-right: $value !important;
+      #{$property}-left: $value !important;
+    }
+    .#{$prefix}t-#{$key} {
+      #{$property}-top: $value !important;
+    }
+    .#{$prefix}b-#{$key} {
+      #{$property}-bottom: $value !important;
+    }
+    .#{$prefix}y-#{$key} {
+      #{$property}-top: $value !important;
+      #{$property}-bottom: $value !important;
+    }
+  }
+}
+
+@mixin generate-breakpoint-utilities($map, $prefix, $property) {
+  @each $breakpoint, $_ in $breakpoints {
+    @each $key, $value in $map {
+      .#{$breakpoint}\:#{$prefix}-#{$key} {
+        @include breakpoint($breakpoint) {
+          #{$property}: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-breakpoint-spaces-utilities($prefix, $property) {
+  @each $breakpoint, $_ in $breakpoints {
+    @each $key, $value in $spaces {
+      .#{$breakpoint}\:#{$prefix}-#{$key} {
+        @include breakpoint($breakpoint) {
+          #{$property}: $value !important;
+        }
+      }
+      .#{$breakpoint}\:#{$prefix}l-#{$key} {
+        @include breakpoint($breakpoint) {
+          #{$property}-left: $value !important;
+        }
+      }
+      .#{$breakpoint}\:#{$prefix}r-#{$key} {
+        @include breakpoint($breakpoint) {
+          #{$property}-right: $value !important;
+        }
+      }
+      .#{$breakpoint}\:#{$prefix}x-#{$key} {
+        @include breakpoint($breakpoint) {
+          #{$property}-right: $value !important;
+          #{$property}-left: $value !important;
+        }
+      }
+      .#{$breakpoint}\:#{$prefix}t-#{$key} {
+        @include breakpoint($breakpoint) {
+          #{$property}-top: $value !important;
+        }
+      }
+      .#{$breakpoint}\:#{$prefix}b-#{$key} {
+        @include breakpoint($breakpoint) {
+          #{$property}-bottom: $value !important;
+        }
+      }
+      .#{$breakpoint}\:#{$prefix}y-#{$key} {
+        @include breakpoint($breakpoint) {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+    }
+  }
+}
+
+// color & background-color
+@include generate-utilities($colors, 'text', 'color');
+@include generate-utilities($colors, 'bg', 'background-color');
+
+// font-size
+@include generate-utilities($font-sizes, 'fs', 'font-size');
+
+// font-weight
+@include generate-utilities($font-weights, 'fw', 'font-weight');
+
+// text-align
+@include generate-utilities($text-directions, 'text', 'text-align');
+
+// line-height
+@include generate-utilities($line-heights, 'lh', 'line-height');
+
+// visibility
+@include generate-utilities($visibilities, 'v', 'visibility');
+
+// display
+@include generate-utilities($displays, 'd', 'display');
+
+// position
+@include generate-utilities($positions, 'ps', 'position');
+
+// margin & padding
+@include generate-spaces-utilities('m', 'margin');
+@include generate-spaces-utilities('p', 'padding');
+
+// white-space
+@include generate-utilities($white-spaces, 'ws', 'white-space');
+
+// word-break
+@include generate-utilities($word-breaks, 'wb', 'word-break');
+
+// flex-direction
+@include generate-utilities(
+  $flex-directions,
+  'flex-direction',
+  'flex-direction'
+);
+
+// flex-wrap
+@include generate-utilities($flex-wraps, 'flex-wrap', 'flex-wrap');
+
+// justify-content
+@include generate-utilities(
+  $justify-content-positions,
+  'justify-content',
+  'justify-content'
+);
+
+// align-items
+@include generate-utilities(
+  $align-items-positions,
+  'align-items',
+  'align-items'
+);
+
+// util
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-fit-content {
+  width: fit-content !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+// breakpoints styles
+@include generate-breakpoint-utilities($colors, 'text', 'color');
+@include generate-breakpoint-utilities($colors, 'bg', 'background-color');
+@include generate-breakpoint-utilities($font-sizes, 'fs', 'font-size');
+@include generate-breakpoint-utilities($font-weights, 'fw', 'font-weight');
+@include generate-breakpoint-utilities($text-directions, 'text', 'text-align');
+@include generate-breakpoint-utilities($line-heights, 'lh', 'line-height');
+@include generate-breakpoint-utilities($visibilities, 'v', 'visibility');
+@include generate-breakpoint-utilities($displays, 'd', 'display');
+@include generate-breakpoint-utilities($positions, 'ps', 'position');
+@include generate-breakpoint-spaces-utilities('m', 'margin');
+@include generate-breakpoint-spaces-utilities('p', 'padding');
+@include generate-breakpoint-utilities($white-spaces, 'ws', 'white-space');
+@include generate-breakpoint-utilities($word-breaks, 'wb', 'word-break');
+@include generate-breakpoint-utilities(
+  $flex-directions,
+  'flex-direction',
+  'flex-direction'
+);
+@include generate-breakpoint-utilities($flex-wraps, 'flex-wrap', 'flex-wrap');
+@include generate-breakpoint-utilities(
+  $justify-content-positions,
+  'justify-content',
+  'justify-content'
+);
+@include generate-breakpoint-utilities(
+  $align-items-positions,
+  'align-items',
+  'align-items'
+);
+
+// util for breakpoints
+@each $breakpoint, $_ in $breakpoints {
+  .#{$breakpoint}\:flex-1 {
+    @include breakpoint($breakpoint) {
+      flex: 1 !important;
+    }
+  }
+
+  .#{$breakpoint}\:flex-shrink-0 {
+    @include breakpoint($breakpoint) {
+      flex-shrink: 0 !important;
+    }
+  }
+
+  .#{$breakpoint}\:w-100 {
+    @include breakpoint($breakpoint) {
+      width: 100% !important;
+    }
+  }
+
+  .#{$breakpoint}\:w-fit-content {
+    @include breakpoint($breakpoint) {
+      width: fit-content !important;
+    }
+  }
+
+  .#{$breakpoint}\:h-100 {
+    @include breakpoint($breakpoint) {
+      height: 100% !important;
+    }
+  }
+}
