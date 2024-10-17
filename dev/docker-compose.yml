@@ -3,12 +3,12 @@ services:
     image: grabcss
     container_name: grabcss
     build:
-      context: ..
-      dockerfile: dev/Dockerfile
-    entrypoint: dev/docker-entrypoint.sh
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: docker-entrypoint.sh
     tty: true
     stdin_open: true
     ports:
       - 3000:3000
     volumes:
-      - ..:/grabcss
+      - .:/grabcss
