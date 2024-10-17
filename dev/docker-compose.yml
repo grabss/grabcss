@@ -5,7 +5,7 @@ services:
     build:
       context: ..
       dockerfile: dev/Dockerfile
-    entrypoint: dev/docker-entrypoint.sh
+    # entrypoint: dev/docker-entrypoint.sh
     tty: true
     stdin_open: true
     ports:
