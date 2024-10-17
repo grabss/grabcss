@@ -7,7 +7,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'src/styles/utilities.scss')
+        grab: path.resolve(__dirname, 'src/styles/utilities.scss')
       },
       output: {
         assetFileNames: '[name].[ext]'
@@ -21,6 +21,7 @@ export default defineConfig({
       }
     }
   },
+  publicDir: false,
   server: {
     host: '0.0.0.0',
     port: 3000
