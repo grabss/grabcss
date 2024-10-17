@@ -1,3 +1,6 @@
+@use './mediaquery.scss' as mediaquery;
+@use './variables.scss' as variables;
+
 // mixins
 @mixin generate-utilities($map, $prefix, $property) {
   @each $key, $value in $map {
