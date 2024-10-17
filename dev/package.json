@@ -8,10 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "grabcss": "workspace:^"
-  },
   "devDependencies": {
+    "typescript": "^5.5.3",
     "vite": "^5.4.8"
   }
 }
