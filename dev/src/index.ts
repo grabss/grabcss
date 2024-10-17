@@ -1,5 +1,5 @@
-import 'the-new-css-reset/css/reset.css'
 import './styles/index.scss'
+import 'the-new-css-reset/css/reset.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
