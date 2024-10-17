@@ -173,24 +173,60 @@
 
 // breakpoints styles
 @include generate-breakpoint-utilities(variables.$colors, 'text', 'color');
-@include generate-breakpoint-utilities(variables.$colors, 'bg', 'background-color');
-@include generate-breakpoint-utilities(variables.$font-sizes, 'fs', 'font-size');
-@include generate-breakpoint-utilities(variables.$font-weights, 'fw', 'font-weight');
-@include generate-breakpoint-utilities(variables.$text-directions, 'text', 'text-align');
-@include generate-breakpoint-utilities(variables.$line-heights, 'lh', 'line-height');
-@include generate-breakpoint-utilities(variables.$visibilities, 'v', 'visibility');
+@include generate-breakpoint-utilities(
+  variables.$colors,
+  'bg',
+  'background-color'
+);
+@include generate-breakpoint-utilities(
+  variables.$font-sizes,
+  'fs',
+  'font-size'
+);
+@include generate-breakpoint-utilities(
+  variables.$font-weights,
+  'fw',
+  'font-weight'
+);
+@include generate-breakpoint-utilities(
+  variables.$text-directions,
+  'text',
+  'text-align'
+);
+@include generate-breakpoint-utilities(
+  variables.$line-heights,
+  'lh',
+  'line-height'
+);
+@include generate-breakpoint-utilities(
+  variables.$visibilities,
+  'v',
+  'visibility'
+);
 @include generate-breakpoint-utilities(variables.$displays, 'd', 'display');
 @include generate-breakpoint-utilities(variables.$positions, 'ps', 'position');
 @include generate-breakpoint-spaces-utilities('m', 'margin');
 @include generate-breakpoint-spaces-utilities('p', 'padding');
-@include generate-breakpoint-utilities(variables.$white-spaces, 'ws', 'white-space');
-@include generate-breakpoint-utilities(variables.$word-breaks, 'wb', 'word-break');
+@include generate-breakpoint-utilities(
+  variables.$white-spaces,
+  'ws',
+  'white-space'
+);
+@include generate-breakpoint-utilities(
+  variables.$word-breaks,
+  'wb',
+  'word-break'
+);
 @include generate-breakpoint-utilities(
   variables.$flex-directions,
   'flex-direction',
   'flex-direction'
 );
-@include generate-breakpoint-utilities(variables.$flex-wraps, 'flex-wrap', 'flex-wrap');
+@include generate-breakpoint-utilities(
+  variables.$flex-wraps,
+  'flex-wrap',
+  'flex-wrap'
+);
 @include generate-breakpoint-utilities(
   variables.$justify-content-positions,
   'justify-content',
