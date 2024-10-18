@@ -22,7 +22,7 @@ npm i grabcss
 
 ### How to use
 
-Using Built CSS
+Using built CSS
 
 ```js
 import "grabcss/dist/grab.css";
