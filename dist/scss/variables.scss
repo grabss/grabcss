@@ -1,13 +1,13 @@
-$color-primary: #00a596;
-$color-secondary: #000000;
-$color-transparent: transparent;
-$color-black: #000000;
-$color-white: #ffffff;
-$color-gray: #f3f4f6;
-$color-link: #0064e6;
-$color-muted: #787878;
-$color-warning: #ffc107;
-$color-danger: #dc3545;
+$color-primary: #00a596 !default;
+$color-secondary: #000000 !default;
+$color-transparent: transparent !default;
+$color-black: #000000 !default;
+$color-white: #ffffff !default;
+$color-gray: #f3f4f6 !default;
+$color-link: #0064e6 !default;
+$color-muted: #787878 !default;
+$color-warning: #ffc107 !default;
+$color-danger: #dc3545 !default;
 $colors: (
   'primary': $color-primary,
   'secondary': $color-secondary,
@@ -21,15 +21,15 @@ $colors: (
   'danger': $color-danger
 ) !default;
 
-$font-size-xs: 12px;
-$font-size-sm: 14px;
-$font-size-md: 16px;
-$font-size-lg: 18px;
-$font-size-xl: 20px;
-$font-size-2xl: 22px;
-$font-size-3xl: 24px;
-$font-size-4xl: 36px;
-$font-size-5xl: 40px;
+$font-size-xs: 12px !default;
+$font-size-sm: 14px !default;
+$font-size-md: 16px !default;
+$font-size-lg: 18px !default;
+$font-size-xl: 20px !default;
+$font-size-2xl: 22px !default;
+$font-size-3xl: 24px !default;
+$font-size-4xl: 36px !default;
+$font-size-5xl: 40px !default;
 $font-sizes: (
   'xs': $font-size-xs,
   'sm': $font-size-sm,
@@ -42,8 +42,8 @@ $font-sizes: (
   '5xl': $font-size-5xl
 ) !default;
 
-$font-weight-normal: 400;
-$font-weight-bold: 700;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
 $font-weights: (
   'normal': $font-weight-normal,
   'bold': $font-weight-bold
@@ -55,10 +55,11 @@ $text-directions: (
   'right': right
 ) !default;
 
-$line-height-default: 1;
-$line-height-xs: 1.2;
-$line-height-sm: 1.4;
-$line-height-md: 1.6;
+$line-height-default: 1 !default;
+$line-height-xs: 1.2 !default;
+$line-height-sm: 1.4 !default;
+$line-height-md: 1.6 !default;
+
 $line-heights: (
   'default': $line-height-default,
   'xs': $line-height-xs,
