@@ -36,7 +36,7 @@ Using SCSS
 @use "grabcss/dist/scss/utilities.scss";
 ```
 
-## Customizing Variables
+## Customizing variables
 
 ```scss
 @use "path/to/custom-variables.scss" as variables;
