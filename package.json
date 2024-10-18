@@ -6,6 +6,13 @@
     "type": "git",
     "url": "https://github.com/grabss/grabcss.git"
   },
+  "keywords": [
+    "css",
+    "postcss",
+    "css-framework",
+    "utility-first",
+    "minimal"
+  ],
   "license": "MIT",
   "author": "grabss Inc.",
   "files": [
