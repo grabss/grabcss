@@ -5,3 +5,17 @@
 </p>
 
 <h3 align="center">grabcss</h3>
+
+<p align="center">
+  A minimal, utility-first CSS framework for rapid UI development, provided and utilized by grabss Inc.
+</p>
+
+---
+
+## Getting started
+
+...TODO
+
+## Adding custom styles
+
+...TODO
