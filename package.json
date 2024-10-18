@@ -2,6 +2,8 @@
   "name": "grabcss",
   "version": "0.1.0",
   "description": "A minimal, utility-first CSS framework for rapid UI development, provided and utilized by grabss Inc.",
+  "license": "MIT",
+  "author": "grabss Inc.",
   "repository": {
     "type": "git",
     "url": "https://github.com/grabss/grabcss.git"
@@ -13,8 +15,6 @@
     "utility-first",
     "minimal"
   ],
-  "license": "MIT",
-  "author": "grabss Inc.",
   "files": [
     "dist"
   ],
