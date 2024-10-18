@@ -14,8 +14,51 @@
 
 ## Getting started
 
-...TODO
+### Installation
 
-## Adding custom styles
+```console
+npm i grabcss
+```
 
-...TODO
+### How to use
+
+Using Built CSS
+
+```js
+import "grabcss/dist/grab.css";
+```
+
+Using SCSS
+
+```scss
+@use "grabcss/dist/scss/mediaquery.scss" as mediaquery;
+@use "grabcss/dist/scss/variables.scss" as variables;
+@use "grabcss/dist/scss/utilities.scss";
+```
+
+## Customizing Variables
+
+```scss
+@use "path/to/custom-variables.scss" as variables;
+```
+
+```scss
+// path/to/custom-variables.scss
+
+// overrides
+@use "grabcss/dist/scss/variables.scss" as variables with (
+  $color-primary: #00a596
+);
+
+// additions
+$color-light-border: #dce1e6;
+
+$colors: map-merge(
+  variables.$colors,
+  (
+    "light-border": $color-light-border,
+  )
+);
+
+@forward "grabcss/dist/scss/variables.scss";
+```
