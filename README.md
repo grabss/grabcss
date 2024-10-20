@@ -44,16 +44,16 @@ Using SCSS
 
 ```scss
 // path/to/custom-variables.scss
-
-// overrides
+@use "sass:map";
 @use "grabcss/dist/scss/variables.scss" as variables with (
+  // overrides
   $color-primary: #00a596
 );
 
 // additions
 $color-light-border: #dce1e6;
 
-$colors: map-merge(
+$colors: map.merge(
   variables.$colors,
   (
     "light-border": $color-light-border,
