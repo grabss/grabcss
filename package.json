@@ -18,6 +18,9 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": "./dist"
+  },
   "workspaces": [
     "dev"
   ]
