@@ -12,40 +12,43 @@
 
 ---
 
-## Getting started
-
-### Installation
+## Installation
 
 ```console
 npm i grabcss
 ```
 
-### How to use
+## How to use
 
 Using built CSS
 
 ```js
-import "grabcss/dist/grab.css";
+import "grabcss";
+
+// Alternatively, you can import only the CSS file
+// import "grabcss/grab.css";
 ```
 
 Using SCSS
 
 ```scss
-@use "grabcss/dist/scss/mediaquery.scss" as mediaquery;
-@use "grabcss/dist/scss/variables.scss" as variables;
-@use "grabcss/dist/scss/utilities.scss";
+@use "grabcss/scss/mediaquery" as mediaquery;
+@use "grabcss/scss/variables" as variables;
+@use "grabcss/scss/utilities";
 ```
 
-## Customizing variables
+Using SCSS with customized variables
 
 ```scss
-@use "path/to/custom-variables.scss" as variables;
+@use "grabcss/scss/mediaquery" as mediaquery;
+@use "path/to/your-customized-variables" as variables;
+@use "grabcss/scss/utilities";
 ```
 
 ```scss
-// path/to/custom-variables.scss
+// path/to/your-customized-variable.scss
 @use "sass:map";
-@use "grabcss/dist/scss/variables.scss" as variables with (
+@use "grabcss/scss/variables" as variables with (
   // overrides
   $color-primary: #00a596
 );
@@ -60,5 +63,5 @@ $colors: map.merge(
   )
 );
 
-@forward "grabcss/dist/scss/variables.scss";
+@forward "grabcss/scss/variables";
 ```
