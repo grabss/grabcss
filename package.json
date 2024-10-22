@@ -15,11 +15,13 @@
     "utility-first",
     "minimal"
   ],
+  "style": "dist/grab.css",
   "files": [
     "dist"
   ],
   "exports": {
-    ".": "./dist"
+    ".": "./dist",
+    "./scss/*": "./dist/scss/*"
   },
   "workspaces": [
     "dev"
