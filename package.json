@@ -16,13 +16,13 @@
     "minimal"
   ],
   "style": "dist/grab.css",
-  "files": [
-    "dist"
-  ],
   "exports": {
     ".": "./dist",
     "./scss/*": "./dist/scss/*"
   },
+  "files": [
+    "dist"
+  ],
   "workspaces": [
     "dev"
   ]
