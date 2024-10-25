@@ -4,6 +4,7 @@
   "description": "A minimal, utility-first CSS framework for rapid UI development.",
   "license": "MIT",
   "author": "grabss Inc.",
+  "homepage": "https://grabss.co.jp",
   "repository": {
     "type": "git",
     "url": "https://github.com/grabss/grabcss.git"
