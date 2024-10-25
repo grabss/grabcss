@@ -10,6 +10,15 @@
   A minimal, utility-first CSS framework for rapid UI development.
 </p>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/grabcss" target="_blank">
+    <img src="https://img.shields.io/npm/v/grabcss.svg" alt="Version" />
+  </a>
+  <a href="https://www.npmjs.com/package/grabcss" target="_blank">
+    <img src="https://img.shields.io/npm/l/grabcss.svg" alt="License" />
+  </a>
+</p>
+
 ---
 
 ## Installation
