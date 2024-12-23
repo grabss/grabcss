@@ -123,6 +123,11 @@
 @include generate-spaces-utilities('m', 'margin');
 @include generate-spaces-utilities('p', 'padding');
 
+// gap
+@include generate-utilities(variables.$spaces, 'g', 'gap');
+@include generate-utilities(variables.$spaces, 'rg', 'row-gap');
+@include generate-utilities(variables.$spaces, 'cg', 'column-gap');
+
 // white-space
 @include generate-utilities(variables.$white-spaces, 'ws', 'white-space');
 
@@ -210,6 +215,9 @@
 @include generate-breakpoint-utilities(variables.$positions, 'ps', 'position');
 @include generate-breakpoint-spaces-utilities('m', 'margin');
 @include generate-breakpoint-spaces-utilities('p', 'padding');
+@include generate-breakpoint-utilities(variables.$spaces, 'g', 'gap');
+@include generate-breakpoint-utilities(variables.$spaces, 'rg', 'row-gap');
+@include generate-breakpoint-utilities(variables.$spaces, 'cg', 'column-gap');
 @include generate-breakpoint-utilities(
   variables.$white-spaces,
   'ws',
