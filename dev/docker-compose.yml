@@ -1,3 +1,4 @@
+name: grabcss
 services:
   grabcss:
     image: grabcss

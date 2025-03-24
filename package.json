@@ -26,5 +26,6 @@
   ],
   "workspaces": [
     "dev"
-  ]
+  ],
+  "packageManager": "pnpm@9.15.4"
 }
