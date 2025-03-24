@@ -26,6 +26,8 @@ lerna-debug.log*
 !.vscode/extensions.json
 !.vscode/settings.json
 
+node-compile-cache
 node_modules
 .yarn
 yarn.lock
+pnpm-lock.yaml
