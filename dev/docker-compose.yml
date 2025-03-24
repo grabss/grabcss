@@ -1,3 +1,4 @@
+name: grabcss
 services:
   grabcss:
     image: grabcss
@@ -5,7 +6,7 @@ services:
     build:
       context: ..
       dockerfile: dev/Dockerfile
-    entrypoint: dev/docker-entrypoint.sh
+    command: /bin/bash -c 'yarn dev'
     tty: true
     stdin_open: true
     ports:

@@ -29,3 +29,4 @@ lerna-debug.log*
 node_modules
 .yarn
 yarn.lock
+pnpm-lock.yaml
