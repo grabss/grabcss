@@ -128,6 +128,10 @@
 @include generate-utilities(variables.$spaces, 'rg', 'row-gap');
 @include generate-utilities(variables.$spaces, 'cg', 'column-gap');
 
+// size
+@include generate-utilities(variables.$sizes, 'w', 'width');
+@include generate-utilities(variables.$sizes, 'h', 'height');
+
 // white-space
 @include generate-utilities(variables.$white-spaces, 'ws', 'white-space');
 
@@ -165,18 +169,6 @@
 
 .flex-shrink-0 {
   flex-shrink: 0 !important;
-}
-
-.w-100 {
-  width: 100% !important;
-}
-
-.w-fit-content {
-  width: fit-content !important;
-}
-
-.h-100 {
-  height: 100% !important;
 }
 
 // breakpoints styles
@@ -218,6 +210,8 @@
 @include generate-breakpoint-utilities(variables.$spaces, 'g', 'gap');
 @include generate-breakpoint-utilities(variables.$spaces, 'rg', 'row-gap');
 @include generate-breakpoint-utilities(variables.$spaces, 'cg', 'column-gap');
+@include generate-breakpoint-utilities(variables.$sizes, 'w', 'width');
+@include generate-breakpoint-utilities(variables.$sizes, 'h', 'height');
 @include generate-breakpoint-utilities(
   variables.$white-spaces,
   'ws',
@@ -260,24 +254,6 @@
   .#{$breakpoint}\:flex-shrink-0 {
     @include mediaquery.mq($breakpoint) {
       flex-shrink: 0 !important;
-    }
-  }
-
-  .#{$breakpoint}\:w-100 {
-    @include mediaquery.mq($breakpoint) {
-      width: 100% !important;
-    }
-  }
-
-  .#{$breakpoint}\:w-fit-content {
-    @include mediaquery.mq($breakpoint) {
-      width: fit-content !important;
-    }
-  }
-
-  .#{$breakpoint}\:h-100 {
-    @include mediaquery.mq($breakpoint) {
-      height: 100% !important;
     }
   }
 }

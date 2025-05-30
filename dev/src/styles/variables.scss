@@ -109,6 +109,14 @@ $spaces: (
   '5xl': 50px
 ) !default;
 
+$sizes: (
+  'auto': auto,
+  'fit-content': fit-content,
+  'none': 0,
+  '50': 50%,
+  '100': 100%
+) !default;
+
 $white-spaces: (
   'normal': normal,
   'nowrap': nowrap,
