@@ -1,1 +1,229 @@
-@use './utilities.scss';
+@use './mediaquery.scss' as mediaquery;
+@use './mixins.scss' as mixins;
+@use './variables.scss' as variables;
+
+:root {
+  @each $name, $value in variables.$define-colors {
+    --color-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-font-sizes {
+    --font-size-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-font-weights {
+    --font-weight-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-line-heights {
+    --line-height-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-spaces {
+    --space-#{$name}: #{$value};
+  }
+}
+
+// color & background-color
+@include mixins.generate-utilities(variables.$colors, 'text', 'color');
+@include mixins.generate-utilities(variables.$colors, 'bg', 'background-color');
+
+// font-size
+@include mixins.generate-utilities(variables.$font-sizes, 'fs', 'font-size');
+
+// font-weight
+@include mixins.generate-utilities(
+  variables.$font-weights,
+  'fw',
+  'font-weight'
+);
+
+// text-align
+@include mixins.generate-utilities(
+  variables.$text-directions,
+  'text',
+  'text-align'
+);
+
+// line-height
+@include mixins.generate-utilities(
+  variables.$line-heights,
+  'lh',
+  'line-height'
+);
+
+// visibility
+@include mixins.generate-utilities(variables.$visibilities, 'v', 'visibility');
+
+// display
+@include mixins.generate-utilities(variables.$displays, 'd', 'display');
+
+// position
+@include mixins.generate-utilities(variables.$positions, 'ps', 'position');
+
+// margin & padding
+@include mixins.generate-spaces-utilities('m', 'margin');
+@include mixins.generate-spaces-utilities('p', 'padding');
+
+// gap
+@include mixins.generate-utilities(variables.$spaces, 'g', 'gap');
+@include mixins.generate-utilities(variables.$spaces, 'rg', 'row-gap');
+@include mixins.generate-utilities(variables.$spaces, 'cg', 'column-gap');
+
+// size
+@include mixins.generate-utilities(variables.$sizes, 'w', 'width');
+@include mixins.generate-utilities(variables.$sizes, 'h', 'height');
+
+// white-space
+@include mixins.generate-utilities(
+  variables.$white-spaces,
+  'ws',
+  'white-space'
+);
+
+// word-break
+@include mixins.generate-utilities(variables.$word-breaks, 'wb', 'word-break');
+
+// flex-direction
+@include mixins.generate-utilities(
+  variables.$flex-directions,
+  'flex-direction',
+  'flex-direction'
+);
+
+// flex-wrap
+@include mixins.generate-utilities(
+  variables.$flex-wraps,
+  'flex-wrap',
+  'flex-wrap'
+);
+
+// justify-content
+@include mixins.generate-utilities(
+  variables.$justify-content-positions,
+  'justify-content',
+  'justify-content'
+);
+
+// align-items
+@include mixins.generate-utilities(
+  variables.$align-items-positions,
+  'align-items',
+  'align-items'
+);
+
+// util
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+// breakpoints styles
+@include mixins.generate-breakpoint-utilities(
+  variables.$colors,
+  'text',
+  'color'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$colors,
+  'bg',
+  'background-color'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$font-sizes,
+  'fs',
+  'font-size'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$font-weights,
+  'fw',
+  'font-weight'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$text-directions,
+  'text',
+  'text-align'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$line-heights,
+  'lh',
+  'line-height'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$visibilities,
+  'v',
+  'visibility'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$displays,
+  'd',
+  'display'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$positions,
+  'ps',
+  'position'
+);
+@include mixins.generate-breakpoint-spaces-utilities('m', 'margin');
+@include mixins.generate-breakpoint-spaces-utilities('p', 'padding');
+@include mixins.generate-breakpoint-utilities(variables.$spaces, 'g', 'gap');
+@include mixins.generate-breakpoint-utilities(
+  variables.$spaces,
+  'rg',
+  'row-gap'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$spaces,
+  'cg',
+  'column-gap'
+);
+@include mixins.generate-breakpoint-utilities(variables.$sizes, 'w', 'width');
+@include mixins.generate-breakpoint-utilities(variables.$sizes, 'h', 'height');
+@include mixins.generate-breakpoint-utilities(
+  variables.$white-spaces,
+  'ws',
+  'white-space'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$word-breaks,
+  'wb',
+  'word-break'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$flex-directions,
+  'flex-direction',
+  'flex-direction'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$flex-wraps,
+  'flex-wrap',
+  'flex-wrap'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$justify-content-positions,
+  'justify-content',
+  'justify-content'
+);
+@include mixins.generate-breakpoint-utilities(
+  variables.$align-items-positions,
+  'align-items',
+  'align-items'
+);
+
+// util for breakpoints
+@each $breakpoint, $_ in mediaquery.$breakpoints {
+  .#{$breakpoint}\:flex-1 {
+    @include mediaquery.mq($breakpoint) {
+      flex: 1 !important;
+    }
+  }
+
+  .#{$breakpoint}\:flex-shrink-0 {
+    @include mediaquery.mq($breakpoint) {
+      flex-shrink: 0 !important;
+    }
+  }
+}
