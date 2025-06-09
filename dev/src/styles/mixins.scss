@@ -1,7 +1,7 @@
 @use './mediaquery.scss' as mediaquery;
 @use './variables.scss' as variables;
 
-@mixin generate-utilities($map, $prefix, $property) {
+@mixin generate-classes($map, $prefix, $property) {
   @each $key, $value in $map {
     .#{$prefix}-#{$key} {
       #{$property}: $value !important;
@@ -9,7 +9,7 @@
   }
 }
 
-@mixin generate-spaces-utilities($prefix, $property) {
+@mixin generate-space-classes($prefix, $property) {
   @each $key, $value in variables.$spaces {
     .#{$prefix}-#{$key} {
       #{$property}: $value !important;
@@ -37,7 +37,7 @@
   }
 }
 
-@mixin generate-breakpoint-utilities($map, $prefix, $property) {
+@mixin generate-breakpoint-classes($map, $prefix, $property) {
   @each $breakpoint, $_ in mediaquery.$breakpoints {
     @each $key, $value in $map {
       .#{$breakpoint}\:#{$prefix}-#{$key} {
@@ -49,7 +49,7 @@
   }
 }
 
-@mixin generate-breakpoint-spaces-utilities($prefix, $property) {
+@mixin generate-breakpoint-space-classes($prefix, $property) {
   @each $breakpoint, $_ in mediaquery.$breakpoints {
     @each $key, $value in variables.$spaces {
       .#{$breakpoint}\:#{$prefix}-#{$key} {
