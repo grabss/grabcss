@@ -1,162 +1,78 @@
-@use './mediaquery.scss' as mediaquery;
-@use './variables.scss' as variables;
-
-// mixins
-@mixin generate-utilities($map, $prefix, $property) {
-  @each $key, $value in $map {
-    .#{$prefix}-#{$key} {
-      #{$property}: $value !important;
-    }
-  }
-}
-
-@mixin generate-spaces-utilities($prefix, $property) {
-  @each $key, $value in variables.$spaces {
-    .#{$prefix}-#{$key} {
-      #{$property}: $value !important;
-    }
-    .#{$prefix}l-#{$key} {
-      #{$property}-left: $value !important;
-    }
-    .#{$prefix}r-#{$key} {
-      #{$property}-right: $value !important;
-    }
-    .#{$prefix}x-#{$key} {
-      #{$property}-right: $value !important;
-      #{$property}-left: $value !important;
-    }
-    .#{$prefix}t-#{$key} {
-      #{$property}-top: $value !important;
-    }
-    .#{$prefix}b-#{$key} {
-      #{$property}-bottom: $value !important;
-    }
-    .#{$prefix}y-#{$key} {
-      #{$property}-top: $value !important;
-      #{$property}-bottom: $value !important;
-    }
-  }
-}
-
-@mixin generate-breakpoint-utilities($map, $prefix, $property) {
-  @each $breakpoint, $_ in mediaquery.$breakpoints {
-    @each $key, $value in $map {
-      .#{$breakpoint}\:#{$prefix}-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          #{$property}: $value !important;
-        }
-      }
-    }
-  }
-}
-
-@mixin generate-breakpoint-spaces-utilities($prefix, $property) {
-  @each $breakpoint, $_ in mediaquery.$breakpoints {
-    @each $key, $value in variables.$spaces {
-      .#{$breakpoint}\:#{$prefix}-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          #{$property}: $value !important;
-        }
-      }
-      .#{$breakpoint}\:#{$prefix}l-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          #{$property}-left: $value !important;
-        }
-      }
-      .#{$breakpoint}\:#{$prefix}r-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          #{$property}-right: $value !important;
-        }
-      }
-      .#{$breakpoint}\:#{$prefix}x-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          #{$property}-right: $value !important;
-          #{$property}-left: $value !important;
-        }
-      }
-      .#{$breakpoint}\:#{$prefix}t-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          #{$property}-top: $value !important;
-        }
-      }
-      .#{$breakpoint}\:#{$prefix}b-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          #{$property}-bottom: $value !important;
-        }
-      }
-      .#{$breakpoint}\:#{$prefix}y-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          #{$property}-top: $value !important;
-          #{$property}-bottom: $value !important;
-        }
-      }
-    }
-  }
-}
+@use './mediaquery' as mediaquery;
+@use './mixins' as mixins;
+@use './variables' as variables;
 
 // color & background-color
-@include generate-utilities(variables.$colors, 'text', 'color');
-@include generate-utilities(variables.$colors, 'bg', 'background-color');
+@include mixins.generate-classes(variables.$colors, 'text', 'color');
+@include mixins.generate-classes(variables.$colors, 'bg', 'background-color');
 
 // font-size
-@include generate-utilities(variables.$font-sizes, 'fs', 'font-size');
+@include mixins.generate-classes(variables.$font-sizes, 'fs', 'font-size');
 
 // font-weight
-@include generate-utilities(variables.$font-weights, 'fw', 'font-weight');
+@include mixins.generate-classes(variables.$font-weights, 'fw', 'font-weight');
 
 // text-align
-@include generate-utilities(variables.$text-directions, 'text', 'text-align');
+@include mixins.generate-classes(
+  variables.$text-directions,
+  'text',
+  'text-align'
+);
 
 // line-height
-@include generate-utilities(variables.$line-heights, 'lh', 'line-height');
+@include mixins.generate-classes(variables.$line-heights, 'lh', 'line-height');
 
 // visibility
-@include generate-utilities(variables.$visibilities, 'v', 'visibility');
+@include mixins.generate-classes(variables.$visibilities, 'v', 'visibility');
 
 // display
-@include generate-utilities(variables.$displays, 'd', 'display');
+@include mixins.generate-classes(variables.$displays, 'd', 'display');
 
 // position
-@include generate-utilities(variables.$positions, 'ps', 'position');
+@include mixins.generate-classes(variables.$positions, 'ps', 'position');
 
 // margin & padding
-@include generate-spaces-utilities('m', 'margin');
-@include generate-spaces-utilities('p', 'padding');
+@include mixins.generate-space-classes('m', 'margin');
+@include mixins.generate-space-classes('p', 'padding');
 
 // gap
-@include generate-utilities(variables.$spaces, 'g', 'gap');
-@include generate-utilities(variables.$spaces, 'rg', 'row-gap');
-@include generate-utilities(variables.$spaces, 'cg', 'column-gap');
+@include mixins.generate-classes(variables.$spaces, 'g', 'gap');
+@include mixins.generate-classes(variables.$spaces, 'rg', 'row-gap');
+@include mixins.generate-classes(variables.$spaces, 'cg', 'column-gap');
 
 // size
-@include generate-utilities(variables.$sizes, 'w', 'width');
-@include generate-utilities(variables.$sizes, 'h', 'height');
+@include mixins.generate-classes(variables.$sizes, 'w', 'width');
+@include mixins.generate-classes(variables.$sizes, 'h', 'height');
 
 // white-space
-@include generate-utilities(variables.$white-spaces, 'ws', 'white-space');
+@include mixins.generate-classes(variables.$white-spaces, 'ws', 'white-space');
 
 // word-break
-@include generate-utilities(variables.$word-breaks, 'wb', 'word-break');
+@include mixins.generate-classes(variables.$word-breaks, 'wb', 'word-break');
 
 // flex-direction
-@include generate-utilities(
+@include mixins.generate-classes(
   variables.$flex-directions,
   'flex-direction',
   'flex-direction'
 );
 
 // flex-wrap
-@include generate-utilities(variables.$flex-wraps, 'flex-wrap', 'flex-wrap');
+@include mixins.generate-classes(
+  variables.$flex-wraps,
+  'flex-wrap',
+  'flex-wrap'
+);
 
 // justify-content
-@include generate-utilities(
+@include mixins.generate-classes(
   variables.$justify-content-positions,
   'justify-content',
   'justify-content'
 );
 
 // align-items
-@include generate-utilities(
+@include mixins.generate-classes(
   variables.$align-items-positions,
   'align-items',
   'align-items'
@@ -172,72 +88,84 @@
 }
 
 // breakpoints styles
-@include generate-breakpoint-utilities(variables.$colors, 'text', 'color');
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(variables.$colors, 'text', 'color');
+@include mixins.generate-breakpoint-classes(
   variables.$colors,
   'bg',
   'background-color'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$font-sizes,
   'fs',
   'font-size'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$font-weights,
   'fw',
   'font-weight'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$text-directions,
   'text',
   'text-align'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$line-heights,
   'lh',
   'line-height'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$visibilities,
   'v',
   'visibility'
 );
-@include generate-breakpoint-utilities(variables.$displays, 'd', 'display');
-@include generate-breakpoint-utilities(variables.$positions, 'ps', 'position');
-@include generate-breakpoint-spaces-utilities('m', 'margin');
-@include generate-breakpoint-spaces-utilities('p', 'padding');
-@include generate-breakpoint-utilities(variables.$spaces, 'g', 'gap');
-@include generate-breakpoint-utilities(variables.$spaces, 'rg', 'row-gap');
-@include generate-breakpoint-utilities(variables.$spaces, 'cg', 'column-gap');
-@include generate-breakpoint-utilities(variables.$sizes, 'w', 'width');
-@include generate-breakpoint-utilities(variables.$sizes, 'h', 'height');
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
+  variables.$displays,
+  'd',
+  'display'
+);
+@include mixins.generate-breakpoint-classes(
+  variables.$positions,
+  'ps',
+  'position'
+);
+@include mixins.generate-breakpoint-space-classes('m', 'margin');
+@include mixins.generate-breakpoint-space-classes('p', 'padding');
+@include mixins.generate-breakpoint-classes(variables.$spaces, 'g', 'gap');
+@include mixins.generate-breakpoint-classes(variables.$spaces, 'rg', 'row-gap');
+@include mixins.generate-breakpoint-classes(
+  variables.$spaces,
+  'cg',
+  'column-gap'
+);
+@include mixins.generate-breakpoint-classes(variables.$sizes, 'w', 'width');
+@include mixins.generate-breakpoint-classes(variables.$sizes, 'h', 'height');
+@include mixins.generate-breakpoint-classes(
   variables.$white-spaces,
   'ws',
   'white-space'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$word-breaks,
   'wb',
   'word-break'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$flex-directions,
   'flex-direction',
   'flex-direction'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$flex-wraps,
   'flex-wrap',
   'flex-wrap'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$justify-content-positions,
   'justify-content',
   'justify-content'
 );
-@include generate-breakpoint-utilities(
+@include mixins.generate-breakpoint-classes(
   variables.$align-items-positions,
   'align-items',
   'align-items'
