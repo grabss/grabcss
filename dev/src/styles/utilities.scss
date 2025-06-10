@@ -1,6 +1,6 @@
-@use './mediaquery.scss' as mediaquery;
-@use './mixins.scss' as mixins;
-@use './variables.scss' as variables;
+@use './mediaquery' as mediaquery;
+@use './mixins' as mixins;
+@use './variables' as variables;
 
 // color & background-color
 @include mixins.generate-classes(variables.$colors, 'text', 'color');
