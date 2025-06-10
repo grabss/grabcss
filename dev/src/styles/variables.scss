@@ -1,18 +1,31 @@
 @use 'sass:map';
 @use 'sass:string';
 
+// Colors
+$color-primary: #00a596 !default;
+$color-secondary: #000000 !default;
+$color-background: #ffffff !default;
+$color-border: #dce1e6 !default;
+$color-heading: #00a596 !default;
+$color-body: #000000 !default;
+$color-link: #0064e6 !default;
+$color-muted: #787878 !default;
+$color-warning: #ffc107 !default;
+$color-danger: #dc3545 !default;
+
 $define-colors: (
-  'primary': #00a596,
-  'secondary': #000000,
-  'background': #ffffff,
-  'border': #dce1e6,
-  'heading': #00a596,
-  'body': #000000,
-  'link': #0064e6,
-  'muted': #787878,
-  'warning': #ffc107,
-  'danger': #dc3545
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'background': $color-background,
+  'border': $color-border,
+  'heading': $color-heading,
+  'body': $color-body,
+  'link': $color-link,
+  'muted': $color-muted,
+  'warning': $color-warning,
+  'danger': $color-danger
 ) !default;
+
 $colors: ();
 @each $name, $value in $define-colors {
   $colors: map.merge(
@@ -23,17 +36,29 @@ $colors: ();
   );
 }
 
+// Font Sizes
+$font-size-xs: 12px !default;
+$font-size-sm: 14px !default;
+$font-size-md: 16px !default;
+$font-size-lg: 18px !default;
+$font-size-xl: 20px !default;
+$font-size-2xl: 22px !default;
+$font-size-3xl: 24px !default;
+$font-size-4xl: 36px !default;
+$font-size-5xl: 40px !default;
+
 $define-font-sizes: (
-  'xs': 12px,
-  'sm': 14px,
-  'md': 16px,
-  'lg': 18px,
-  'xl': 20px,
-  '2xl': 22px,
-  '3xl': 24px,
-  '4xl': 36px,
-  '5xl': 40px
+  'xs': $font-size-xs,
+  'sm': $font-size-sm,
+  'md': $font-size-md,
+  'lg': $font-size-lg,
+  'xl': $font-size-xl,
+  '2xl': $font-size-2xl,
+  '3xl': $font-size-3xl,
+  '4xl': $font-size-4xl,
+  '5xl': $font-size-5xl
 ) !default;
+
 $font-sizes: ();
 @each $name, $value in $define-font-sizes {
   $font-sizes: map.merge(
@@ -44,10 +69,15 @@ $font-sizes: ();
   );
 }
 
+// Font Weights
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
 $define-font-weights: (
-  'normal': 400,
-  'bold': 700
+  'normal': $font-weight-normal,
+  'bold': $font-weight-bold
 ) !default;
+
 $font-weights: ();
 @each $name, $value in $define-font-weights {
   $font-weights: map.merge(
@@ -58,13 +88,21 @@ $font-weights: ();
   );
 }
 
+// Line Heights
+$line-height-default: 1 !default;
+$line-height-xs: 1.2 !default;
+$line-height-sm: 1.4 !default;
+$line-height-md: 1.6 !default;
+$line-height-lg: 1.8 !default;
+
 $define-line-heights: (
-  'default': 1,
-  'xs': 1.2,
-  'sm': 1.4,
-  'md': 1.6,
-  'lg': 1.8
+  'default': $line-height-default,
+  'xs': $line-height-xs,
+  'sm': $line-height-sm,
+  'md': $line-height-md,
+  'lg': $line-height-lg
 ) !default;
+
 $line-heights: ();
 @each $name, $value in $define-line-heights {
   $line-heights: map.merge(
@@ -75,20 +113,33 @@ $line-heights: ();
   );
 }
 
+// Spacing
+$space-2xs: 5px !default;
+$space-xs: 10px !default;
+$space-sm: 15px !default;
+$space-md: 20px !default;
+$space-lg: 25px !default;
+$space-xl: 30px !default;
+$space-2xl: 35px !default;
+$space-3xl: 40px !default;
+$space-4xl: 45px !default;
+$space-5xl: 50px !default;
+
 $define-spaces: (
   'auto': auto,
   'none': 0,
-  '2xs': 5px,
-  'xs': 10px,
-  'sm': 15px,
-  'md': 20px,
-  'lg': 25px,
-  'xl': 30px,
-  '2xl': 35px,
-  '3xl': 40px,
-  '4xl': 45px,
-  '5xl': 50px
+  '2xs': $space-2xs,
+  'xs': $space-xs,
+  'sm': $space-sm,
+  'md': $space-md,
+  'lg': $space-lg,
+  'xl': $space-xl,
+  '2xl': $space-2xl,
+  '3xl': $space-3xl,
+  '4xl': $space-4xl,
+  '5xl': $space-5xl
 ) !default;
+
 $spaces: ();
 @each $name, $value in $define-spaces {
   $spaces: map.merge(
@@ -99,6 +150,7 @@ $spaces: ();
   );
 }
 
+// The following maps are primarily using CSS keyword values
 $text-directions: (
   'left': left,
   'center': center,
