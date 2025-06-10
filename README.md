@@ -19,7 +19,7 @@ npm i grabcss
 
 ## How to use
 
-Using built CSS
+### Using built CSS
 
 ```js
 import "grabcss";
@@ -28,38 +28,37 @@ import "grabcss";
 // import "grabcss/grab.css";
 ```
 
-Using SCSS
+### Using SCSS
 
 ```scss
-@use "grabcss/scss/mediaquery" as mediaquery;
-@use "grabcss/scss/variables" as variables;
-@use "grabcss/scss/utilities";
+@use "grabcss/scss/index" as grabcss;
 ```
 
-Using SCSS with customized variables
+### Using SCSS with customized variables
 
 ```scss
-@use "grabcss/scss/mediaquery" as mediaquery;
 @use "path/to/your-customized-variables" as variables;
-@use "grabcss/scss/utilities";
+@use "grabcss/scss/index";
 ```
 
+_path/to/your-customized-variable.scss_
+
 ```scss
-// path/to/your-customized-variable.scss
 @use "sass:map";
 @use "grabcss/scss/variables" as variables with (
-  // overrides
-  $color-primary: #00a596
-);
-
-// additions
-$color-light-border: #dce1e6;
-
-$colors: map.merge(
-  variables.$colors,
-  (
-    "light-border": $color-light-border,
-  )
+  // override
+  $color-primary: #00a596,
+  // redefine
+  $define-colors:
+    (
+      "primary": #00a596,
+      "secondary": #f0f0f0,
+      "tertiary": #dce1e6,
+      "success": #4caf50,
+      "warning": #ff9800,
+      "error": #f44336,
+      "info": #2196f3
+    )
 );
 
 @forward "grabcss/scss/variables";
