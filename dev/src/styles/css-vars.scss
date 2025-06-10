@@ -1,0 +1,23 @@
+@use './variables.scss' as variables;
+
+:root {
+  @each $name, $value in variables.$define-colors {
+    --color-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-font-sizes {
+    --font-size-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-font-weights {
+    --font-weight-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-line-heights {
+    --line-height-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-spaces {
+    --space-#{$name}: #{$value};
+  }
+}
