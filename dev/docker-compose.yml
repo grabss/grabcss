@@ -6,7 +6,7 @@ services:
     build:
       context: ..
       dockerfile: dev/Dockerfile
-    command: /bin/bash -c 'yarn dev'
+    command: /bin/bash -c 'cd dev && pnpm dev'
     tty: true
     stdin_open: true
     ports:

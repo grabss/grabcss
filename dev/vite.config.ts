@@ -8,7 +8,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        grab: path.resolve(__dirname, 'src/styles/utilities.scss')
+        grab: path.resolve(__dirname, 'src/styles/index.scss')
       },
       output: {
         assetFileNames: '[name].[ext]'
@@ -18,7 +18,6 @@ export default defineConfig({
           targets: [
             {
               src: 'src/styles/*.scss',
-              ignore: ['src/styles/index.scss'],
               dest: '../dist/scss'
             }
           ],

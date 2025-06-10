@@ -1,9 +1,9 @@
+@use 'sass:map';
+@use 'sass:string';
+
+// Colors
 $color-primary: #00a596 !default;
 $color-secondary: #000000 !default;
-$color-transparent: transparent !default;
-$color-black: #000000 !default;
-$color-white: #ffffff !default;
-$color-gray: #f3f4f6 !default;
 $color-background: #ffffff !default;
 $color-border: #dce1e6 !default;
 $color-heading: #00a596 !default;
@@ -12,19 +12,31 @@ $color-link: #0064e6 !default;
 $color-muted: #787878 !default;
 $color-warning: #ffc107 !default;
 $color-danger: #dc3545 !default;
-$colors: (
+
+$define-colors: (
   'primary': $color-primary,
   'secondary': $color-secondary,
-  'transparent': $color-transparent,
-  'black': $color-black,
-  'white': $color-white,
-  'gray': $color-gray,
+  'background': $color-background,
+  'border': $color-border,
+  'heading': $color-heading,
+  'body': $color-body,
   'link': $color-link,
   'muted': $color-muted,
   'warning': $color-warning,
   'danger': $color-danger
 ) !default;
 
+$colors: ();
+@each $name, $value in $define-colors {
+  $colors: map.merge(
+    $colors,
+    (
+      $name: string.unquote('var(--color-#{$name})')
+    )
+  );
+}
+
+// Font Sizes
 $font-size-xs: 12px !default;
 $font-size-sm: 14px !default;
 $font-size-md: 16px !default;
@@ -34,7 +46,8 @@ $font-size-2xl: 22px !default;
 $font-size-3xl: 24px !default;
 $font-size-4xl: 36px !default;
 $font-size-5xl: 40px !default;
-$font-sizes: (
+
+$define-font-sizes: (
   'xs': $font-size-xs,
   'sm': $font-size-sm,
   'md': $font-size-md,
@@ -46,29 +59,102 @@ $font-sizes: (
   '5xl': $font-size-5xl
 ) !default;
 
+$font-sizes: ();
+@each $name, $value in $define-font-sizes {
+  $font-sizes: map.merge(
+    $font-sizes,
+    (
+      $name: string.unquote('var(--font-size-#{$name})')
+    )
+  );
+}
+
+// Font Weights
 $font-weight-normal: 400 !default;
 $font-weight-bold: 700 !default;
-$font-weights: (
+
+$define-font-weights: (
   'normal': $font-weight-normal,
   'bold': $font-weight-bold
 ) !default;
 
-$text-directions: (
-  'left': left,
-  'center': center,
-  'right': right
-) !default;
+$font-weights: ();
+@each $name, $value in $define-font-weights {
+  $font-weights: map.merge(
+    $font-weights,
+    (
+      $name: string.unquote('var(--font-weight-#{$name})')
+    )
+  );
+}
 
+// Line Heights
 $line-height-default: 1 !default;
 $line-height-xs: 1.2 !default;
 $line-height-sm: 1.4 !default;
 $line-height-md: 1.6 !default;
+$line-height-lg: 1.8 !default;
 
-$line-heights: (
+$define-line-heights: (
   'default': $line-height-default,
   'xs': $line-height-xs,
   'sm': $line-height-sm,
-  'md': $line-height-md
+  'md': $line-height-md,
+  'lg': $line-height-lg
+) !default;
+
+$line-heights: ();
+@each $name, $value in $define-line-heights {
+  $line-heights: map.merge(
+    $line-heights,
+    (
+      $name: string.unquote('var(--line-height-#{$name})')
+    )
+  );
+}
+
+// Spacing
+$space-2xs: 5px !default;
+$space-xs: 10px !default;
+$space-sm: 15px !default;
+$space-md: 20px !default;
+$space-lg: 25px !default;
+$space-xl: 30px !default;
+$space-2xl: 35px !default;
+$space-3xl: 40px !default;
+$space-4xl: 45px !default;
+$space-5xl: 50px !default;
+
+$define-spaces: (
+  'auto': auto,
+  'none': 0,
+  '2xs': $space-2xs,
+  'xs': $space-xs,
+  'sm': $space-sm,
+  'md': $space-md,
+  'lg': $space-lg,
+  'xl': $space-xl,
+  '2xl': $space-2xl,
+  '3xl': $space-3xl,
+  '4xl': $space-4xl,
+  '5xl': $space-5xl
+) !default;
+
+$spaces: ();
+@each $name, $value in $define-spaces {
+  $spaces: map.merge(
+    $spaces,
+    (
+      $name: string.unquote('var(--space-#{$name})')
+    )
+  );
+}
+
+// The following maps are primarily using CSS keyword values
+$text-directions: (
+  'left': left,
+  'center': center,
+  'right': right
 ) !default;
 
 $visibilities: (
@@ -92,21 +178,6 @@ $positions: (
   'absolute': absolute,
   'fixed': fixed,
   'sticky': sticky
-) !default;
-
-$spaces: (
-  'auto': auto,
-  'none': 0,
-  '2xs': 5px,
-  'xs': 10px,
-  'sm': 15px,
-  'md': 20px,
-  'lg': 25px,
-  'xl': 30px,
-  '2xl': 35px,
-  '3xl': 40px,
-  '4xl': 45px,
-  '5xl': 50px
 ) !default;
 
 $sizes: (
