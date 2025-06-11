@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@eslint/js": "^9.28.0",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.7.6",
     "eslint": "^9.12.0",
