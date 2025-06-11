@@ -39,7 +39,7 @@ import "grabcss/grab.css";
 ### Use with SCSS
 
 ```scss
-@use "grabcss/scss/core";
+@use "grabcss/scss/main";
 ```
 
 ### Custom Configuration
