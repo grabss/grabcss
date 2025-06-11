@@ -5,31 +5,95 @@
 
 // Define utility configurations for cleaner generation
 $utility-configs: (
-  'text': (variables.$colors, 'color'),
-  'bg': (variables.$colors, 'background-color'),
-  'fs': (variables.$font-sizes, 'font-size'),
-  'fw': (variables.$font-weights, 'font-weight'),
-  'text-align': (variables.$text-directions, 'text-align'),
-  'lh': (variables.$line-heights, 'line-height'),
-  'v': (variables.$visibilities, 'visibility'),
-  'd': (variables.$displays, 'display'),
-  'ps': (variables.$positions, 'position'),
-  'g': (variables.$spaces, 'gap'),
-  'rg': (variables.$spaces, 'row-gap'),
-  'cg': (variables.$spaces, 'column-gap'),
-  'w': (variables.$sizes, 'width'),
-  'h': (variables.$sizes, 'height'),
-  'ws': (variables.$white-spaces, 'white-space'),
-  'wb': (variables.$word-breaks, 'word-break'),
-  'flex-direction': (variables.$flex-directions, 'flex-direction'),
-  'flex-wrap': (variables.$flex-wraps, 'flex-wrap'),
-  'justify-content': (variables.$justify-content-positions, 'justify-content'),
-  'align-items': (variables.$align-items-positions, 'align-items'),
+  'text': (
+    variables.$colors,
+    'color'
+  ),
+  'bg': (
+    variables.$colors,
+    'background-color'
+  ),
+  'fs': (
+    variables.$font-sizes,
+    'font-size'
+  ),
+  'fw': (
+    variables.$font-weights,
+    'font-weight'
+  ),
+  'text-align': (
+    variables.$text-directions,
+    'text-align'
+  ),
+  'lh': (
+    variables.$line-heights,
+    'line-height'
+  ),
+  'v': (
+    variables.$visibilities,
+    'visibility'
+  ),
+  'd': (
+    variables.$displays,
+    'display'
+  ),
+  'ps': (
+    variables.$positions,
+    'position'
+  ),
+  'g': (
+    variables.$spaces,
+    'gap'
+  ),
+  'rg': (
+    variables.$spaces,
+    'row-gap'
+  ),
+  'cg': (
+    variables.$spaces,
+    'column-gap'
+  ),
+  'w': (
+    variables.$sizes,
+    'width'
+  ),
+  'h': (
+    variables.$sizes,
+    'height'
+  ),
+  'ws': (
+    variables.$white-spaces,
+    'white-space'
+  ),
+  'wb': (
+    variables.$word-breaks,
+    'word-break'
+  ),
+  'flex-direction': (
+    variables.$flex-directions,
+    'flex-direction'
+  ),
+  'flex-wrap': (
+    variables.$flex-wraps,
+    'flex-wrap'
+  ),
+  'justify-content': (
+    variables.$justify-content-positions,
+    'justify-content'
+  ),
+  'align-items': (
+    variables.$align-items-positions,
+    'align-items'
+  )
 );
 
 // Generate base utilities
 @each $prefix, $config in $utility-configs {
-  @include mixins.generate-classes(list.nth($config, 1), $prefix, list.nth($config, 2));
+  @include mixins.generate-classes(
+    list.nth($config, 1),
+    $prefix,
+    list.nth($config, 2)
+  );
 }
 
 // Generate spacing utilities (margin & padding)
@@ -47,7 +111,11 @@ $utility-configs: (
 
 // Generate breakpoint utilities
 @each $prefix, $config in $utility-configs {
-  @include mixins.generate-breakpoint-classes(list.nth($config, 1), $prefix, list.nth($config, 2));
+  @include mixins.generate-breakpoint-classes(
+    list.nth($config, 1),
+    $prefix,
+    list.nth($config, 2)
+  );
 }
 
 // Generate breakpoint spacing utilities
