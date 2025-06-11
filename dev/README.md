@@ -25,14 +25,7 @@ grabcss/
 ```bash
 git clone https://github.com/grabss/grabcss.git
 cd grabcss
-
-# Install root dependencies
 pnpm install
-
-# Install playground dependencies
-cd dev
-pnpm install
-cd ..
 ```
 
 ## Development Commands
@@ -53,11 +46,8 @@ This compiles the SCSS source files and generates:
 ### Development Playground
 
 ```bash
-# Navigate to playground and install dependencies
-cd dev
-pnpm install
-
 # Start the development server
+cd dev
 pnpm run dev
 ```
 
