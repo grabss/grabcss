@@ -169,6 +169,9 @@ $displays: (
   'inline-block': inline-block,
   'block': block,
   'flex': flex,
+  'inline-flex': inline-flex,
+  'grid': grid,
+  'inline-grid': inline-grid,
   'table-cell': table-cell
 ) !default;
 
@@ -232,4 +235,71 @@ $align-items-positions: (
   'end': end,
   'flex-start': flex-start,
   'flex-end': flex-end
+) !default;
+
+// CSS Grid Properties
+$grid-template-columns: (
+  'none': none,
+  '1': repeat(1, minmax(0, 1fr)),
+  '2': repeat(2, minmax(0, 1fr)),
+  '3': repeat(3, minmax(0, 1fr)),
+  '4': repeat(4, minmax(0, 1fr)),
+  '5': repeat(5, minmax(0, 1fr)),
+  '6': repeat(6, minmax(0, 1fr)),
+  '12': repeat(12, minmax(0, 1fr))
+) !default;
+
+$grid-template-rows: (
+  'none': none,
+  '1': repeat(1, minmax(0, 1fr)),
+  '2': repeat(2, minmax(0, 1fr)),
+  '3': repeat(3, minmax(0, 1fr)),
+  '4': repeat(4, minmax(0, 1fr)),
+  '6': repeat(6, minmax(0, 1fr))
+) !default;
+
+$grid-columns: (
+  'auto': auto,
+  'span-1': span 1 / span 1,
+  'span-2': span 2 / span 2,
+  'span-3': span 3 / span 3,
+  'span-4': span 4 / span 4,
+  'span-5': span 5 / span 5,
+  'span-6': span 6 / span 6,
+  'span-full': 1 / -1
+) !default;
+
+$grid-rows: (
+  'auto': auto,
+  'span-1': span 1 / span 1,
+  'span-2': span 2 / span 2,
+  'span-3': span 3 / span 3,
+  'span-4': span 4 / span 4,
+  'span-6': span 6 / span 6,
+  'span-full': 1 / -1
+) !default;
+
+$place-content: (
+  'center': center,
+  'start': start,
+  'end': end,
+  'between': space-between,
+  'around': space-around,
+  'evenly': space-evenly,
+  'stretch': stretch
+) !default;
+
+$place-items: (
+  'start': start,
+  'end': end,
+  'center': center,
+  'stretch': stretch
+) !default;
+
+$place-self: (
+  'auto': auto,
+  'start': start,
+  'end': end,
+  'center': center,
+  'stretch': stretch
 ) !default;

@@ -84,6 +84,34 @@ $utility-configs: (
   'align-items': (
     variables.$align-items-positions,
     'align-items'
+  ),
+  'grid-template-cols': (
+    variables.$grid-template-columns,
+    'grid-template-columns'
+  ),
+  'grid-template-rows': (
+    variables.$grid-template-rows,
+    'grid-template-rows'
+  ),
+  'grid-col': (
+    variables.$grid-columns,
+    'grid-column'
+  ),
+  'grid-row': (
+    variables.$grid-rows,
+    'grid-row'
+  ),
+  'place-content': (
+    variables.$place-content,
+    'place-content'
+  ),
+  'place-items': (
+    variables.$place-items,
+    'place-items'
+  ),
+  'place-self': (
+    variables.$place-self,
+    'place-self'
   )
 );
 
