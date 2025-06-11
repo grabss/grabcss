@@ -31,14 +31,14 @@ import "grabcss";
 ### Using SCSS
 
 ```scss
-@use "grabcss/scss/index" as grabcss;
+@use "grabcss/scss/core" as grabcss;
 ```
 
 ### Using SCSS with customized variables
 
 ```scss
 @use "path/to/your-customized-variables" as variables;
-@use "grabcss/scss/index";
+@use "grabcss/scss/core";
 ```
 
 _path/to/your-customized-variable.scss_
