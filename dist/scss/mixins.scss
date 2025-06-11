@@ -4,7 +4,7 @@
 @mixin generate-classes($map, $prefix, $property) {
   @each $key, $value in $map {
     .#{$prefix}-#{$key} {
-      #{$property}: $value !important;
+      #{$property}: $value;
     }
   }
 }
@@ -12,27 +12,27 @@
 @mixin generate-space-classes($prefix, $property) {
   @each $key, $value in variables.$spaces {
     .#{$prefix}-#{$key} {
-      #{$property}: $value !important;
+      #{$property}: $value;
     }
     .#{$prefix}l-#{$key} {
-      #{$property}-left: $value !important;
+      #{$property}-left: $value;
     }
     .#{$prefix}r-#{$key} {
-      #{$property}-right: $value !important;
+      #{$property}-right: $value;
     }
     .#{$prefix}x-#{$key} {
-      #{$property}-right: $value !important;
-      #{$property}-left: $value !important;
+      #{$property}-right: $value;
+      #{$property}-left: $value;
     }
     .#{$prefix}t-#{$key} {
-      #{$property}-top: $value !important;
+      #{$property}-top: $value;
     }
     .#{$prefix}b-#{$key} {
-      #{$property}-bottom: $value !important;
+      #{$property}-bottom: $value;
     }
     .#{$prefix}y-#{$key} {
-      #{$property}-top: $value !important;
-      #{$property}-bottom: $value !important;
+      #{$property}-top: $value;
+      #{$property}-bottom: $value;
     }
   }
 }
@@ -42,7 +42,7 @@
     @each $key, $value in $map {
       .#{$breakpoint}\:#{$prefix}-#{$key} {
         @include mediaquery.mq($breakpoint) {
-          #{$property}: $value !important;
+          #{$property}: $value;
         }
       }
     }
@@ -54,39 +54,39 @@
     @each $key, $value in variables.$spaces {
       .#{$breakpoint}\:#{$prefix}-#{$key} {
         @include mediaquery.mq($breakpoint) {
-          #{$property}: $value !important;
+          #{$property}: $value;
         }
       }
       .#{$breakpoint}\:#{$prefix}l-#{$key} {
         @include mediaquery.mq($breakpoint) {
-          #{$property}-left: $value !important;
+          #{$property}-left: $value;
         }
       }
       .#{$breakpoint}\:#{$prefix}r-#{$key} {
         @include mediaquery.mq($breakpoint) {
-          #{$property}-right: $value !important;
+          #{$property}-right: $value;
         }
       }
       .#{$breakpoint}\:#{$prefix}x-#{$key} {
         @include mediaquery.mq($breakpoint) {
-          #{$property}-right: $value !important;
-          #{$property}-left: $value !important;
+          #{$property}-right: $value;
+          #{$property}-left: $value;
         }
       }
       .#{$breakpoint}\:#{$prefix}t-#{$key} {
         @include mediaquery.mq($breakpoint) {
-          #{$property}-top: $value !important;
+          #{$property}-top: $value;
         }
       }
       .#{$breakpoint}\:#{$prefix}b-#{$key} {
         @include mediaquery.mq($breakpoint) {
-          #{$property}-bottom: $value !important;
+          #{$property}-bottom: $value;
         }
       }
       .#{$breakpoint}\:#{$prefix}y-#{$key} {
         @include mediaquery.mq($breakpoint) {
-          #{$property}-top: $value !important;
-          #{$property}-bottom: $value !important;
+          #{$property}-top: $value;
+          #{$property}-bottom: $value;
         }
       }
     }
