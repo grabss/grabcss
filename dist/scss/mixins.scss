@@ -1,5 +1,5 @@
-@use './mediaquery' as mediaquery;
-@use './variables' as variables;
+@use "./mediaquery" as mediaquery;
+@use "./variables" as variables;
 
 @mixin generate-classes($map, $prefix, $property) {
   @each $key, $value in $map {

@@ -1,118 +1,118 @@
-@use './mediaquery' as mediaquery;
-@use './mixins' as mixins;
-@use './variables' as variables;
-@use 'sass:list';
+@use "./mediaquery" as mediaquery;
+@use "./mixins" as mixins;
+@use "./variables" as variables;
+@use "sass:list";
 
 // Define utility configurations for cleaner generation
 $utility-configs: (
-  'text': (
+  "text": (
     variables.$colors,
-    'color'
+    "color",
   ),
-  'bg': (
+  "bg": (
     variables.$colors,
-    'background-color'
+    "background-color",
   ),
-  'fs': (
+  "fs": (
     variables.$font-sizes,
-    'font-size'
+    "font-size",
   ),
-  'fw': (
+  "fw": (
     variables.$font-weights,
-    'font-weight'
+    "font-weight",
   ),
-  'text-align': (
+  "text-align": (
     variables.$text-directions,
-    'text-align'
+    "text-align",
   ),
-  'lh': (
+  "lh": (
     variables.$line-heights,
-    'line-height'
+    "line-height",
   ),
-  'v': (
+  "v": (
     variables.$visibilities,
-    'visibility'
+    "visibility",
   ),
-  'd': (
+  "d": (
     variables.$displays,
-    'display'
+    "display",
   ),
-  'ps': (
+  "ps": (
     variables.$positions,
-    'position'
+    "position",
   ),
-  'g': (
+  "g": (
     variables.$spaces,
-    'gap'
+    "gap",
   ),
-  'rg': (
+  "rg": (
     variables.$spaces,
-    'row-gap'
+    "row-gap",
   ),
-  'cg': (
+  "cg": (
     variables.$spaces,
-    'column-gap'
+    "column-gap",
   ),
-  'w': (
+  "w": (
     variables.$sizes,
-    'width'
+    "width",
   ),
-  'h': (
+  "h": (
     variables.$sizes,
-    'height'
+    "height",
   ),
-  'ws': (
+  "ws": (
     variables.$white-spaces,
-    'white-space'
+    "white-space",
   ),
-  'wb': (
+  "wb": (
     variables.$word-breaks,
-    'word-break'
+    "word-break",
   ),
-  'flex-direction': (
+  "flex-direction": (
     variables.$flex-directions,
-    'flex-direction'
+    "flex-direction",
   ),
-  'flex-wrap': (
+  "flex-wrap": (
     variables.$flex-wraps,
-    'flex-wrap'
+    "flex-wrap",
   ),
-  'justify-content': (
+  "justify-content": (
     variables.$justify-content-positions,
-    'justify-content'
+    "justify-content",
   ),
-  'align-items': (
+  "align-items": (
     variables.$align-items-positions,
-    'align-items'
+    "align-items",
   ),
-  'grid-template-cols': (
+  "grid-template-cols": (
     variables.$grid-template-columns,
-    'grid-template-columns'
+    "grid-template-columns",
   ),
-  'grid-template-rows': (
+  "grid-template-rows": (
     variables.$grid-template-rows,
-    'grid-template-rows'
+    "grid-template-rows",
   ),
-  'grid-col': (
+  "grid-col": (
     variables.$grid-columns,
-    'grid-column'
+    "grid-column",
   ),
-  'grid-row': (
+  "grid-row": (
     variables.$grid-rows,
-    'grid-row'
+    "grid-row",
   ),
-  'place-content': (
+  "place-content": (
     variables.$place-content,
-    'place-content'
+    "place-content",
   ),
-  'place-items': (
+  "place-items": (
     variables.$place-items,
-    'place-items'
+    "place-items",
   ),
-  'place-self': (
+  "place-self": (
     variables.$place-self,
-    'place-self'
-  )
+    "place-self",
+  ),
 );
 
 // Generate base utilities
@@ -125,8 +125,8 @@ $utility-configs: (
 }
 
 // Generate spacing utilities (margin & padding)
-@include mixins.generate-space-classes('m', 'margin');
-@include mixins.generate-space-classes('p', 'padding');
+@include mixins.generate-space-classes("m", "margin");
+@include mixins.generate-space-classes("p", "padding");
 
 // Fixed utilities
 .flex-1 {
@@ -147,8 +147,8 @@ $utility-configs: (
 }
 
 // Generate breakpoint spacing utilities
-@include mixins.generate-breakpoint-space-classes('m', 'margin');
-@include mixins.generate-breakpoint-space-classes('p', 'padding');
+@include mixins.generate-breakpoint-space-classes("m", "margin");
+@include mixins.generate-breakpoint-space-classes("p", "padding");
 
 // Breakpoint fixed utilities
 @each $breakpoint, $_ in mediaquery.$breakpoints {

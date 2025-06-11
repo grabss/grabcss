@@ -1,4 +1,4 @@
-@use './variables' as variables;
+@use "./variables" as variables;
 
 :root {
   @each $name, $value in variables.$define-colors {
