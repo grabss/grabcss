@@ -4,7 +4,7 @@ import copy from "rollup-plugin-copy";
 
 export default defineConfig({
   build: {
-    outDir: "../dist",
+    outDir: "./dist",
     emptyOutDir: true,
     rollupOptions: {
       input: {
@@ -18,7 +18,7 @@ export default defineConfig({
           targets: [
             {
               src: "src/styles/*.scss",
-              dest: "../dist/scss",
+              dest: "./dist/scss",
             },
           ],
           hook: "writeBundle",
