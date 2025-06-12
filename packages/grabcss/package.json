@@ -1,0 +1,42 @@
+{
+  "name": "grabcss",
+  "version": "0.3.0",
+  "description": "A minimal, utility-first CSS framework for rapid UI development.",
+  "license": "MIT",
+  "author": "grabss Inc.",
+  "homepage": "https://grabss.co.jp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grabss/grabcss.git"
+  },
+  "keywords": [
+    "css",
+    "postcss",
+    "css-framework",
+    "utility-first",
+    "minimal"
+  ],
+  "main": "dist/grab.css",
+  "style": "dist/grab.css",
+  "exports": {
+    ".": "./dist/grab.css",
+    "./scss/*": "./src/*"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.6",
+    "rollup-plugin-copy": "^3.5.0",
+    "sass-embedded": "^1.80.1",
+    "the-new-css-reset": "^1.11.3",
+    "typescript": "^5.5.3",
+    "vite": "^6.3.5"
+  },
+  "packageManager": "pnpm@10.12.1"
+}

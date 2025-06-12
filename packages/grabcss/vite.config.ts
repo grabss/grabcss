@@ -4,11 +4,11 @@ import copy from 'rollup-plugin-copy'
 
 export default defineConfig({
   build: {
-    outDir: '../dist',
+    outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        grab: path.resolve(__dirname, 'src/styles/main.scss')
+        grab: path.resolve(__dirname, 'src/main.scss')
       },
       output: {
         assetFileNames: '[name].[ext]'
@@ -17,8 +17,8 @@ export default defineConfig({
         copy({
           targets: [
             {
-              src: 'src/styles/*.scss',
-              dest: '../dist/scss'
+              src: 'src/*.scss',
+              dest: 'dist/scss'
             }
           ],
           hook: 'writeBundle'
@@ -33,9 +33,5 @@ export default defineConfig({
       }
     }
   },
-  publicDir: false,
-  server: {
-    host: '0.0.0.0',
-    port: 3000
-  }
+  publicDir: false
 })

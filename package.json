@@ -1,7 +1,8 @@
 {
-  "name": "grabcss",
+  "name": "@grabcss/monorepo",
   "version": "0.3.0",
-  "description": "A minimal, utility-first CSS framework for rapid UI development.",
+  "description": "Monorepo for grabcss - A minimal, utility-first CSS framework",
+  "private": true,
   "license": "MIT",
   "author": "grabss Inc.",
   "homepage": "https://grabss.co.jp",
@@ -9,20 +10,19 @@
     "type": "git",
     "url": "https://github.com/grabss/grabcss.git"
   },
-  "keywords": [
-    "css",
-    "postcss",
-    "css-framework",
-    "utility-first",
-    "minimal"
-  ],
-  "style": "dist/grab.css",
-  "exports": {
-    ".": "./dist",
-    "./scss/*": "./dist/scss/*"
+  "scripts": {
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write .",
+    "dev": "pnpm -C playground dev",
+    "build": "pnpm -C packages/grabcss build"
   },
-  "files": [
-    "dist"
-  ],
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@types/eslint": "^9.6.1",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "typescript-eslint": "^8.9.0"
+  },
   "packageManager": "pnpm@10.12.1"
 }

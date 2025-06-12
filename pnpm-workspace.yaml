@@ -1,4 +1,5 @@
 packages:
-  - dev
+  - packages/*
+  - playground
 onlyBuiltDependencies:
   - esbuild
