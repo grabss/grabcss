@@ -161,8 +161,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <div class="text-align-right p-sm" style="border: 1px solid var(--color-border);">Right aligned</div>
         </div>
         <div>
-          <div class="ws-nowrap p-sm" style="border: 1px solid var(--color-border); width: 100px;">No wrap text overflow example</div>
-          <div class="wb-break-all p-sm" style="border: 1px solid var(--color-border); width: 100px;">BreakAllTextExample</div>
+          <div class="ws-nowrap p-sm" style="border: 1px solid var(--color-border); overflow: hidden; text-overflow: ellipsis;" title="This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling">This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling</div>
+          <div class="wb-break-all p-sm" style="border: 1px solid var(--color-border);">This is a demonstration of the word-break all utility class that allows text to break at any character position when the content exceeds the container width</div>
         </div>
         <div>
           <div class="lh-xs p-sm" style="border: 1px solid var(--color-border);">Line height extra small (1.2)</div>
@@ -180,18 +180,56 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
       <div class="d-grid grid-template-cols-2 g-md">
         <div class="p-md" style="border: 1px solid var(--color-border); background: var(--color-background);">
-          <h3 class="text-heading">Dynamic Colors</h3>
-          <p class="text-body">This content uses CSS variables that change with the theme.</p>
-          <div class="bg-primary text-background p-sm m-sm">Primary background</div>
-          <div class="bg-secondary text-background p-sm m-sm">Secondary background</div>
+          <h3 class="text-heading mt-sm mb-sm">Dynamic Colors</h3>
+          <p class="text-body mb-sm">All color utilities use CSS variables that adapt to theme changes.</p>
+          
+          <h4 class="fs-md fw-bold text-heading mb-xs">Text Colors</h4>
+          <div class="mb-sm">
+            <div class="text-primary">Primary text color</div>
+            <div class="text-secondary">Secondary text color</div>
+            <div class="text-heading">Heading text color</div>
+            <div class="text-body">Body text color</div>
+            <div class="text-link">Link text color</div>
+            <div class="text-muted">Muted text color</div>
+            <div class="text-warning">Warning text color</div>
+            <div class="text-danger">Danger text color</div>
+          </div>
+
+          <h4 class="fs-md fw-bold text-heading mb-xs">Background Colors</h4>
+          <div class="d-grid grid-template-cols-2 g-xs">
+            <div class="bg-primary text-background p-xs text-center">Primary</div>
+            <div class="bg-secondary text-background p-xs text-center">Secondary</div>
+            <div class="bg-background text-body p-xs text-center" style="border: 1px solid var(--color-border);">Background</div>
+            <div class="bg-link text-background p-xs text-center">Link</div>
+            <div class="bg-muted text-background p-xs text-center">Muted</div>
+            <div class="bg-warning p-xs text-center">Warning</div>
+            <div class="bg-danger text-background p-xs text-center">Danger</div>
+            <div class="bg-border p-xs text-center">Border</div>
+          </div>
         </div>
+        
         <div class="p-md" style="border: 1px solid var(--color-border);">
-          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Variable Values</h3>
-          <div class="fs-sm">
-            <div>--color-primary: <span style="color: var(--color-primary);">●</span></div>
-            <div>--color-secondary: <span style="color: var(--color-secondary);">●</span></div>
-            <div>--color-background: <span style="background: var(--color-background); border: 1px solid var(--color-border);">&nbsp;&nbsp;&nbsp;</span></div>
-            <div>--color-border: <span style="color: var(--color-border);">●</span></div>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">CSS Variable Values</h3>
+          
+          <h4 class="fs-md fw-bold text-heading mb-xs">Color Variables</h4>
+          <div class="fs-sm mb-md">
+            <div class="mb-xs">--color-primary: <span style="color: var(--color-primary); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-primary)</code></div>
+            <div class="mb-xs">--color-secondary: <span style="color: var(--color-secondary); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-secondary)</code></div>
+            <div class="mb-xs">--color-background: <span style="background: var(--color-background); border: 1px solid var(--color-border); display: inline-block; width: 16px; height: 16px; vertical-align: middle;"></span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-background)</code></div>
+            <div class="mb-xs">--color-border: <span style="color: var(--color-border); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-border)</code></div>
+            <div class="mb-xs">--color-heading: <span style="color: var(--color-heading); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-heading)</code></div>
+            <div class="mb-xs">--color-body: <span style="color: var(--color-body); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-body)</code></div>
+            <div class="mb-xs">--color-link: <span style="color: var(--color-link); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-link)</code></div>
+            <div class="mb-xs">--color-muted: <span style="color: var(--color-muted); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-muted)</code></div>
+            <div class="mb-xs">--color-warning: <span style="color: var(--color-warning); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-warning)</code></div>
+            <div class="mb-xs">--color-danger: <span style="color: var(--color-danger); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-danger)</code></div>
+          </div>
+
+          <h4 class="fs-md fw-bold text-heading mb-xs">Usage Examples</h4>
+          <div class="fs-xs">
+            <div class="mb-xs"><code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">color: var(--color-primary)</code></div>
+            <div class="mb-xs"><code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">background: var(--color-background)</code></div>
+            <div class="mb-xs"><code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">border: 1px solid var(--color-border)</code></div>
           </div>
         </div>
       </div>
