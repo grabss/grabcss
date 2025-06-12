@@ -30,9 +30,6 @@ npm install grabcss
 ### Import Pre-built CSS
 
 ```js
-import "grabcss";
-
-// Or import CSS file directly
 import "grabcss/grab.css";
 ```
 
@@ -60,7 +57,7 @@ import "grabcss/grab.css";
   )
 );
 
-@use "grabcss/scss/core";
+@use "grabcss/scss/main";
 ```
 
 ## Utility Classes

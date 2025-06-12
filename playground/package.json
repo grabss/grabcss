@@ -1,0 +1,19 @@
+{
+  "name": "grabcss-playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.6",
+    "grabcss": "workspace:*",
+    "sass-embedded": "^1.80.1",
+    "the-new-css-reset": "^1.11.3",
+    "typescript": "^5.5.3",
+    "vite": "^6.3.5"
+  },
+  "packageManager": "pnpm@10.12.1"
+}
