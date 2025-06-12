@@ -7,7 +7,9 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "dev": "pnpm -C playground dev",
-    "build": "pnpm -C packages/grabcss build"
+    "build": "pnpm -C packages/grabcss build",
+    "build:playground": "pnpm -C packages/grabcss build && pnpm -C playground build",
+    "preview:playground": "pnpm -C playground preview"
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
