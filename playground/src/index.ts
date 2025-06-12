@@ -10,7 +10,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <h1 class="fs-lg fw-bold text-primary">grabcss</h1>
           <span class="bg-primary text-background fs-xs" style="border-radius: 12px; padding: 2px 6px; font-size: 10px;">v${__GRABCSS_VERSION__}</span>
         </div>
-        <div class="d-flex g-sm">
+        <div class="d-flex align-items-center g-sm">
+          <div style="position: relative; display: inline-block;">
+            <input type="checkbox" id="theme-toggle" style="opacity: 0; width: 0; height: 0;">
+            <label for="theme-toggle" style="position: relative; display: inline-block; width: 40px; height: 20px; background-color: var(--color-border); border-radius: 20px; cursor: pointer; transition: background-color 0.3s;">
+              <span style="position: absolute; content: ''; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: var(--color-background); border-radius: 50%; transition: transform 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
+            </label>
+          </div>
           <a href="https://github.com/grabss/grabcss" target="_blank" rel="noopener noreferrer" title="GitHub">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--color-body)">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -40,7 +46,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Typography Section -->
     <section class="m-xl">
-      <h2 id="typography" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#typography" class="text-heading" style="text-decoration: none;"># Typography</a></h2>
+      <h2 id="typography" class="fs-2xl fw-bold text-heading"><a href="#typography" class="text-heading" style="text-decoration: none;"># Typography</a></h2>
       <div class="d-grid grid-template-cols-2 g-md">
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Font Sizes</h3>
@@ -70,7 +76,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Layout Section -->
     <section class="m-xl">
-      <h2 id="layout-display" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#layout-display" class="text-heading" style="text-decoration: none;"># Layout & Display</a></h2>
+      <h2 id="layout-display" class="fs-2xl fw-bold text-heading"><a href="#layout-display" class="text-heading" style="text-decoration: none;"># Layout & Display</a></h2>
 
       <!-- Flexbox Demo -->
       <div>
@@ -102,7 +108,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Spacing Section -->
     <section class="m-xl">
-      <h2 id="spacing" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#spacing" class="text-heading" style="text-decoration: none;"># Spacing</a></h2>
+      <h2 id="spacing" class="fs-2xl fw-bold text-heading"><a href="#spacing" class="text-heading" style="text-decoration: none;"># Spacing</a></h2>
       <div class="d-grid grid-template-cols-2 g-lg">
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Margins</h3>
@@ -125,7 +131,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Position & Size Section -->
     <section class="m-xl">
-      <h2 id="positioning-sizing" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#positioning-sizing" class="text-heading" style="text-decoration: none;"># Positioning & Sizing</a></h2>
+      <h2 id="positioning-sizing" class="fs-2xl fw-bold text-heading"><a href="#positioning-sizing" class="text-heading" style="text-decoration: none;"># Positioning & Sizing</a></h2>
       <div class="ps-relative h-100" style="height: 200px; border: 1px solid var(--color-border);">
         <div class="ps-absolute bg-primary text-background p-sm" style="top: 10px; left: 10px;">Absolute Top-Left</div>
         <div class="ps-absolute bg-secondary text-background p-sm" style="bottom: 10px; right: 10px;">Absolute Bottom-Right</div>
@@ -137,7 +143,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Responsive Utilities Preview -->
     <section class="m-xl">
-      <h2 id="responsive-design" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#responsive-design" class="text-heading" style="text-decoration: none;"># Responsive Design</a></h2>
+      <h2 id="responsive-design" class="fs-2xl fw-bold text-heading"><a href="#responsive-design" class="text-heading" style="text-decoration: none;"># Responsive Design</a></h2>
       <p class="text-muted my-sm">Resize your browser to see responsive behavior</p>
       <div class="d-flex flex-direction-column sm:flex-direction-row g-md">
         <div class="bg-primary text-background p-md flex-1">
@@ -153,7 +159,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Text Utilities -->
     <section class="m-xl">
-      <h2 id="text-utilities" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#text-utilities" class="text-heading" style="text-decoration: none;"># Text Utilities</a></h2>
+      <h2 id="text-utilities" class="fs-2xl fw-bold text-heading"><a href="#text-utilities" class="text-heading" style="text-decoration: none;"># Text Utilities</a></h2>
       <div class="d-grid grid-template-cols-3 g-md">
         <div>
           <div class="text-align-left p-sm" style="border: 1px solid var(--color-border);">Left aligned</div>
@@ -173,16 +179,15 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- CSS Variables & Theme Demo -->
     <section class="m-xl">
-      <h2 id="css-variables-theming" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#css-variables-theming" class="text-heading" style="text-decoration: none;"># CSS Variables & Theming</a></h2>
+      <h2 id="css-variables-theming" class="fs-2xl fw-bold text-heading"><a href="#css-variables-theming" class="text-heading" style="text-decoration: none;"># CSS Variables & Theming</a></h2>
       <div class="my-md">
-        <button id="themeToggle" class="bg-primary text-background p-md">Toggle Dark Theme</button>
-        <p class="text-muted m-sm">Click to see CSS custom properties in action</p>
+        <p class="text-muted m-sm">Use the theme toggle in the header to see CSS custom properties in action</p>
       </div>
       <div class="d-grid grid-template-cols-2 g-md">
         <div class="p-md" style="border: 1px solid var(--color-border); background: var(--color-background);">
           <h3 class="text-heading mt-sm mb-sm">Dynamic Colors</h3>
           <p class="text-body mb-sm">All color utilities use CSS variables that adapt to theme changes.</p>
-          
+
           <h4 class="fs-md fw-bold text-heading mb-xs">Text Colors</h4>
           <div class="mb-sm">
             <div class="text-primary">Primary text color</div>
@@ -207,10 +212,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <div class="bg-border p-xs text-center">Border</div>
           </div>
         </div>
-        
+
         <div class="p-md" style="border: 1px solid var(--color-border);">
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">CSS Variable Values</h3>
-          
+
           <h4 class="fs-md fw-bold text-heading mb-xs">Color Variables</h4>
           <div class="fs-sm mb-md">
             <div class="mb-xs">--color-primary: <span style="color: var(--color-primary); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-primary)</code></div>
@@ -244,12 +249,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 // Theme toggle functionality
-const themeToggle = document.getElementById('themeToggle') as HTMLButtonElement
+const themeToggle = document.getElementById('theme-toggle') as HTMLInputElement
 let isDark = false
 
-themeToggle?.addEventListener('click', () => {
-  isDark = !isDark
+themeToggle?.addEventListener('change', () => {
+  isDark = themeToggle.checked
   const root = document.documentElement
+  const slider = themeToggle.nextElementSibling?.querySelector(
+    'span'
+  ) as HTMLElement
+  const label = themeToggle.nextElementSibling as HTMLElement
 
   if (isDark) {
     // Dark theme
@@ -260,8 +269,10 @@ themeToggle?.addEventListener('click', () => {
     root.style.setProperty('--color-heading', '#f3f4f6')
     root.style.setProperty('--color-body', '#e5e7eb')
     root.style.setProperty('--color-muted', '#9ca3af')
-    themeToggle.textContent = 'Toggle Light Theme'
     document.body.style.backgroundColor = 'var(--color-background)'
+    // Update toggle appearance
+    if (slider) slider.style.transform = 'translateX(20px)'
+    if (label) label.style.backgroundColor = '#4ade80'
   } else {
     // Light theme (reset to defaults)
     root.style.setProperty('--color-primary', '#00a596')
@@ -271,7 +282,9 @@ themeToggle?.addEventListener('click', () => {
     root.style.setProperty('--color-heading', '#00a596')
     root.style.setProperty('--color-body', '#000000')
     root.style.setProperty('--color-muted', '#787878')
-    themeToggle.textContent = 'Toggle Dark Theme'
     document.body.style.backgroundColor = 'var(--color-background)'
+    // Update toggle appearance
+    if (slider) slider.style.transform = 'translateX(0px)'
+    if (label) label.style.backgroundColor = 'var(--color-border)'
   }
 })
