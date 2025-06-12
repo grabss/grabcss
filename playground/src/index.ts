@@ -14,7 +14,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <h2 class="fs-2xl fw-bold text-heading m-md">Typography</h2>
       <div class="d-grid grid-template-cols-2 g-md">
         <div>
-          <h3 class="fs-lg fw-bold m-sm">Font Sizes</h3>
+          <h3 class="fs-lg fw-bold text-heading m-sm">Font Sizes</h3>
           <div class="fs-xs">fs-xs: Extra Small Text (12px)</div>
           <div class="fs-sm">fs-sm: Small Text (14px)</div>
           <div class="fs-md">fs-md: Medium Text (16px)</div>
@@ -26,7 +26,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <div class="fs-5xl">fs-5xl: 5X Large (40px)</div>
         </div>
         <div>
-          <h3 class="fs-lg fw-bold m-sm">Colors & Weights</h3>
+          <h3 class="fs-lg fw-bold text-heading m-sm">Colors & Weights</h3>
           <div class="text-primary fw-normal">Primary Color (Normal)</div>
           <div class="text-secondary fw-bold">Secondary Color (Bold)</div>
           <div class="text-heading">Heading Color</div>
@@ -45,7 +45,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
       <!-- Flexbox Demo -->
       <div class="m-lg">
-        <h3 class="fs-lg fw-bold m-sm">Flexbox</h3>
+        <h3 class="fs-lg fw-bold text-heading m-sm">Flexbox</h3>
         <div class="d-flex justify-content-space-between align-items-center bg-background p-md" style="border: 1px solid var(--color-border);">
           <div class="bg-primary text-background p-sm">Item 1</div>
           <div class="bg-secondary text-background p-sm">Item 2</div>
@@ -60,7 +60,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
       <!-- Grid Demo -->
       <div class="m-lg">
-        <h3 class="fs-lg fw-bold m-sm">CSS Grid</h3>
+        <h3 class="fs-lg fw-bold text-heading m-sm">CSS Grid</h3>
         <div class="d-grid grid-template-cols-3 g-sm">
           <div class="bg-primary text-background p-md text-center">Grid 1</div>
           <div class="bg-secondary text-background p-md text-center">Grid 2</div>
@@ -76,7 +76,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <h2 class="fs-2xl fw-bold text-heading m-md">Spacing</h2>
       <div class="d-grid grid-template-cols-2 g-lg">
         <div>
-          <h3 class="fs-lg fw-bold m-sm">Margins</h3>
+          <h3 class="fs-lg fw-bold text-heading m-sm">Margins</h3>
           <div class="bg-border p-sm">
             <div class="bg-primary text-background p-sm m-2xs">m-2xs (5px)</div>
             <div class="bg-primary text-background p-sm m-xs">m-xs (10px)</div>
@@ -85,7 +85,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           </div>
         </div>
         <div>
-          <h3 class="fs-lg fw-bold m-sm">Paddings</h3>
+          <h3 class="fs-lg fw-bold text-heading m-sm">Paddings</h3>
           <div class="bg-primary text-background p-2xs m-sm">p-2xs (5px)</div>
           <div class="bg-secondary text-background p-xs m-sm">p-xs (10px)</div>
           <div class="bg-warning p-sm m-sm">p-sm (15px)</div>
@@ -157,7 +157,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <div class="bg-secondary text-background p-sm m-sm">Secondary background</div>
         </div>
         <div class="p-md" style="border: 1px solid var(--color-border);">
-          <h3 class="fs-lg fw-bold">Variable Values</h3>
+          <h3 class="fs-lg fw-bold text-heading">Variable Values</h3>
           <div class="fs-sm">
             <div>--color-primary: <span style="color: var(--color-primary);">●</span></div>
             <div>--color-secondary: <span style="color: var(--color-secondary);">●</span></div>
