@@ -1,66 +1,53 @@
 # Contributing to grabcss
 
-Thank you for considering contributing to the **grabcss** project! We appreciate your help and support.
+## Development Setup
 
-## Code of Conduct
+```bash
+# Clone and install dependencies
+git clone https://github.com/grabss/grabcss.git
+cd grabcss
+pnpm install
 
-### Purpose
+# Start development
+pnpm dev        # Start playground
+pnpm build      # Build CSS framework
+```
 
-We are committed to providing a friendly, safe, and inclusive environment for all contributors, regardless of their background or experience level. This Code of Conduct outlines our expectations for participant behavior and the consequences for unacceptable behavior.
+## Project Structure
 
-### Expected Behavior
+- `packages/grabcss/` - Main package (SCSS source, build config)
+- `playground/` - Development environment
+- Root - Shared tooling (ESLint, Prettier)
 
-- **Be Respectful**: Treat everyone with respect, kindness, and empathy. Be mindful of your language and tone.
-- **Be Inclusive**: Welcome and encourage contributions from all individuals. Celebrate diversity and strive for inclusiveness.
-- **Constructive Feedback**: Provide constructive criticism and offer help when needed. Be open to feedback and improvement.
-- **Professionalism**: Keep communication professional and focused on the project. Personal attacks, harassment, or discriminatory remarks will not be tolerated.
+## Making Changes
 
-### Unacceptable Behavior
+### SCSS Utilities
+Edit files in `packages/grabcss/src/`:
+- `variables.scss` - Colors, spacing, breakpoints
+- `utilities.scss` - Utility class generation
+- `mixins.scss` - Reusable SCSS mixins
 
-Examples of unacceptable behavior include, but are not limited to:
+### Testing Changes
+```bash
+pnpm dev        # Test in playground
+pnpm build      # Build for production
+```
 
-- Harassment, intimidation, or discrimination in any form.
-- Offensive comments related to gender, sexual orientation, disability, physical appearance, race, or religion.
-- Disruptive behavior that interferes with the contributions of others.
-- Trolling, stalking, or deliberately provoking others.
+## Code Standards
 
-### Reporting Issues
+- Follow existing SCSS patterns
+- Use existing design tokens
+- Test in playground before submitting
+- Run `pnpm lint` before committing
 
-To report an issue, please follow these steps:
+## Submitting Changes
 
-1. Check if the issue has already been reported.
-2. If not, create a new issue in the [issues section](https://github.com/grabss/grabcss/issues).
-3. Provide as much detail as possible, including steps to reproduce the issue.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-By following these guidelines, you help ensure that issues are documented clearly and efficiently, allowing the community to address them when possible.
+## Issues
 
-### Submitting Pull Requests
-
-To submit a pull request, please adhere to the following process:
-
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes and commit them with clear, descriptive messages.
-4. Push your changes to your forked repository.
-5. Open a pull request against the main repository.
-
-### Coding Standards and Best Practices
-
-When contributing code, please follow these coding standards and best practices:
-
-- Use descriptive variable and function names.
-- Write comments where necessary to explain complex logic.
-- Ensure your code is tested before submitting.
-
-### How to Contribute
-
-If you're interested in contributing to this project, follow these steps:
-
-1. **Comment or Open a Pull Request**: If you want to work on an issue or task, simply comment on the issue or submit a pull request with your proposed changes.
-2. **Collaborate with the Community**: Engage with other contributors by reviewing pull requests, offering feedback, or helping to resolve issues.
-
-Your contributions are greatly appreciated!
-
-## Acknowledgment
-
-By participating in this project, you agree to abide by this Code of Conduct. We appreciate your cooperation in making our community welcoming and inclusive.
+Report bugs or request features in [GitHub Issues](https://github.com/grabss/grabcss/issues).
