@@ -7,26 +7,30 @@ export function createTypographySection(): string {
       <div class="d-grid grid-template-cols-2 g-md">
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Font Sizes</h3>
-          <div class="fs-xs">fs-xs: Extra Small Text (12px)</div>
-          <div class="fs-sm">fs-sm: Small Text (14px)</div>
-          <div class="fs-md">fs-md: Medium Text (16px)</div>
-          <div class="fs-lg">fs-lg: Large Text (18px)</div>
-          <div class="fs-xl">fs-xl: Extra Large (20px)</div>
-          <div class="fs-2xl">fs-2xl: 2X Large (22px)</div>
-          <div class="fs-3xl">fs-3xl: 3X Large (24px)</div>
-          <div class="fs-4xl">fs-4xl: 4X Large (36px)</div>
-          <div class="fs-5xl">fs-5xl: 5X Large (40px)</div>
+          <div class="lh-sm">
+            <div class="fs-xs">fs-xs: Extra Small Text (12px)</div>
+            <div class="fs-sm">fs-sm: Small Text (14px)</div>
+            <div class="fs-md">fs-md: Medium Text (16px)</div>
+            <div class="fs-lg">fs-lg: Large Text (18px)</div>
+            <div class="fs-xl">fs-xl: Extra Large (20px)</div>
+            <div class="fs-2xl">fs-2xl: 2X Large (22px)</div>
+            <div class="fs-3xl">fs-3xl: 3X Large (24px)</div>
+            <div class="fs-4xl">fs-4xl: 4X Large (36px)</div>
+            <div class="fs-5xl">fs-5xl: 5X Large (40px)</div>
+          </div>
         </div>
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Colors & Weights</h3>
-          <div class="text-primary fw-normal">Primary Color (Normal)</div>
-          <div class="text-secondary fw-bold">Secondary Color (Bold)</div>
-          <div class="text-heading">Heading Color</div>
-          <div class="text-body">Body Color</div>
-          <div class="text-link">Link Color</div>
-          <div class="text-muted">Muted Color</div>
-          <div class="text-warning">Warning Color</div>
-          <div class="text-danger">Danger Color</div>
+          <div class="lh-sm">
+            <div class="text-primary fw-normal">Primary Color (Normal)</div>
+            <div class="text-secondary fw-bold">Secondary Color (Bold)</div>
+            <div class="text-heading">Heading Color</div>
+            <div class="text-body">Body Color</div>
+            <div class="text-link">Link Color</div>
+            <div class="text-muted">Muted Color</div>
+            <div class="text-warning">Warning Color</div>
+            <div class="text-danger">Danger Color</div>
+          </div>
         </div>
       </div>
     </section>
@@ -96,7 +100,7 @@ export function createPositioningSizingSection(): string {
   return `
     <section class="m-xl">
       ${createSectionHeader('positioning-sizing', 'Positioning & Sizing')}
-      <div class="ps-relative h-100" style="height: 200px; border: 1px solid var(--color-border);">
+      <div class="ps-relative h-100 mt-sm" style="height: 200px; border: 1px solid var(--color-border);">
         <div class="ps-absolute bg-primary text-background p-sm" style="top: 10px; left: 10px;">Absolute Top-Left</div>
         <div class="ps-absolute bg-secondary text-background p-sm" style="bottom: 10px; right: 10px;">Absolute Bottom-Right</div>
         <div class="d-flex justify-content-center align-items-center h-100">
@@ -130,7 +134,7 @@ export function createTextUtilitiesSection(): string {
   return `
     <section class="m-xl">
       ${createSectionHeader('text-utilities', 'Text Utilities')}
-      <div class="d-grid grid-template-cols-3 g-md">
+      <div class="mt-sm d-grid grid-template-cols-3 g-md">
         <div>
           <div class="text-align-left p-sm" style="border: 1px solid var(--color-border);">Left aligned</div>
           <div class="text-align-center p-sm" style="border: 1px solid var(--color-border);">Center aligned</div>
@@ -162,7 +166,7 @@ export function createCSSVariablesSection(): string {
           <p class="text-body mb-sm">All color utilities use CSS variables that adapt to theme changes.</p>
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Text Colors</h4>
-          <div class="mb-sm">
+          <div class="mb-sm lh-sm">
             <div class="text-primary">Primary text color</div>
             <div class="text-secondary">Secondary text color</div>
             <div class="text-heading">Heading text color</div>
