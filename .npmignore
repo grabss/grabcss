@@ -1,8 +1,0 @@
-.github
-.vscode
-.yarn
-dev
-node_modules
-.gitignore
-yarn.lock
-pnpm-lock.yaml
