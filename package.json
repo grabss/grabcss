@@ -1,15 +1,8 @@
 {
   "name": "@grabcss/monorepo",
-  "version": "0.3.0",
-  "description": "Monorepo for grabcss - A minimal, utility-first CSS framework",
-  "private": true,
   "license": "MIT",
   "author": "grabss Inc.",
-  "homepage": "https://grabss.co.jp",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/grabss/grabcss.git"
-  },
+  "private": true,
   "scripts": {
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
