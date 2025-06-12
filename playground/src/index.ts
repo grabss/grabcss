@@ -7,6 +7,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <header class="m-md">
       <h1 class="fs-4xl fw-bold text-primary text-center">grabcss Playground</h1>
       <p class="fs-lg text-center text-muted m-sm">Utility-first CSS framework demonstration</p>
+      <div class="text-center">
+        <span class="bg-primary text-background p-xs fs-sm">v${__GRABCSS_VERSION__}</span>
+      </div>
     </header>
 
     <!-- Typography Section -->
@@ -170,7 +173,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Footer -->
     <footer class="text-center text-muted p-xl">
-      <p>Built with grabcss - A minimal utility-first CSS framework</p>
+      <p>Built with <strong>grabcss v${__GRABCSS_VERSION__}</strong></p>
+      <p class="fs-sm">A minimal utility-first CSS framework</p>
     </footer>
   </div>
 `
