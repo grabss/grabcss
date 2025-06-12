@@ -19,7 +19,7 @@
   "main": "dist/grab.css",
   "style": "dist/grab.css",
   "exports": {
-    ".": "./dist/grab.css",
+    "./grab.css": "./dist/grab.css",
     "./scss/*": "./src/*"
   },
   "files": [
