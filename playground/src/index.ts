@@ -2,22 +2,48 @@ import 'grabcss/scss/main.scss'
 import 'the-new-css-reset/css/reset.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div class="p-lg">
-    <!-- Header -->
-    <header class="m-md">
-      <h1 class="fs-4xl fw-bold text-primary text-center">grabcss Playground</h1>
-      <p class="fs-lg text-center text-muted m-sm">Utility-first CSS framework demonstration</p>
-      <div class="text-center">
-        <span class="bg-primary text-background p-xs fs-sm">v${__GRABCSS_VERSION__}</span>
+  <div>
+    <!-- Fixed Header -->
+    <header class="ps-fixed w-100" style="top: 0; left: 0; height: 60px; border-bottom: 1px solid var(--color-border); background: var(--color-background); z-index: 100; padding: 0 20px;">
+      <div class="d-flex justify-content-space-between align-items-center h-100">
+        <div class="d-flex align-items-center g-sm">
+          <h1 class="fs-lg fw-bold text-primary">grabcss</h1>
+          <span class="bg-primary text-background fs-xs" style="border-radius: 12px; padding: 2px 6px; font-size: 10px;">v${__GRABCSS_VERSION__}</span>
+        </div>
+        <div class="d-flex g-sm">
+          <a href="https://github.com/grabss/grabcss" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--color-body)">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://www.npmjs.com/package/grabcss" target="_blank" rel="noopener noreferrer" title="NPM">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--color-body)">
+              <path d="M0 7v10h6.67v1.34H12V17h12V7H0zm6.67 8.67H2V8.33h4.67v7.34zM12 15.67H8.67V8.33H12V15.67zm9.33 0H13.33V8.33h8v7.34z"/>
+              <rect x="3.33" y="9.67" width="1.34" height="4.67"/>
+              <rect x="9.33" y="9.67" width="1.34" height="4.67"/>
+              <rect x="14.67" y="9.67" width="1.34" height="4.67"/>
+              <rect x="16.33" y="9.67" width="1.34" height="4.67"/>
+              <rect x="18" y="9.67" width="1.34" height="4.67"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </header>
 
+    <!-- Content with top margin for fixed header -->
+    <div class="p-lg" style="margin-top: 60px;">
+      <!-- Page Title -->
+      <div class="text-center m-xl">
+        <h1 class="fs-4xl fw-bold text-primary">grabcss Playground</h1>
+        <p class="fs-lg text-muted m-sm">Utility-first CSS framework demonstration</p>
+      </div>
+
     <!-- Typography Section -->
     <section class="m-xl">
-      <h2 class="fs-2xl fw-bold text-heading m-md">Typography</h2>
+      <h2 id="typography" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#typography" class="text-heading" style="text-decoration: none;"># Typography</a></h2>
       <div class="d-grid grid-template-cols-2 g-md">
         <div>
-          <h3 class="fs-lg fw-bold text-heading m-sm">Font Sizes</h3>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Font Sizes</h3>
           <div class="fs-xs">fs-xs: Extra Small Text (12px)</div>
           <div class="fs-sm">fs-sm: Small Text (14px)</div>
           <div class="fs-md">fs-md: Medium Text (16px)</div>
@@ -29,7 +55,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <div class="fs-5xl">fs-5xl: 5X Large (40px)</div>
         </div>
         <div>
-          <h3 class="fs-lg fw-bold text-heading m-sm">Colors & Weights</h3>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Colors & Weights</h3>
           <div class="text-primary fw-normal">Primary Color (Normal)</div>
           <div class="text-secondary fw-bold">Secondary Color (Bold)</div>
           <div class="text-heading">Heading Color</div>
@@ -44,26 +70,26 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Layout Section -->
     <section class="m-xl">
-      <h2 class="fs-2xl fw-bold text-heading m-md">Layout & Display</h2>
+      <h2 id="layout-display" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#layout-display" class="text-heading" style="text-decoration: none;"># Layout & Display</a></h2>
 
       <!-- Flexbox Demo -->
-      <div class="m-lg">
-        <h3 class="fs-lg fw-bold text-heading m-sm">Flexbox</h3>
+      <div>
+        <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Flexbox</h3>
         <div class="d-flex justify-content-space-between align-items-center bg-background p-md" style="border: 1px solid var(--color-border);">
           <div class="bg-primary text-background p-sm">Item 1</div>
           <div class="bg-secondary text-background p-sm">Item 2</div>
           <div class="bg-warning p-sm">Item 3</div>
         </div>
 
-        <div class="d-flex flex-direction-column g-sm m-md">
+        <div class="d-flex flex-direction-column g-sm my-md">
           <div class="bg-link text-background p-sm">Column Item 1</div>
           <div class="bg-muted text-background p-sm">Column Item 2</div>
         </div>
       </div>
 
       <!-- Grid Demo -->
-      <div class="m-lg">
-        <h3 class="fs-lg fw-bold text-heading m-sm">CSS Grid</h3>
+      <div class="mt-lg">
+        <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">CSS Grid</h3>
         <div class="d-grid grid-template-cols-3 g-sm">
           <div class="bg-primary text-background p-md text-center">Grid 1</div>
           <div class="bg-secondary text-background p-md text-center">Grid 2</div>
@@ -76,10 +102,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Spacing Section -->
     <section class="m-xl">
-      <h2 class="fs-2xl fw-bold text-heading m-md">Spacing</h2>
+      <h2 id="spacing" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#spacing" class="text-heading" style="text-decoration: none;"># Spacing</a></h2>
       <div class="d-grid grid-template-cols-2 g-lg">
         <div>
-          <h3 class="fs-lg fw-bold text-heading m-sm">Margins</h3>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Margins</h3>
           <div class="bg-border p-sm">
             <div class="bg-primary text-background p-sm m-2xs">m-2xs (5px)</div>
             <div class="bg-primary text-background p-sm m-xs">m-xs (10px)</div>
@@ -88,18 +114,18 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           </div>
         </div>
         <div>
-          <h3 class="fs-lg fw-bold text-heading m-sm">Paddings</h3>
-          <div class="bg-primary text-background p-2xs m-sm">p-2xs (5px)</div>
-          <div class="bg-secondary text-background p-xs m-sm">p-xs (10px)</div>
-          <div class="bg-warning p-sm m-sm">p-sm (15px)</div>
-          <div class="bg-danger text-background p-md m-sm">p-md (20px)</div>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Paddings</h3>
+          <div class="bg-primary text-background p-2xs my-sm">p-2xs (5px)</div>
+          <div class="bg-secondary text-background p-xs my-sm">p-xs (10px)</div>
+          <div class="bg-warning p-sm my-sm">p-sm (15px)</div>
+          <div class="bg-danger text-background p-md my-sm">p-md (20px)</div>
         </div>
       </div>
     </section>
 
     <!-- Position & Size Section -->
     <section class="m-xl">
-      <h2 class="fs-2xl fw-bold text-heading m-md">Positioning & Sizing</h2>
+      <h2 id="positioning-sizing" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#positioning-sizing" class="text-heading" style="text-decoration: none;"># Positioning & Sizing</a></h2>
       <div class="ps-relative h-100" style="height: 200px; border: 1px solid var(--color-border);">
         <div class="ps-absolute bg-primary text-background p-sm" style="top: 10px; left: 10px;">Absolute Top-Left</div>
         <div class="ps-absolute bg-secondary text-background p-sm" style="bottom: 10px; right: 10px;">Absolute Bottom-Right</div>
@@ -111,8 +137,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Responsive Utilities Preview -->
     <section class="m-xl">
-      <h2 class="fs-2xl fw-bold text-heading m-md">Responsive Design</h2>
-      <p class="text-muted m-sm">Resize your browser to see responsive behavior</p>
+      <h2 id="responsive-design" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#responsive-design" class="text-heading" style="text-decoration: none;"># Responsive Design</a></h2>
+      <p class="text-muted my-sm">Resize your browser to see responsive behavior</p>
       <div class="d-flex flex-direction-column sm:flex-direction-row g-md">
         <div class="bg-primary text-background p-md flex-1">
           <p>Mobile: Column layout</p>
@@ -127,7 +153,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- Text Utilities -->
     <section class="m-xl">
-      <h2 class="fs-2xl fw-bold text-heading m-md">Text Utilities</h2>
+      <h2 id="text-utilities" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#text-utilities" class="text-heading" style="text-decoration: none;"># Text Utilities</a></h2>
       <div class="d-grid grid-template-cols-3 g-md">
         <div>
           <div class="text-align-left p-sm" style="border: 1px solid var(--color-border);">Left aligned</div>
@@ -147,12 +173,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <!-- CSS Variables & Theme Demo -->
     <section class="m-xl">
-      <h2 class="fs-2xl fw-bold text-heading m-md">CSS Variables & Theming</h2>
-      <div class="m-md">
+      <h2 id="css-variables-theming" class="fs-2xl fw-bold text-heading" style="padding-top: 80px; margin-top: -80px;"><a href="#css-variables-theming" class="text-heading" style="text-decoration: none;"># CSS Variables & Theming</a></h2>
+      <div class="my-md">
         <button id="themeToggle" class="bg-primary text-background p-md">Toggle Dark Theme</button>
         <p class="text-muted m-sm">Click to see CSS custom properties in action</p>
       </div>
-      <div class="d-grid grid-template-cols-2 g-md m-md">
+      <div class="d-grid grid-template-cols-2 g-md">
         <div class="p-md" style="border: 1px solid var(--color-border); background: var(--color-background);">
           <h3 class="text-heading">Dynamic Colors</h3>
           <p class="text-body">This content uses CSS variables that change with the theme.</p>
@@ -160,7 +186,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <div class="bg-secondary text-background p-sm m-sm">Secondary background</div>
         </div>
         <div class="p-md" style="border: 1px solid var(--color-border);">
-          <h3 class="fs-lg fw-bold text-heading">Variable Values</h3>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Variable Values</h3>
           <div class="fs-sm">
             <div>--color-primary: <span style="color: var(--color-primary);">●</span></div>
             <div>--color-secondary: <span style="color: var(--color-secondary);">●</span></div>
@@ -172,9 +198,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-muted p-xl">
+    <footer class="text-align-right text-muted p-xl">
       <p>Built with <strong>grabcss v${__GRABCSS_VERSION__}</strong></p>
-      <p class="fs-sm">A minimal utility-first CSS framework</p>
+      <p class="fs-sm">A minimal, utility-first CSS framework for rapid UI development</p>
     </footer>
   </div>
 `
