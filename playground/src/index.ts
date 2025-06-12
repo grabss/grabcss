@@ -1,4 +1,4 @@
-import './styles/main.scss'
+import 'grabcss/scss/main'
 import 'the-new-css-reset/css/reset.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
