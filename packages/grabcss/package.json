@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "@types/node": "^22.7.6",
-    "rollup-plugin-copy": "^3.5.0",
     "sass-embedded": "^1.80.1",
     "the-new-css-reset": "^1.11.3",
     "typescript": "^5.5.3",
