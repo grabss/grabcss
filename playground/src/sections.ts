@@ -115,7 +115,7 @@ export function createResponsiveSection(): string {
   return `
     <section class="m-xl">
       ${createSectionHeader('responsive-design', 'Responsive Design')}
-      <p class="text-muted my-sm">Resize your browser to see responsive behavior</p>
+      <p class="text-muted m-sm">Resize your browser to see responsive behavior</p>
       <div class="d-flex flex-direction-column sm:flex-direction-row g-md">
         <div class="bg-primary text-background p-md flex-1">
           <p>Mobile: Column layout</p>
