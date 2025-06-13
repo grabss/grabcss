@@ -8,7 +8,9 @@ export class ThemeManager {
   }
 
   private initializeThemeToggle(): void {
-    const themeToggle = document.getElementById('theme-toggle') as HTMLInputElement
+    const themeToggle = document.getElementById(
+      'theme-toggle'
+    ) as HTMLInputElement
     if (!themeToggle) return
 
     themeToggle.addEventListener('change', () => {
@@ -30,10 +32,14 @@ export class ThemeManager {
   }
 
   private updateToggleAppearance(): void {
-    const themeToggle = document.getElementById('theme-toggle') as HTMLInputElement
+    const themeToggle = document.getElementById(
+      'theme-toggle'
+    ) as HTMLInputElement
     if (!themeToggle) return
 
-    const slider = themeToggle.nextElementSibling?.querySelector('.theme-toggle__slider') as HTMLElement
+    const slider = themeToggle.nextElementSibling?.querySelector(
+      '.theme-toggle__slider'
+    ) as HTMLElement
     const label = themeToggle.nextElementSibling as HTMLElement
 
     if (this.isDark) {
