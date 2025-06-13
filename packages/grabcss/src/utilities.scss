@@ -3,6 +3,13 @@
 @use './variables' as variables;
 @use 'sass:list';
 
+// Playground examples:
+// .opacity-0    { opacity: 0; }
+// .opacity-25   { opacity: 0.25; }
+// .opacity-50   { opacity: 0.5; }
+// .opacity-75   { opacity: 0.75; }
+// .opacity-100  { opacity: 1; }
+
 // Define utility configurations for cleaner generation
 $utility-configs: (
   'text': (
@@ -112,6 +119,10 @@ $utility-configs: (
   'place-self': (
     variables.$place-self,
     'place-self'
+  )
+  'opacity': (
+    variables.$opacities,
+    'opacity'
   )
 );
 
