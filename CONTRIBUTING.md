@@ -3,8 +3,8 @@
 ## Development Setup
 
 ```bash
-# Clone and install dependencies
-git clone https://github.com/grabss/grabcss.git
+# Fork the repository on GitHub, then clone your fork
+git clone https://github.com/YOUR_USERNAME/grabcss.git
 cd grabcss
 pnpm install
 
