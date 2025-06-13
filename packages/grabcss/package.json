@@ -10,6 +10,12 @@
     "url": "https://github.com/grabss/grabcss.git",
     "directory": "packages/grabcss"
   },
+  "bugs": {
+    "url": "https://github.com/grabss/grabcss/issues"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "keywords": [
     "css",
     "postcss",
