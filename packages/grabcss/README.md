@@ -202,7 +202,7 @@ import "grabcss/grab.css";
 
 ### Card Component
 ```html
-<div class="bg-background p-lg border border-border">
+<div class="bg-background p-lg">
   <h2 class="fs-xl fw-bold text-heading mb-sm">Card Title</h2>
   <p class="text-body lh-md mb-md">Card description with proper line height.</p>
   <button class="bg-primary text-background px-md py-sm">Action Button</button>
