@@ -1,5 +1,10 @@
 # Contributing to grabcss
 
+## Prerequisites
+
+- Node.js ^20.0.0
+- pnpm 10.12.1
+
 ## Development Setup
 
 ```bash
