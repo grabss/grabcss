@@ -1,5 +1,6 @@
 {
   "name": "@grabcss/monorepo",
+  "type": "module",
   "license": "MIT",
   "author": "grabss Inc.",
   "private": true,
