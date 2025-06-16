@@ -1,15 +1,39 @@
 import { ICONS } from './icons'
+import { THEMES, ThemeKey } from './config'
 
 declare const __GRABCSS_VERSION__: string
 
 // Component builders for better code organization
 export function createThemeToggle(): string {
+  const defaultTheme = THEMES.light
+  const colorPreview = (primary: string, secondary: string) => `
+    <span class="color-preview">
+      <span class="color-dot" style="background-color: ${primary}"></span>
+      <span class="color-dot" style="background-color: ${secondary}"></span>
+    </span>
+  `
+
+  const options = Object.entries(THEMES)
+    .map(([key, theme]) => `
+      <div class="theme-option" data-theme="${key}">
+        ${colorPreview(theme['--color-primary'], theme['--color-secondary'])}
+        <span class="theme-name">${theme.name}</span>
+      </div>
+    `)
+    .join('')
+
   return `
-    <div style="position: relative; display: inline-block;">
-      <input type="checkbox" id="theme-toggle" class="theme-toggle__input">
-      <label for="theme-toggle" class="theme-toggle__label">
-        <span class="theme-toggle__slider"></span>
-      </label>
+    <div class="theme-selector">
+      <div class="theme-selector-trigger" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false">
+        ${colorPreview(defaultTheme['--color-primary'], defaultTheme['--color-secondary'])}
+        <span class="theme-name">${defaultTheme.name}</span>
+        <svg class="theme-selector-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M3 5L6 8L9 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="theme-selector-dropdown" role="listbox">
+        ${options}
+      </div>
     </div>
   `
 }
