@@ -1,5 +1,5 @@
 import { ICONS } from './icons'
-import { THEMES, ThemeKey } from './config'
+import { THEMES } from './config'
 
 declare const __GRABCSS_VERSION__: string
 
