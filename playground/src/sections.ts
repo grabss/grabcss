@@ -107,10 +107,10 @@ export function createOpacitySection(): string {
             op-100<br/><span class="fs-xs">100%</span>
           </div>
           <div class="bg-primary text-background p-md text-center op-75" style="width: 120px;">
-            opacity-75<br/><span class="fs-xs">75%</span>
+            op-75<br/><span class="fs-xs">75%</span>
           </div>
           <div class="bg-primary text-background p-md text-center op-50" style="width: 120px;">
-            opacity-50<br/><span class="fs-xs">50%</span>
+            op-50<br/><span class="fs-xs">50%</span>
           </div>
           <div class="bg-primary text-background p-md text-center op-25" style="width: 120px;">
             op-25<br/><span class="fs-xs">25%</span>
