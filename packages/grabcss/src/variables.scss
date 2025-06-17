@@ -325,7 +325,7 @@ $opacities: ();
   $opacities: map.merge(
     $opacities,
     (
-      $name: string.unquote('var(--opacity-#{$name})')
+      $name: $value
     )
   );
 }
