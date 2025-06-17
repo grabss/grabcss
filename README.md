@@ -195,6 +195,9 @@ import "grabcss/grab.css";
 ### Background
 `.bg-{color}` - primary, secondary, background, etc.
 
+### Opacity
+- `.op-{value}` - 0, 25, 50, 75, 100
+
 ### Visibility
 `.v-{value}` - visible, hidden
 
