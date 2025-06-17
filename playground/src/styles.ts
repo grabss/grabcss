@@ -21,34 +21,105 @@ export const PLAYGROUND_STYLES = `
       padding: 2px 6px;
     }
 
-    .theme-toggle__input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .theme-toggle__label {
+    .theme-selector {
       position: relative;
       display: inline-block;
-      width: 40px;
-      height: 20px;
-      background-color: var(--color-border);
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s;
     }
 
-    .theme-toggle__slider {
-      position: absolute;
-      content: '';
-      height: 16px;
-      width: 16px;
-      left: 2px;
-      bottom: 2px;
+    .theme-selector-trigger {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       background-color: var(--color-background);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 14px;
+      color: var(--color-body);
+      cursor: pointer;
+      transition: all 0.2s;
+      outline: none;
+      min-width: 140px;
+      user-select: none;
+    }
+
+    .theme-selector-trigger:hover {
+      border-color: var(--color-primary);
+    }
+
+    .theme-selector-trigger:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+    }
+
+    .theme-selector-arrow {
+      margin-left: auto;
+      transition: transform 0.2s;
+      color: var(--color-muted);
+    }
+
+    .theme-selector-trigger[aria-expanded="true"] .theme-selector-arrow {
+      transform: rotate(180deg);
+    }
+
+    .theme-selector-dropdown {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      right: 0;
+      background-color: var(--color-background);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4px);
+      transition: all 0.2s;
+      z-index: 1000;
+      overflow: hidden;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .theme-selector-dropdown.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .theme-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+
+    .theme-option:hover {
+      background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    }
+
+    .theme-option.selected {
+      background-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
+    }
+
+    .color-preview {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .color-dot {
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
-      transition: transform 0.3s;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .theme-name {
+      font-weight: 500;
     }
 
     .section-link {
