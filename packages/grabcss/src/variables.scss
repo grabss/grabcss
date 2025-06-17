@@ -305,10 +305,27 @@ $place-self: (
   'stretch': stretch
 ) !default;
 
-$opacities: (
-  0: 0,
-  25: 0.25,
-  50: 0.5,
-  75: 0.75,
-  100: 1
-);
+// Opacity
+$opacity-0: 0 !default;
+$opacity-25: 0.25 !default;
+$opacity-50: 0.5 !default;
+$opacity-75: 0.75 !default;
+$opacity-100: 1 !default;
+
+$define-opacities: (
+  '0': $opacity-0,
+  '25': $opacity-25,
+  '50': $opacity-50,
+  '75': $opacity-75,
+  '100': $opacity-100
+) !default;
+
+$opacities: ();
+@each $name, $value in $define-opacities {
+  $opacities: map.merge(
+    $opacities,
+    (
+      $name: string.unquote('var(--opacity-#{$name})')
+    )
+  );
+}
