@@ -153,6 +153,22 @@ import "grabcss/grab.css";
 - `4xl`: 45px
 - `5xl`: 50px
 
+### Border Widths
+- `none`: 0
+- `sm`: 2px
+- `md`: 4px
+- `lg`: 8px
+
+### Border Radius
+- `none`: 0
+- `sm`: 2px
+- `md`: 6px
+- `lg`: 8px
+- `xl`: 12px
+- `2xl`: 16px
+- `3xl`: 24px
+- `full`: 9999px
+
 ## Available Utilities
 
 ### Display
@@ -198,6 +214,11 @@ import "grabcss/grab.css";
 ### Opacity
 - `.op-{value}` - 0, 25, 50, 75, 100
 
+### Borders
+- `.border-{width}` - none, sm, md, lg
+- `.rounded-{radius}` - none, sm, md, lg, xl, 2xl, 3xl, full
+- `.border` - adds solid border with default color
+
 ### Visibility
 `.v-{value}` - visible, hidden
 
@@ -205,10 +226,28 @@ import "grabcss/grab.css";
 
 ### Card Component
 ```html
-<div class="bg-background p-lg">
+<div class="bg-background border rounded-lg p-lg">
   <h2 class="fs-xl fw-bold text-heading mb-sm">Card Title</h2>
   <p class="text-body lh-md mb-md">Card description with proper line height.</p>
-  <button class="bg-primary text-background px-md py-sm">Action Button</button>
+  <button class="bg-primary text-background px-md py-sm rounded-md">Action Button</button>
+</div>
+```
+
+### Border Examples
+```html
+<!-- Border widths -->
+<div class="border-sm">Thin border</div>
+<div class="border-md">Medium border</div>
+<div class="border-lg">Thick border</div>
+
+<!-- Border radius -->
+<div class="rounded-sm">Small rounded corners</div>
+<div class="rounded-lg">Large rounded corners</div>
+<div class="rounded-full">Pill shape</div>
+
+<!-- Combined -->
+<div class="border border-md rounded-xl bg-background p-md">
+  Bordered card with rounded corners
 </div>
 ```
 
