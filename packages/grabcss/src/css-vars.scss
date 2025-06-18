@@ -20,4 +20,12 @@
   @each $name, $value in variables.$define-spaces {
     --space-#{$name}: #{$value};
   }
+
+  @each $name, $value in variables.$define-border-widths {
+    --border-width-#{$name}: #{$value};
+  }
+
+  @each $name, $value in variables.$define-border-radius {
+    --border-radius-#{$name}: #{$value};
+  }
 }

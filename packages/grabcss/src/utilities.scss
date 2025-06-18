@@ -123,6 +123,14 @@ $utility-configs: (
   'op': (
     variables.$opacities,
     'opacity'
+  ),
+  'border': (
+    variables.$border-widths,
+    'border-width'
+  ),
+  'rounded': (
+    variables.$border-radii,
+    'border-radius'
   )
 );
 
@@ -146,6 +154,12 @@ $utility-configs: (
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+// Border style utilities
+.border {
+  border-style: solid;
+  border-color: var(--color-border);
 }
 
 // Generate breakpoint utilities
@@ -172,6 +186,13 @@ $utility-configs: (
   .#{$breakpoint}\:flex-shrink-0 {
     @include mediaquery.mq($breakpoint) {
       flex-shrink: 0;
+    }
+  }
+
+  .#{$breakpoint}\:border {
+    @include mediaquery.mq($breakpoint) {
+      border-style: solid;
+      border-color: var(--color-border);
     }
   }
 }

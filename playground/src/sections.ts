@@ -188,6 +188,90 @@ export function createTextUtilitiesSection(): string {
   `
 }
 
+export function createBorderSection(): string {
+  return `
+    <section class="m-xl">
+      ${createSectionHeader('border-utilities', 'Border Utilities')}
+      <div class="d-grid grid-template-cols-2 g-lg">
+        <div>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Border Widths</h3>
+          <div class="d-flex flex-direction-column g-md">
+            <div class="border border-none bg-background p-md">
+              <code class="bg-border p-xs rounded-sm">.border-none</code>
+              <span class="text-muted ml-sm">No border (0)</span>
+            </div>
+            <div class="border border-sm bg-background p-md">
+              <code class="bg-border p-xs rounded-sm">.border-sm</code>
+              <span class="text-muted ml-sm">Small border (2px)</span>
+            </div>
+            <div class="border border-md bg-background p-md">
+              <code class="bg-border p-xs rounded-sm">.border-md</code>
+              <span class="text-muted ml-sm">Medium border (4px)</span>
+            </div>
+            <div class="border border-lg bg-background p-md">
+              <code class="bg-border p-xs rounded-sm">.border-lg</code>
+              <span class="text-muted ml-sm">Large border (8px)</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Border Radius</h3>
+          <div class="d-flex flex-direction-column g-md">
+            <div class="border bg-primary text-background p-md rounded-none">
+              <code class="bg-background text-body p-xs">.rounded-none</code>
+              <span class="ml-sm">No radius (0)</span>
+            </div>
+            <div class="border bg-primary text-background p-md rounded-sm">
+              <code class="bg-background text-body p-xs rounded-sm">.rounded-sm</code>
+              <span class="ml-sm">Small radius (2px)</span>
+            </div>
+            <div class="border bg-primary text-background p-md rounded-md">
+              <code class="bg-background text-body p-xs rounded-md">.rounded-md</code>
+              <span class="ml-sm">Medium radius (6px)</span>
+            </div>
+            <div class="border bg-primary text-background p-md rounded-lg">
+              <code class="bg-background text-body p-xs rounded-lg">.rounded-lg</code>
+              <span class="ml-sm">Large radius (8px)</span>
+            </div>
+            <div class="border bg-primary text-background p-md rounded-xl">
+              <code class="bg-background text-body p-xs rounded-xl">.rounded-xl</code>
+              <span class="ml-sm">Extra large (12px)</span>
+            </div>
+            <div class="border bg-primary text-background p-md rounded-2xl">
+              <code class="bg-background text-body p-xs rounded-2xl">.rounded-2xl</code>
+              <span class="ml-sm">2X large (16px)</span>
+            </div>
+            <div class="border bg-primary text-background p-md rounded-3xl">
+              <code class="bg-background text-body p-xs rounded-3xl">.rounded-3xl</code>
+              <span class="ml-sm">3X large (24px)</span>
+            </div>
+            <div class="border bg-primary text-background p-md rounded-full">
+              <code class="bg-background text-body p-xs rounded-full">.rounded-full</code>
+              <span class="ml-sm">Full radius (9999px)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-lg">
+        <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Combined Examples</h3>
+        <div class="d-flex flex-wrap g-md">
+          <div class="border rounded-sm bg-background p-md">
+            Card with border + rounded corners
+          </div>
+          <div class="border border-md rounded-lg bg-warning p-md">
+            Warning box with thick border
+          </div>
+          <div class="border border-sm rounded-full bg-primary text-background p-md">
+            Pill button
+          </div>
+        </div>
+      </div>
+    </section>
+  `
+}
+
 export function createCSSVariablesSection(): string {
   return `
     <section class="m-xl">
@@ -196,7 +280,7 @@ export function createCSSVariablesSection(): string {
         <p class="text-muted m-sm">Use the theme toggle in the header to see CSS custom properties in action</p>
       </div>
       <div class="d-grid grid-template-cols-2 g-md">
-        <div class="p-md" style="border: 1px solid var(--color-border); background: var(--color-background);">
+        <div class="p-md rounded-md" style="border: 1px solid var(--color-border); background: var(--color-background);">
           <h3 class="text-heading mt-sm mb-sm">Dynamic Colors</h3>
           <p class="text-body mb-sm">All color utilities use CSS variables that adapt to theme changes.</p>
 
@@ -214,39 +298,39 @@ export function createCSSVariablesSection(): string {
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Background Colors</h4>
           <div class="d-grid grid-template-cols-2 g-xs">
-            <div class="bg-primary text-background p-xs text-center">Primary</div>
-            <div class="bg-secondary text-background p-xs text-center">Secondary</div>
-            <div class="bg-background text-body p-xs text-center" style="border: 1px solid var(--color-border);">Background</div>
-            <div class="bg-link text-background p-xs text-center">Link</div>
-            <div class="bg-muted text-background p-xs text-center">Muted</div>
-            <div class="bg-warning p-xs text-center">Warning</div>
-            <div class="bg-danger text-background p-xs text-center">Danger</div>
-            <div class="bg-border p-xs text-center">Border</div>
+            <div class="bg-primary text-background p-xs text-center rounded-sm">Primary</div>
+            <div class="bg-secondary text-background p-xs text-center rounded-sm">Secondary</div>
+            <div class="bg-background text-body p-xs text-center rounded-sm border">Background</div>
+            <div class="bg-link text-background p-xs text-center rounded-sm">Link</div>
+            <div class="bg-muted text-background p-xs text-center rounded-sm">Muted</div>
+            <div class="bg-warning p-xs text-center rounded-sm">Warning</div>
+            <div class="bg-danger text-background p-xs text-center rounded-sm">Danger</div>
+            <div class="bg-border p-xs text-center rounded-sm">Border</div>
           </div>
         </div>
 
-        <div class="p-md" style="border: 1px solid var(--color-border);">
+        <div class="p-md rounded-md" style="border: 1px solid var(--color-border);">
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">CSS Variable Values</h3>
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Color Variables</h4>
           <div class="fs-sm mb-md">
-            <div class="mb-xs">--color-primary: <span style="color: var(--color-primary); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-primary)</code></div>
-            <div class="mb-xs">--color-secondary: <span style="color: var(--color-secondary); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-secondary)</code></div>
-            <div class="mb-xs">--color-background: <span style="background: var(--color-background); border: 1px solid var(--color-border); display: inline-block; width: 16px; height: 16px; vertical-align: middle;"></span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-background)</code></div>
-            <div class="mb-xs">--color-border: <span style="color: var(--color-border); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-border)</code></div>
-            <div class="mb-xs">--color-heading: <span style="color: var(--color-heading); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-heading)</code></div>
-            <div class="mb-xs">--color-body: <span style="color: var(--color-body); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-body)</code></div>
-            <div class="mb-xs">--color-link: <span style="color: var(--color-link); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-link)</code></div>
-            <div class="mb-xs">--color-muted: <span style="color: var(--color-muted); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-muted)</code></div>
-            <div class="mb-xs">--color-warning: <span style="color: var(--color-warning); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-warning)</code></div>
-            <div class="mb-xs">--color-danger: <span style="color: var(--color-danger); font-weight: bold;">●</span> <code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">var(--color-danger)</code></div>
+            <div class="mb-xs">--color-primary: <span style="color: var(--color-primary); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-primary)</code></div>
+            <div class="mb-xs">--color-secondary: <span style="color: var(--color-secondary); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-secondary)</code></div>
+            <div class="mb-xs">--color-background: <span style="background: var(--color-background); border: 1px solid var(--color-border); display: inline-block; width: 16px; height: 16px; vertical-align: middle;" class="rounded-sm"></span> <code class="bg-border p-xs rounded-sm">var(--color-background)</code></div>
+            <div class="mb-xs">--color-border: <span style="color: var(--color-border); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-border)</code></div>
+            <div class="mb-xs">--color-heading: <span style="color: var(--color-heading); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-heading)</code></div>
+            <div class="mb-xs">--color-body: <span style="color: var(--color-body); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-body)</code></div>
+            <div class="mb-xs">--color-link: <span style="color: var(--color-link); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-link)</code></div>
+            <div class="mb-xs">--color-muted: <span style="color: var(--color-muted); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-muted)</code></div>
+            <div class="mb-xs">--color-warning: <span style="color: var(--color-warning); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-warning)</code></div>
+            <div class="mb-xs">--color-danger: <span style="color: var(--color-danger); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-danger)</code></div>
           </div>
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Usage Examples</h4>
           <div class="fs-xs">
-            <div class="mb-xs"><code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">color: var(--color-primary)</code></div>
-            <div class="mb-xs"><code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">background: var(--color-background)</code></div>
-            <div class="mb-xs"><code style="background: var(--color-border); padding: 2px 4px; border-radius: 3px;">border: 1px solid var(--color-border)</code></div>
+            <div class="mb-xs"><code class="bg-border p-xs rounded-sm">color: var(--color-primary)</code></div>
+            <div class="mb-xs"><code class="bg-border p-xs rounded-sm">background: var(--color-background)</code></div>
+            <div class="mb-xs"><code class="bg-border p-xs rounded-sm">border: 1px solid var(--color-border)</code></div>
           </div>
         </div>
       </div>
