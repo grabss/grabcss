@@ -96,6 +96,41 @@ export function createSpacingSection(): string {
   `
 }
 
+export function createOpacitySection(): string {
+  return `
+    <section class="m-xl">
+      ${createSectionHeader('opacity', 'Opacity')}
+      <div>
+        <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Opacity Classes</h3>
+        <div class="d-flex g-md align-items-end">
+          <div class="bg-primary text-background p-md text-center op-100" style="width: 120px;">
+            op-100<br/><span class="fs-xs">100%</span>
+          </div>
+          <div class="bg-primary text-background p-md text-center op-75" style="width: 120px;">
+            op-75<br/><span class="fs-xs">75%</span>
+          </div>
+          <div class="bg-primary text-background p-md text-center op-50" style="width: 120px;">
+            op-50<br/><span class="fs-xs">50%</span>
+          </div>
+          <div class="bg-primary text-background p-md text-center op-25" style="width: 120px;">
+            op-25<br/><span class="fs-xs">25%</span>
+          </div>
+          <div class="bg-primary text-background p-md text-center op-0" style="width: 120px;">
+            op-0<br/><span class="fs-xs">0%</span>
+          </div>
+        </div>
+        <div class="mt-md fs-sm text-muted">
+          <code class="bg-border p-xs" style="border-radius: 3px;">.op-100</code>,
+          <code class="bg-border p-xs" style="border-radius: 3px;">.op-75</code>,
+          <code class="bg-border p-xs" style="border-radius: 3px;">.op-50</code>,
+          <code class="bg-border p-xs" style="border-radius: 3px;">.op-25</code>,
+          <code class="bg-border p-xs" style="border-radius: 3px;">.op-0</code>
+        </div>
+      </div>
+    </section>
+  `
+}
+
 export function createPositioningSizingSection(): string {
   return `
     <section class="m-xl">

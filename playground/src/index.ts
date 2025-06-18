@@ -11,7 +11,8 @@ import {
   createPositioningSizingSection,
   createResponsiveSection,
   createTextUtilitiesSection,
-  createCSSVariablesSection
+  createCSSVariablesSection,
+  createOpacitySection
 } from './sections'
 
 // Main application initialization
@@ -32,6 +33,8 @@ function initializeApp(): void {
         ${createLayoutSection()}
 
         ${createSpacingSection()}
+
+        ${createOpacitySection()}
 
         ${createPositioningSizingSection()}
 
