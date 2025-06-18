@@ -35,7 +35,10 @@ export class ThemeManager {
 
     // Click outside to close
     document.addEventListener('click', (e) => {
-      if (!this.trigger?.contains(e.target as Node) && !this.dropdown?.contains(e.target as Node)) {
+      if (
+        !this.trigger?.contains(e.target as Node) &&
+        !this.dropdown?.contains(e.target as Node)
+      ) {
         this.closeDropdown()
       }
     })
@@ -89,8 +92,12 @@ export class ThemeManager {
 
     if (colorPreview) {
       const dots = colorPreview.querySelectorAll('.color-dot')
-      if (dots[0]) (dots[0] as HTMLElement).style.backgroundColor = theme['--color-primary']
-      if (dots[1]) (dots[1] as HTMLElement).style.backgroundColor = theme['--color-secondary']
+      if (dots[0])
+        (dots[0] as HTMLElement).style.backgroundColor =
+          theme['--color-primary']
+      if (dots[1])
+        (dots[1] as HTMLElement).style.backgroundColor =
+          theme['--color-secondary']
     }
 
     if (themeName) {

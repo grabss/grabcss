@@ -14,12 +14,14 @@ export function createThemeToggle(): string {
   `
 
   const options = Object.entries(THEMES)
-    .map(([key, theme]) => `
+    .map(
+      ([key, theme]) => `
       <div class="theme-option" data-theme="${key}">
         ${colorPreview(theme['--color-primary'], theme['--color-secondary'])}
         <span class="theme-name">${theme.name}</span>
       </div>
-    `)
+    `
+    )
     .join('')
 
   return `
