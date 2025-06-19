@@ -7,8 +7,6 @@
   "scripts": {
     "lint": "biome check .",
     "format": "biome format --write .",
-    "lint:check": "biome check .",
-    "format:check": "biome format .",
     "dev": "pnpm -C playground dev",
     "build": "pnpm -C packages/grabcss build",
     "build:playground": "pnpm -C packages/grabcss build && pnpm -C playground build",
