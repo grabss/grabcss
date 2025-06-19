@@ -1,20 +1,20 @@
 import 'grabcss/scss/main.scss'
 import 'the-new-css-reset/css/reset.css'
 
-import { PLAYGROUND_STYLES } from './styles'
-import { ThemeManager } from './theme'
-import { createHeader, createPageTitle, createFooter } from './components'
+import { createFooter, createHeader, createPageTitle } from './components'
 import {
-  createTypographySection,
+  createBorderSection,
+  createCSSVariablesSection,
   createLayoutSection,
-  createSpacingSection,
+  createOpacitySection,
   createPositioningSizingSection,
   createResponsiveSection,
+  createSpacingSection,
   createTextUtilitiesSection,
-  createCSSVariablesSection,
-  createOpacitySection,
-  createBorderSection
+  createTypographySection
 } from './sections'
+import { PLAYGROUND_STYLES } from './styles'
+import { ThemeManager } from './theme'
 
 // Main application initialization
 function initializeApp(): void {

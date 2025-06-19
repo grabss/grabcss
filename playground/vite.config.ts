@@ -1,6 +1,6 @@
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
-import { readFileSync } from 'fs'
-import { resolve } from 'path'
 
 // Read version from grabcss package.json
 const grabcssPackageJson = JSON.parse(
