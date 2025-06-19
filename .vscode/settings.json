@@ -1,29 +1,31 @@
 {
   "editor.codeActionsOnSave": {
-    "addMissingImports": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
   },
   "editor.formatOnSave": true,
   "editor.lineNumbers": "on",
   "editor.rulers": [80],
   "editor.wordWrap": "on",
-  "eslint.format.enable": false,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "npm.packageManager": "yarn",
+  "npm.packageManager": "pnpm",
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
   }
 }
