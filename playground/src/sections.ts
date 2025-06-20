@@ -70,54 +70,69 @@ export function createLayoutSection(): string {
         <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
           <h4 class="fs-md fw-bold mb-sm">Flex Direction & Justify</h4>
           <div class="d-flex justify-space-between items-center g-sm mb-sm">
-            <div class="flex-1 bg-primary text-background p-sm text-center">.flex-1</div>
-            <div class="flex-1 bg-primary text-background p-sm text-center">.flex-1</div>
-            <div class="flex-1 bg-primary text-background p-sm text-center">.flex-1</div>
+            <div class="flex-1 bg-primary text-background p-sm text-center">Item 1</div>
+            <div class="flex-1 bg-primary text-background p-sm text-center">Item 2</div>
+            <div class="flex-1 bg-primary text-background p-sm text-center">Item 3</div>
           </div>
-          <p class="text-muted fs-sm mb-0">.d-flex .justify-space-between .items-center</p>
+          <p class="text-muted fs-sm mt-2xs mb-0">.d-flex .justify-space-between .items-center .flex-1</p>
         </div>
 
         <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
           <h4 class="fs-md fw-bold mb-sm">Justify Variations</h4>
-          <div class="d-flex justify-center items-center g-sm mb-sm">
-            <div class="bg-secondary text-background p-sm">.justify-center</div>
-            <div class="bg-secondary text-background p-sm">Item 2</div>
-            <div class="bg-secondary text-background p-sm">Item 3</div>
+          <div class="mb-sm">
+            <div class="d-flex justify-center items-center g-sm">
+              <div class="bg-secondary text-background p-sm">Item 1</div>
+              <div class="bg-secondary text-background p-sm">Item 2</div>
+              <div class="bg-secondary text-background p-sm">Item 3</div>
+            </div>
+            <p class="text-muted fs-sm mt-2xs mb-0 text-center">.d-flex .justify-center .items-center</p>
           </div>
-          <div class="d-flex justify-start items-center g-sm mb-sm">
-            <div class="bg-secondary text-background p-sm">.justify-start</div>
-            <div class="bg-secondary text-background p-sm">Item 2</div>
-            <div class="bg-secondary text-background p-sm">Item 3</div>
+          <div class="mb-sm">
+            <div class="d-flex justify-start items-center g-sm">
+              <div class="bg-secondary text-background p-sm">Item 1</div>
+              <div class="bg-secondary text-background p-sm">Item 2</div>
+              <div class="bg-secondary text-background p-sm">Item 3</div>
+            </div>
+            <p class="text-muted fs-sm mt-2xs mb-0 text-left">.d-flex .justify-start .items-center</p>
           </div>
-          <div class="d-flex justify-end items-center g-sm">
-            <div class="bg-secondary text-background p-sm">.justify-end</div>
-            <div class="bg-secondary text-background p-sm">Item 2</div>
+          <div>
+            <div class="d-flex justify-end items-center g-sm">
+              <div class="bg-secondary text-background p-sm">Item 1</div>
+              <div class="bg-secondary text-background p-sm">Item 2</div>
+            </div>
+            <p class="text-muted fs-sm mt-2xs mb-0 text-right">.d-flex .justify-end .items-center</p>
           </div>
         </div>
 
         <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
           <h4 class="fs-md fw-bold mb-sm">Flex Direction</h4>
-          <div class="d-flex flex-column g-sm mb-md">
-            <div class="bg-primary text-background p-sm">.flex-column: Item 1</div>
-            <div class="bg-primary text-background p-sm">.flex-column: Item 2</div>
-            <div class="bg-primary text-background p-sm">.flex-column: Item 3</div>
+          <div class="mb-sm">
+            <div class="d-flex flex-column g-sm">
+              <div class="bg-primary text-background p-sm">Item 1</div>
+              <div class="bg-primary text-background p-sm">Item 2</div>
+              <div class="bg-primary text-background p-sm">Item 3</div>
+            </div>
+            <p class="text-muted fs-sm mt-2xs mb-0">.d-flex .flex-column .g-sm</p>
           </div>
-          <div class="d-flex flex-row-reverse g-sm">
-            <div class="bg-secondary text-background p-sm">.flex-row-reverse: Item 1</div>
-            <div class="bg-secondary text-background p-sm">.flex-row-reverse: Item 2</div>
-            <div class="bg-secondary text-background p-sm">.flex-row-reverse: Item 3</div>
+          <div>
+            <div class="d-flex flex-row-reverse g-sm">
+              <div class="bg-secondary text-background p-sm">Item 1</div>
+              <div class="bg-secondary text-background p-sm">Item 2</div>
+              <div class="bg-secondary text-background p-sm">Item 3</div>
+            </div>
+            <p class="text-muted fs-sm mt-2xs mb-0 text-right">.d-flex .flex-row-reverse .g-sm</p>
           </div>
         </div>
 
         <div class="bg-background p-md" style="border: 1px solid var(--color-border);">
           <h4 class="fs-md fw-bold mb-sm">Flex Wrap</h4>
           <div class="d-flex flex-wrap g-sm" style="width: 200px;">
-            <div class="bg-primary text-background p-sm">.flex-wrap: Item 1</div>
-            <div class="bg-primary text-background p-sm">.flex-wrap: Item 2</div>
-            <div class="bg-primary text-background p-sm">.flex-wrap: Item 3</div>
-            <div class="bg-primary text-background p-sm">.flex-wrap: Item 4</div>
+            <div class="bg-primary text-background p-sm">Item 1</div>
+            <div class="bg-primary text-background p-sm">Item 2</div>
+            <div class="bg-primary text-background p-sm">Item 3</div>
+            <div class="bg-primary text-background p-sm">Item 4</div>
           </div>
-          <p class="text-muted fs-sm mt-sm mb-0">.d-flex .flex-wrap .g-sm (in 200px container)</p>
+          <p class="text-muted fs-sm mt-2xs mb-0">.d-flex .flex-wrap .g-sm (in 200px container)</p>
         </div>
       </div>
 
@@ -126,24 +141,27 @@ export function createLayoutSection(): string {
 
         <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
           <h4 class="fs-md fw-bold mb-sm">Grid Columns</h4>
-          <div class="d-grid grid-cols-2 g-sm mb-md">
-            <div class="bg-primary text-background p-sm text-center">.grid-cols-2: Item 1</div>
-            <div class="bg-primary text-background p-sm text-center">.grid-cols-2: Item 2</div>
+          <div class="d-grid grid-cols-2 g-sm">
+            <div class="bg-primary text-background p-sm text-center">Item 1</div>
+            <div class="bg-primary text-background p-sm text-center">Item 2</div>
           </div>
-          <div class="d-grid grid-cols-4 g-sm mb-md">
-            <div class="bg-secondary text-background p-sm text-center">.grid-cols-4: 1</div>
-            <div class="bg-secondary text-background p-sm text-center">.grid-cols-4: 2</div>
-            <div class="bg-secondary text-background p-sm text-center">.grid-cols-4: 3</div>
-            <div class="bg-secondary text-background p-sm text-center">.grid-cols-4: 4</div>
+          <p class="text-muted fs-sm mt-2xs mb-md">.d-grid .grid-cols-2 .g-sm</p>
+          <div class="d-grid grid-cols-4 g-sm">
+            <div class="bg-secondary text-background p-sm text-center">1</div>
+            <div class="bg-secondary text-background p-sm text-center">2</div>
+            <div class="bg-secondary text-background p-sm text-center">3</div>
+            <div class="bg-secondary text-background p-sm text-center">4</div>
           </div>
+          <p class="text-muted fs-sm mt-2xs mb-md">.d-grid .grid-cols-4 .g-sm</p>
           <div class="d-grid grid-cols-6 g-sm">
-            <div class="bg-primary text-background p-xs text-center">.grid-cols-6</div>
+            <div class="bg-primary text-background p-xs text-center">1</div>
             <div class="bg-primary text-background p-xs text-center">2</div>
             <div class="bg-primary text-background p-xs text-center">3</div>
             <div class="bg-primary text-background p-xs text-center">4</div>
             <div class="bg-primary text-background p-xs text-center">5</div>
             <div class="bg-primary text-background p-xs text-center">6</div>
           </div>
+          <p class="text-muted fs-sm mt-2xs mb-0">.d-grid .grid-cols-6 .g-sm</p>
         </div>
 
         <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
@@ -155,20 +173,20 @@ export function createLayoutSection(): string {
             <div class="col-span-4 bg-primary text-background p-sm text-center">.col-span-4</div>
             <div class="col-span-5 bg-secondary text-background p-sm text-center">.col-span-5 (full width)</div>
           </div>
-          <p class="text-muted fs-sm mt-sm mb-0">.d-grid .grid-cols-5 with various column spans</p>
+          <p class="text-muted fs-sm mt-2xs mb-0">.d-grid .grid-cols-5 with various column spans</p>
         </div>
 
         <div class="bg-background p-md" style="border: 1px solid var(--color-border);">
           <h4 class="fs-md fw-bold mb-sm">Grid Rows</h4>
           <div class="d-grid grid-cols-3 grid-rows-3 g-sm" style="height: 200px;">
-            <div class="bg-primary text-background p-sm text-center d-flex items-center justify-center">.grid-rows-3: 1</div>
+            <div class="bg-primary text-background p-sm text-center d-flex items-center justify-center">1</div>
             <div class="row-span-2 bg-secondary text-background p-sm text-center d-flex items-center justify-center">.row-span-2</div>
             <div class="bg-primary text-background p-sm text-center d-flex items-center justify-center">3</div>
             <div class="bg-primary text-background p-sm text-center d-flex items-center justify-center">4</div>
-            <div class="bg-primary text-background p-sm text-center d-flex items-center justify-center">6</div>
+            <div class="bg-primary text-background p-sm text-center d-flex items-center justify-center">5</div>
             <div class="row-span-2 bg-secondary text-background p-sm text-center d-flex items-center justify-center">.row-span-2</div>
           </div>
-          <p class="text-muted fs-sm mt-sm mb-0">.d-grid .grid-cols-3 .grid-rows-3 with row spans</p>
+          <p class="text-muted fs-sm mt-2xs mb-0">.d-grid .grid-cols-3 .grid-rows-3 with row spans</p>
         </div>
       </div>
     </section>
@@ -404,16 +422,16 @@ export function createCSSVariablesSection(): string {
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Color Variables</h4>
           <div class="fs-sm mb-md">
-            <div class="d-flex items-center mb-xs">--color-primary: <span style="color: var(--color-primary); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-primary)</code></div>
-            <div class="d-flex items-center mb-xs">--color-secondary: <span style="color: var(--color-secondary); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-secondary)</code></div>
-            <div class="d-flex items-center mb-xs">--color-background: <span style="background: var(--color-background); border: 1px solid var(--color-border); display: inline-block; width: 16px; height: 16px; vertical-align: middle;" class="rounded-sm"></span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-background)</code></div>
-            <div class="d-flex items-center mb-xs">--color-border: <span style="color: var(--color-border); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-border)</code></div>
-            <div class="d-flex items-center mb-xs">--color-heading: <span style="color: var(--color-heading); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-heading)</code></div>
-            <div class="d-flex items-center mb-xs">--color-body: <span style="color: var(--color-body); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-body)</code></div>
-            <div class="d-flex items-center mb-xs">--color-link: <span style="color: var(--color-link); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-link)</code></div>
-            <div class="d-flex items-center mb-xs">--color-muted: <span style="color: var(--color-muted); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-muted)</code></div>
-            <div class="d-flex items-center mb-xs">--color-warning: <span style="color: var(--color-warning); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-warning)</code></div>
-            <div class="d-flex items-center mb-xs">--color-danger: <span style="color: var(--color-danger); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-danger)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-primary: <span style="color: var(--color-primary); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-primary)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-secondary: <span style="color: var(--color-secondary); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-secondary)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-background: <span style="background: var(--color-background); border: 1px solid var(--color-border); display: inline-block; width: 16px; height: 16px; vertical-align: middle;" class="rounded-sm"></span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-background)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-border: <span style="color: var(--color-border); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-border)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-heading: <span style="color: var(--color-heading); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-heading)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-body: <span style="color: var(--color-body); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-body)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-link: <span style="color: var(--color-link); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-link)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-muted: <span style="color: var(--color-muted); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-muted)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-warning: <span style="color: var(--color-warning); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-warning)</code></div>
+            <div class="d-flex sm:items-center flex-column sm:flex-row mb-xs"><div>--color-danger: <span style="color: var(--color-danger); font-weight: bold;">●</span></div> <code class="bg-border p-2xs rounded-sm sm:ml-xs">var(--color-danger)</code></div>
           </div>
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Usage Examples</h4>
