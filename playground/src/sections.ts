@@ -274,19 +274,15 @@ export function createTextUtilitiesSection(): string {
   return `
     <section class="m-xl">
       ${createSectionHeader('text-utilities', 'Text Utilities')}
-      <div class="mt-sm d-grid grid-cols-3 g-md">
-        <div>
+      <div class="mt-sm d-grid grid-cols-2 g-md">
+        <div class="d-flex flex-column g-sm">
           <div class="text-left p-sm" style="border: 1px solid var(--color-border);">.text-left: Left aligned</div>
           <div class="text-center p-sm" style="border: 1px solid var(--color-border);">.text-center: Center aligned</div>
           <div class="text-right p-sm" style="border: 1px solid var(--color-border);">.text-right: Right aligned</div>
         </div>
-        <div>
+        <div class="d-flex flex-column g-sm">
           <div class="ws-nowrap p-sm" style="border: 1px solid var(--color-border); overflow: hidden; text-overflow: ellipsis;" title="This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling">.ws-nowrap: This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling</div>
           <div class="wb-break-all p-sm" style="border: 1px solid var(--color-border);">.wb-break-all: This is a demonstration of the word-break all utility class that allows text to break at any character position when the content exceeds the container width</div>
-        </div>
-        <div>
-          <div class="lh-xs p-sm" style="border: 1px solid var(--color-border);">.lh-xs: Line height extra small (1.2)</div>
-          <div class="lh-md p-sm" style="border: 1px solid var(--color-border);">.lh-md: Line height medium (1.6)</div>
         </div>
       </div>
     </section>
@@ -415,23 +411,23 @@ export function createCSSVariablesSection(): string {
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Color Variables</h4>
           <div class="fs-sm mb-md">
-            <div class="mb-xs">--color-primary: <span style="color: var(--color-primary); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-primary)</code></div>
-            <div class="mb-xs">--color-secondary: <span style="color: var(--color-secondary); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-secondary)</code></div>
-            <div class="mb-xs">--color-background: <span style="background: var(--color-background); border: 1px solid var(--color-border); display: inline-block; width: 16px; height: 16px; vertical-align: middle;" class="rounded-sm"></span> <code class="bg-border p-xs rounded-sm">var(--color-background)</code></div>
-            <div class="mb-xs">--color-border: <span style="color: var(--color-border); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-border)</code></div>
-            <div class="mb-xs">--color-heading: <span style="color: var(--color-heading); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-heading)</code></div>
-            <div class="mb-xs">--color-body: <span style="color: var(--color-body); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-body)</code></div>
-            <div class="mb-xs">--color-link: <span style="color: var(--color-link); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-link)</code></div>
-            <div class="mb-xs">--color-muted: <span style="color: var(--color-muted); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-muted)</code></div>
-            <div class="mb-xs">--color-warning: <span style="color: var(--color-warning); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-warning)</code></div>
-            <div class="mb-xs">--color-danger: <span style="color: var(--color-danger); font-weight: bold;">●</span> <code class="bg-border p-xs rounded-sm">var(--color-danger)</code></div>
+            <div class="d-flex items-center mb-xs">--color-primary: <span style="color: var(--color-primary); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-primary)</code></div>
+            <div class="d-flex items-center mb-xs">--color-secondary: <span style="color: var(--color-secondary); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-secondary)</code></div>
+            <div class="d-flex items-center mb-xs">--color-background: <span style="background: var(--color-background); border: 1px solid var(--color-border); display: inline-block; width: 16px; height: 16px; vertical-align: middle;" class="rounded-sm"></span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-background)</code></div>
+            <div class="d-flex items-center mb-xs">--color-border: <span style="color: var(--color-border); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-border)</code></div>
+            <div class="d-flex items-center mb-xs">--color-heading: <span style="color: var(--color-heading); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-heading)</code></div>
+            <div class="d-flex items-center mb-xs">--color-body: <span style="color: var(--color-body); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-body)</code></div>
+            <div class="d-flex items-center mb-xs">--color-link: <span style="color: var(--color-link); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-link)</code></div>
+            <div class="d-flex items-center mb-xs">--color-muted: <span style="color: var(--color-muted); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-muted)</code></div>
+            <div class="d-flex items-center mb-xs">--color-warning: <span style="color: var(--color-warning); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-warning)</code></div>
+            <div class="d-flex items-center mb-xs">--color-danger: <span style="color: var(--color-danger); font-weight: bold;">●</span> <code class="bg-border p-2xs rounded-sm ml-xs">var(--color-danger)</code></div>
           </div>
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Usage Examples</h4>
           <div class="fs-xs">
-            <div class="mb-xs"><code class="bg-border p-xs rounded-sm">color: var(--color-primary)</code></div>
-            <div class="mb-xs"><code class="bg-border p-xs rounded-sm">background: var(--color-background)</code></div>
-            <div class="mb-xs"><code class="bg-border p-xs rounded-sm">border: 1px solid var(--color-border)</code></div>
+            <div class="d-flex items-center mb-xs"><code class="bg-border p-2xs rounded-sm">color: var(--color-primary)</code></div>
+            <div class="d-flex items-center mb-xs"><code class="bg-border p-2xs rounded-sm">background: var(--color-background)</code></div>
+            <div class="d-flex items-center mb-xs"><code class="bg-border p-2xs rounded-sm">border: 1px solid var(--color-border)</code></div>
           </div>
         </div>
       </div>
