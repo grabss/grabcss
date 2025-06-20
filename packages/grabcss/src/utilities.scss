@@ -75,10 +75,6 @@ $utility-configs: (
     variables.$flex-directions,
     'flex-direction'
   ),
-  'flex-wrap': (
-    variables.$flex-wraps,
-    'flex-wrap'
-  ),
   'justify-content': (
     variables.$justify-content-positions,
     'justify-content'
@@ -147,6 +143,23 @@ $utility-configs: (
   }
 }
 
+// Generate flex-wrap utilities with better naming
+@each $key, $value in variables.$flex-wraps {
+  @if $key == 'nowrap' {
+    .flex-nowrap {
+      flex-wrap: $value;
+    }
+  } @else if $key == 'wrap' {
+    .flex-wrap {
+      flex-wrap: $value;
+    }
+  } @else if $key == 'wrap-reverse' {
+    .flex-wrap-reverse {
+      flex-wrap: $value;
+    }
+  }
+}
+
 // Generate border utilities
 @each $key, $value in variables.$border-widths {
   @if $key == 'default' {
@@ -192,6 +205,31 @@ $utility-configs: (
     .#{$breakpoint}\:text-#{$key} {
       @include mediaquery.mq($breakpoint) {
         text-align: $value;
+      }
+    }
+  }
+}
+
+// Generate breakpoint flex-wrap utilities
+@each $breakpoint, $_ in mediaquery.$breakpoints {
+  @each $key, $value in variables.$flex-wraps {
+    @if $key == 'nowrap' {
+      .#{$breakpoint}\:flex-nowrap {
+        @include mediaquery.mq($breakpoint) {
+          flex-wrap: $value;
+        }
+      }
+    } @else if $key == 'wrap' {
+      .#{$breakpoint}\:flex-wrap {
+        @include mediaquery.mq($breakpoint) {
+          flex-wrap: $value;
+        }
+      }
+    } @else if $key == 'wrap-reverse' {
+      .#{$breakpoint}\:flex-wrap-reverse {
+        @include mediaquery.mq($breakpoint) {
+          flex-wrap: $value;
+        }
       }
     }
   }

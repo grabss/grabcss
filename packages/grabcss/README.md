@@ -178,7 +178,7 @@ import "grabcss/grab.css";
 
 ### Flexbox
 - `.flex-direction-{value}` - row, row-reverse, column, column-reverse
-- `.flex-wrap-{value}` - nowrap, wrap, wrap-reverse
+- `.flex-nowrap`, `.flex-wrap`, `.flex-wrap-reverse`
 - `.justify-content-{value}` - start, center, end, flex-start, flex-end, space-between, space-around
 - `.align-items-{value}` - start, center, end, flex-start, flex-end
 - `.flex-1`, `.flex-shrink-0`

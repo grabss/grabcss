@@ -45,9 +45,9 @@ export function createLayoutSection(): string {
       <div>
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Flexbox</h3>
         <div class="d-flex justify-content-space-between align-items-center bg-background p-md" style="border: 1px solid var(--color-border);">
-          <div class="bg-primary text-background p-sm">Item 1</div>
-          <div class="bg-secondary text-background p-sm">Item 2</div>
-          <div class="bg-warning p-sm">Item 3</div>
+          <div class="flex-1 bg-primary text-background p-sm">Item 1</div>
+          <div class="flex-1 bg-secondary text-background p-sm">Item 2</div>
+          <div class="flex-1 bg-warning p-sm">Item 3</div>
         </div>
 
         <div class="d-flex flex-direction-column g-sm my-md">
