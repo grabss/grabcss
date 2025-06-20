@@ -90,13 +90,15 @@ $font-weights: ();
 }
 
 // Line Heights
-$line-height-default: 1 !default;
+$line-height-none: 1 !default;
+$line-height-default: normal !default;
 $line-height-xs: 1.2 !default;
 $line-height-sm: 1.4 !default;
 $line-height-md: 1.6 !default;
 $line-height-lg: 1.8 !default;
 
 $define-line-heights: (
+  'none': $line-height-none,
   'default': $line-height-default,
   'xs': $line-height-xs,
   'sm': $line-height-sm,
@@ -127,8 +129,8 @@ $space-4xl: 45px !default;
 $space-5xl: 50px !default;
 
 $define-spaces: (
-  'auto': auto,
   'none': 0,
+  'auto': auto,
   '2xs': $space-2xs,
   'xs': $space-xs,
   'sm': $space-sm,
@@ -185,9 +187,9 @@ $positions: (
 ) !default;
 
 $sizes: (
+  'none': 0,
   'auto': auto,
   'fit-content': fit-content,
-  'none': 0,
   '50': 50%,
   '100': 100%
 ) !default;
