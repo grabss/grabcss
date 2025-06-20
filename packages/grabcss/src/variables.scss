@@ -96,6 +96,8 @@ $line-height-xs: 1.2 !default;
 $line-height-sm: 1.4 !default;
 $line-height-md: 1.6 !default;
 $line-height-lg: 1.8 !default;
+$line-height-xl: 2.0 !default;
+$line-height-2xl: 2.2 !default;
 
 $define-line-heights: (
   'none': $line-height-none,
@@ -103,7 +105,9 @@ $define-line-heights: (
   'xs': $line-height-xs,
   'sm': $line-height-sm,
   'md': $line-height-md,
-  'lg': $line-height-lg
+  'lg': $line-height-lg,
+  'xl': $line-height-xl,
+  '2xl': $line-height-2xl
 ) !default;
 
 $line-heights: ();
@@ -225,7 +229,7 @@ $opacities: ();
   $opacities: map.merge(
     $opacities,
     (
-      $name: $value
+      $name: string.unquote('var(--opacity-#{$name})')
     )
   );
 }
@@ -335,6 +339,7 @@ $grid-template-rows: (
   '2': repeat(2, minmax(0, 1fr)),
   '3': repeat(3, minmax(0, 1fr)),
   '4': repeat(4, minmax(0, 1fr)),
+  '5': repeat(5, minmax(0, 1fr)),
   '6': repeat(6, minmax(0, 1fr))
 ) !default;
 
@@ -355,6 +360,7 @@ $grid-rows: (
   'span-2': span 2 / span 2,
   'span-3': span 3 / span 3,
   'span-4': span 4 / span 4,
+  'span-5': span 5 / span 5,
   'span-6': span 6 / span 6,
   'span-full': string.unquote('1 / -1')
 ) !default;

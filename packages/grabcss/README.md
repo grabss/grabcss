@@ -203,7 +203,7 @@ import "grabcss/grab.css";
 - `.text-{value}` - left, center, right
 - `.fs-{size}` - xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl
 - `.fw-{weight}` - normal, bold
-- `.lh-{value}` - default, xs, sm, md, lg
+- `.lh-{value}` - none, default, xs, sm, md, lg, xl, 2xl
 - `.ws-{value}` - normal, nowrap, pre, pre-wrap, pre-line
 - `.wb-{value}` - normal, break-all, keep-all, break-word
 
@@ -234,9 +234,9 @@ import "grabcss/grab.css";
 ### Border Examples
 ```html
 <!-- Border widths -->
-<div class="border-sm">Thin border</div>
-<div class="border-md">Medium border</div>
-<div class="border-lg">Thick border</div>
+<div class="border">Default border</div>
+<div class="border-lg">Large border</div>
+<div class="border-xl">Extra large border</div>
 
 <!-- Border radius -->
 <div class="rounded-sm">Small rounded corners</div>
@@ -244,7 +244,7 @@ import "grabcss/grab.css";
 <div class="rounded-full">Pill shape</div>
 
 <!-- Combined -->
-<div class="border border-md rounded-xl bg-background p-md">
+<div class="border border-lg rounded-xl bg-background p-md">
   Bordered card with rounded corners
 </div>
 ```
