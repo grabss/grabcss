@@ -78,7 +78,7 @@ export function createSectionHeader(id: string, title: string): string {
 
 export function createPageTitle(): string {
   return `
-    <div class="text-center m-xl">
+    <div class="m-xl">
       <h1 class="fs-4xl fw-bold text-primary">grabcss Playground</h1>
       <p class="fs-lg text-muted m-sm">Utility-first CSS framework demonstration</p>
     </div>
@@ -93,7 +93,7 @@ export function createFooter(): string {
           <p>Built with <strong>grabcss v${__GRABCSS_VERSION__}</strong></p>
           <p class="fs-sm mt-xs">A minimal, utility-first CSS framework for rapid UI development</p>
         </div>
-        <div class="md:text-align-right">
+        <div class="md:text-right">
           <p class="fs-xs">Copyright © ${new Date().getFullYear()} grabss Inc.</p>
         </div>
       </div>

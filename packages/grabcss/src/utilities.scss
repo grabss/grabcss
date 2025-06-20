@@ -28,10 +28,6 @@ $utility-configs: (
     variables.$font-weights,
     'font-weight'
   ),
-  'text-align': (
-    variables.$text-directions,
-    'text-align'
-  ),
   'lh': (
     variables.$line-heights,
     'line-height'
@@ -147,6 +143,13 @@ $utility-configs: (
 @include mixins.generate-space-classes('m', 'margin');
 @include mixins.generate-space-classes('p', 'padding');
 
+// Generate text-align utilities with special prefix
+@each $key, $value in variables.$text-directions {
+  .text-#{$key} {
+    text-align: $value;
+  }
+}
+
 // Fixed utilities
 .flex-1 {
   flex: 1;
@@ -174,6 +177,17 @@ $utility-configs: (
 // Generate breakpoint spacing utilities
 @include mixins.generate-breakpoint-space-classes('m', 'margin');
 @include mixins.generate-breakpoint-space-classes('p', 'padding');
+
+// Generate breakpoint text-align utilities
+@each $breakpoint, $_ in mediaquery.$breakpoints {
+  @each $key, $value in variables.$text-directions {
+    .#{$breakpoint}\:text-#{$key} {
+      @include mediaquery.mq($breakpoint) {
+        text-align: $value;
+      }
+    }
+  }
+}
 
 // Breakpoint fixed utilities
 @each $breakpoint, $_ in mediaquery.$breakpoints {

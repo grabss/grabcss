@@ -171,9 +171,9 @@ export function createTextUtilitiesSection(): string {
       ${createSectionHeader('text-utilities', 'Text Utilities')}
       <div class="mt-sm d-grid grid-template-cols-3 g-md">
         <div>
-          <div class="text-align-left p-sm" style="border: 1px solid var(--color-border);">Left aligned</div>
-          <div class="text-align-center p-sm" style="border: 1px solid var(--color-border);">Center aligned</div>
-          <div class="text-align-right p-sm" style="border: 1px solid var(--color-border);">Right aligned</div>
+          <div class="text-left p-sm" style="border: 1px solid var(--color-border);">Left aligned</div>
+          <div class="text-center p-sm" style="border: 1px solid var(--color-border);">Center aligned</div>
+          <div class="text-right p-sm" style="border: 1px solid var(--color-border);">Right aligned</div>
         </div>
         <div>
           <div class="ws-nowrap p-sm" style="border: 1px solid var(--color-border); overflow: hidden; text-overflow: ellipsis;" title="This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling">This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling</div>
