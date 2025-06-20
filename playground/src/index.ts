@@ -26,7 +26,7 @@ function initializeApp(): void {
     ${PLAYGROUND_STYLES}
     <div class="h-100 d-flex flex-direction-column" style="overflow: hidden;">
       ${createHeader()}
-      <main class="main-content p-lg">
+      <main class="main-content">
         ${createPageTitle()}
 
         ${createTypographySection()}

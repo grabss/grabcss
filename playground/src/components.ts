@@ -55,13 +55,15 @@ export function createHeader(): string {
   return `
     <header class="header">
       <div class="d-flex justify-space-between items-center h-100">
-        <div class="d-flex items-center g-sm">
-          <h1 class="fs-lg fw-bold text-primary">grabcss</h1>
-          <span class="version-badge">v${__GRABCSS_VERSION__}</span>
+        <div class="d-flex items-center g-xs sm:g-sm">
+          <h1 class="fs-md sm:fs-lg fw-bold text-primary">grabcss</h1>
+          <span class="version-badge fs-2xs sm:fs-xs">v${__GRABCSS_VERSION__}</span>
         </div>
-        <div class="d-flex items-center g-sm">
+        <div class="d-flex items-center g-xs sm:g-sm">
           ${createThemeToggle()}
-          ${createHeaderLinks()}
+          <div class="d-flex items-center g-xs sm:g-sm">
+            ${createHeaderLinks()}
+          </div>
         </div>
       </div>
     </header>
@@ -78,17 +80,17 @@ export function createSectionHeader(id: string, title: string): string {
 
 export function createPageTitle(): string {
   return `
-    <div class="m-xl">
-      <h1 class="fs-4xl fw-bold text-primary">grabcss Playground</h1>
-      <p class="fs-lg text-muted m-sm">Utility-first CSS framework demonstration</p>
+    <div class="m-lg lg:m-xl">
+      <h1 class="fs-2xl sm:fs-3xl lg:fs-4xl fw-bold text-primary">grabcss Playground</h1>
+      <p class="fs-md sm:fs-lg text-muted m-sm">Utility-first CSS framework demonstration</p>
     </div>
   `
 }
 
 export function createFooter(): string {
   return `
-    <footer class="p-xl text-muted">
-      <div class="d-flex flex-column md:flex-row md:justify-space-between md:align-items-end g-sm">
+    <footer class="p-lg lg:p-xl text-muted">
+      <div class="d-flex flex-column md:flex-row md:justify-space-between md:items-end g-sm">
         <div>
           <p>Built with <strong>grabcss v${__GRABCSS_VERSION__}</strong></p>
           <p class="fs-sm mt-xs">A minimal, utility-first CSS framework for rapid UI development</p>

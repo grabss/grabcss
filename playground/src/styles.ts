@@ -2,15 +2,22 @@
 export const PLAYGROUND_STYLES = `
   <style>
     .header {
-      height: 60px;
+      height: 50px;
       border-bottom: 1px solid var(--color-border);
       background: var(--color-background);
-      padding: 0 20px;
+      padding: 0 15px;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 1000;
+    }
+
+    @media (min-width: 576px) {
+      .header {
+        height: 60px;
+        padding: 0 20px;
+      }
     }
 
     .version-badge {
@@ -29,18 +36,26 @@ export const PLAYGROUND_STYLES = `
     .theme-selector-trigger {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       background-color: var(--color-background);
       border: 1px solid var(--color-border);
       border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 14px;
+      padding: 4px 8px;
+      font-size: 12px;
       color: var(--color-body);
       cursor: pointer;
       transition: all 0.2s;
       outline: none;
-      min-width: 140px;
+      min-width: 100px;
       user-select: none;
+    }
+
+    @media (min-width: 576px) {
+      .theme-selector-trigger {
+        gap: 8px;
+        padding: 6px 12px;
+        font-size: 14px;
+      }
     }
 
     .theme-selector-trigger:hover {
@@ -90,10 +105,19 @@ export const PLAYGROUND_STYLES = `
     .theme-option {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
+      gap: 6px;
+      padding: 6px 8px;
       cursor: pointer;
       transition: background-color 0.15s;
+      font-size: 12px;
+    }
+
+    @media (min-width: 576px) {
+      .theme-option {
+        gap: 8px;
+        padding: 8px 12px;
+        font-size: 14px;
+      }
     }
 
     .theme-option:hover {
@@ -127,9 +151,17 @@ export const PLAYGROUND_STYLES = `
     }
 
     .main-content {
-      margin-top: 60px;
+      margin-top: 50px;
       flex: 1;
       overflow: auto;
+      padding: 15px;
+    }
+
+    @media (min-width: 576px) {
+      .main-content {
+        margin-top: 60px;
+        padding: 25px;
+      }
     }
   </style>
 `
