@@ -12,7 +12,7 @@ export const THEMES = {
   },
   dark: {
     name: 'Dark',
-    '--color-primary': '#4ade80',
+    '--color-primary': '#00a596',
     '--color-secondary': '#ffffff',
     '--color-background': '#1f2937',
     '--color-border': '#374151',
@@ -20,45 +20,35 @@ export const THEMES = {
     '--color-body': '#e5e7eb',
     '--color-muted': '#9ca3af'
   },
-  ocean: {
-    name: 'Ocean',
-    '--color-primary': '#3b82f6',
-    '--color-secondary': '#1e40af',
-    '--color-background': '#f0f9ff',
-    '--color-border': '#bfdbfe',
-    '--color-heading': '#1e40af',
-    '--color-body': '#1e293b',
-    '--color-muted': '#64748b'
+  cyber: {
+    name: 'Cyber',
+    '--color-primary': '#ff0080',
+    '--color-secondary': '#00ffff',
+    '--color-background': '#0a0a0a',
+    '--color-border': '#2a2a2a',
+    '--color-heading': '#ff0080',
+    '--color-body': '#e0e0e0',
+    '--color-muted': '#808080'
   },
-  forest: {
-    name: 'Forest',
-    '--color-primary': '#10b981',
-    '--color-secondary': '#047857',
-    '--color-background': '#f0fdf4',
-    '--color-border': '#bbf7d0',
-    '--color-heading': '#047857',
-    '--color-body': '#14532d',
-    '--color-muted': '#4b5563'
+  royal: {
+    name: 'Royal',
+    '--color-primary': '#1E3A8A',
+    '--color-secondary': '#DAA520',
+    '--color-background': '#FFFFFF',
+    '--color-border': '#E5E5E5',
+    '--color-heading': '#1E3A8A',
+    '--color-body': '#1F2937',
+    '--color-muted': '#6B7280'
   },
-  sunset: {
-    name: 'Sunset',
-    '--color-primary': '#f97316',
-    '--color-secondary': '#c2410c',
-    '--color-background': '#fff7ed',
-    '--color-border': '#fed7aa',
-    '--color-heading': '#c2410c',
-    '--color-body': '#431407',
-    '--color-muted': '#78716c'
-  },
-  midnight: {
-    name: 'Midnight',
-    '--color-primary': '#a78bfa',
-    '--color-secondary': '#c084fc',
-    '--color-background': '#0f172a',
-    '--color-border': '#334155',
-    '--color-heading': '#e2e8f0',
-    '--color-body': '#cbd5e1',
-    '--color-muted': '#64748b'
+  mono: {
+    name: 'Mono',
+    '--color-primary': '#000000',
+    '--color-secondary': '#ffffff',
+    '--color-background': '#f8f8f8',
+    '--color-border': '#d0d0d0',
+    '--color-heading': '#000000',
+    '--color-body': '#333333',
+    '--color-muted': '#666666'
   }
 } as const
 
