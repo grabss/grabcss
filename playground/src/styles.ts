@@ -1,16 +1,24 @@
 // CSS styles that will be injected into the page
 export const PLAYGROUND_STYLES = `
   <style>
+    /* Base styles */
     .header {
-      height: 60px;
+      height: 50px;
       border-bottom: 1px solid var(--color-border);
       background: var(--color-background);
-      padding: 0 20px;
+      padding: 0 15px;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 1000;
+    }
+
+    .main-content {
+      margin-top: 50px;
+      flex: 1;
+      overflow: auto;
+      padding: 10px;
     }
 
     .version-badge {
@@ -21,6 +29,11 @@ export const PLAYGROUND_STYLES = `
       padding: 2px 6px;
     }
 
+    .section-link {
+      text-decoration: none;
+    }
+
+    /* Theme selector components */
     .theme-selector {
       position: relative;
       display: inline-block;
@@ -29,26 +42,26 @@ export const PLAYGROUND_STYLES = `
     .theme-selector-trigger {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       background-color: var(--color-background);
       border: 1px solid var(--color-border);
       border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 14px;
+      padding: 4px 8px;
+      font-size: 12px;
       color: var(--color-body);
       cursor: pointer;
       transition: all 0.2s;
       outline: none;
-      min-width: 140px;
+      min-width: 100px;
       user-select: none;
     }
 
-    .theme-selector-trigger:hover {
+    .theme-selector-trigger:hover,
+    .theme-selector-trigger:focus {
       border-color: var(--color-primary);
     }
 
     .theme-selector-trigger:focus {
-      border-color: var(--color-primary);
       box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
     }
 
@@ -90,10 +103,11 @@ export const PLAYGROUND_STYLES = `
     .theme-option {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
+      gap: 6px;
+      padding: 6px 8px;
       cursor: pointer;
       transition: background-color 0.15s;
+      font-size: 12px;
     }
 
     .theme-option:hover {
@@ -122,14 +136,29 @@ export const PLAYGROUND_STYLES = `
       font-weight: 500;
     }
 
-    .section-link {
-      text-decoration: none;
-    }
+    /* Responsive styles - consolidated */
+    @media (min-width: 576px) {
+      .header {
+        height: 60px;
+        padding: 0 20px;
+      }
 
-    .main-content {
-      margin-top: 60px;
-      flex: 1;
-      overflow: auto;
+      .main-content {
+        margin-top: 60px;
+        padding: 25px;
+      }
+
+      .theme-selector-trigger {
+        gap: 8px;
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+
+      .theme-option {
+        gap: 8px;
+        padding: 8px 12px;
+        font-size: 14px;
+      }
     }
   </style>
 `
