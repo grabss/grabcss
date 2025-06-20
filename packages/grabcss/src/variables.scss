@@ -38,15 +38,15 @@ $colors: ();
 }
 
 // Font Sizes
-$font-size-xs: 12px !default;
-$font-size-sm: 14px !default;
-$font-size-md: 16px !default;
-$font-size-lg: 18px !default;
-$font-size-xl: 20px !default;
-$font-size-2xl: 22px !default;
-$font-size-3xl: 24px !default;
-$font-size-4xl: 36px !default;
-$font-size-5xl: 40px !default;
+$font-size-xs: 0.75rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-md: 1rem !default;
+$font-size-lg: 1.125rem !default;
+$font-size-xl: 1.25rem !default;
+$font-size-2xl: 1.375rem !default;
+$font-size-3xl: 1.5rem !default;
+$font-size-4xl: 2.25rem !default;
+$font-size-5xl: 2.5rem !default;
 
 $define-font-sizes: (
   'xs': $font-size-xs,

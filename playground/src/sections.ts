@@ -8,15 +8,15 @@ export function createTypographySection(): string {
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Font Sizes</h3>
           <div class="lh-sm">
-            <div class="fs-xs">fs-xs: Extra Small Text (12px)</div>
-            <div class="fs-sm">fs-sm: Small Text (14px)</div>
-            <div class="fs-md">fs-md: Medium Text (16px)</div>
-            <div class="fs-lg">fs-lg: Large Text (18px)</div>
-            <div class="fs-xl">fs-xl: Extra Large (20px)</div>
-            <div class="fs-2xl">fs-2xl: 2X Large (22px)</div>
-            <div class="fs-3xl">fs-3xl: 3X Large (24px)</div>
-            <div class="fs-4xl">fs-4xl: 4X Large (36px)</div>
-            <div class="fs-5xl">fs-5xl: 5X Large (40px)</div>
+            <div class="fs-xs">fs-xs: Extra Small Text (0.75rem)</div>
+            <div class="fs-sm">fs-sm: Small Text (0.875rem)</div>
+            <div class="fs-md">fs-md: Medium Text (1rem)</div>
+            <div class="fs-lg">fs-lg: Large Text (1.125rem)</div>
+            <div class="fs-xl">fs-xl: Extra Large (1.25rem)</div>
+            <div class="fs-2xl">fs-2xl: 2X Large (1.375rem)</div>
+            <div class="fs-3xl">fs-3xl: 3X Large (1.5rem)</div>
+            <div class="fs-4xl">fs-4xl: 4X Large (2.25rem)</div>
+            <div class="fs-5xl">fs-5xl: 5X Large (2.5rem)</div>
           </div>
         </div>
         <div>

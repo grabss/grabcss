@@ -131,15 +131,15 @@ import "grabcss/grab.css";
 - Danger: `#dc3545`
 
 ### Font Sizes
-- `xs`: 12px
-- `sm`: 14px
-- `md`: 16px (base)
-- `lg`: 18px
-- `xl`: 20px
-- `2xl`: 22px
-- `3xl`: 24px
-- `4xl`: 36px
-- `5xl`: 40px
+- `xs`: 0.75rem (12px)
+- `sm`: 0.875rem (14px)
+- `md`: 1rem (16px, base)
+- `lg`: 1.125rem (18px)
+- `xl`: 1.25rem (20px)
+- `2xl`: 1.375rem (22px)
+- `3xl`: 1.5rem (24px)
+- `4xl`: 2.25rem (36px)
+- `5xl`: 2.5rem (40px)
 
 ### Spacing Scale
 - `2xs`: 5px
