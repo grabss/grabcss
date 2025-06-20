@@ -8,28 +8,28 @@ export function createTypographySection(): string {
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Font Sizes</h3>
           <div class="lh-sm">
-            <div class="fs-xs">fs-xs: Extra Small Text (0.75rem)</div>
-            <div class="fs-sm">fs-sm: Small Text (0.875rem)</div>
-            <div class="fs-md">fs-md: Medium Text (1rem)</div>
-            <div class="fs-lg">fs-lg: Large Text (1.125rem)</div>
-            <div class="fs-xl">fs-xl: Extra Large (1.25rem)</div>
-            <div class="fs-2xl">fs-2xl: 2X Large (1.375rem)</div>
-            <div class="fs-3xl">fs-3xl: 3X Large (1.5rem)</div>
-            <div class="fs-4xl">fs-4xl: 4X Large (2.25rem)</div>
-            <div class="fs-5xl">fs-5xl: 5X Large (2.5rem)</div>
+            <div class="fs-xs">.fs-xs: Extra Small Text (0.75rem)</div>
+            <div class="fs-sm">.fs-sm: Small Text (0.875rem)</div>
+            <div class="fs-md">.fs-md: Medium Text (1rem)</div>
+            <div class="fs-lg">.fs-lg: Large Text (1.125rem)</div>
+            <div class="fs-xl">.fs-xl: Extra Large (1.25rem)</div>
+            <div class="fs-2xl">.fs-2xl: 2X Large (1.375rem)</div>
+            <div class="fs-3xl">.fs-3xl: 3X Large (1.5rem)</div>
+            <div class="fs-4xl">.fs-4xl: 4X Large (2.25rem)</div>
+            <div class="fs-5xl">.fs-5xl: 5X Large (2.5rem)</div>
           </div>
         </div>
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Colors & Weights</h3>
           <div class="lh-sm">
-            <div class="text-primary fw-normal">Primary Color (Normal)</div>
-            <div class="text-secondary fw-bold">Secondary Color (Bold)</div>
-            <div class="text-heading">Heading Color</div>
-            <div class="text-body">Body Color</div>
-            <div class="text-link">Link Color</div>
-            <div class="text-muted">Muted Color</div>
-            <div class="text-warning">Warning Color</div>
-            <div class="text-danger">Danger Color</div>
+            <div class="text-primary fw-normal">.text-primary .fw-normal: Primary Color (Normal)</div>
+            <div class="text-secondary fw-bold">.text-secondary .fw-bold: Secondary Color (Bold)</div>
+            <div class="text-heading">.text-heading: Heading Color</div>
+            <div class="text-body">.text-body: Body Color</div>
+            <div class="text-link">.text-link: Link Color</div>
+            <div class="text-muted">.text-muted: Muted Color</div>
+            <div class="text-warning">.text-warning: Warning Color</div>
+            <div class="text-danger">.text-danger: Danger Color</div>
           </div>
         </div>
       </div>
@@ -44,26 +44,109 @@ export function createLayoutSection(): string {
 
       <div>
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Flexbox</h3>
-        <div class="d-flex justify-space-between items-center bg-background p-md" style="border: 1px solid var(--color-border);">
-          <div class="flex-1 bg-primary text-background p-sm">Item 1</div>
-          <div class="flex-1 bg-secondary text-background p-sm">Item 2</div>
-          <div class="flex-1 bg-warning p-sm">Item 3</div>
+        
+        <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
+          <h4 class="fs-md fw-bold mb-sm">Flex Direction & Justify</h4>
+          <div class="d-flex justify-space-between items-center mb-sm">
+            <div class="flex-1 bg-primary text-background p-sm text-center">.flex-1</div>
+            <div class="flex-1 bg-secondary text-background p-sm text-center">.flex-1</div>
+            <div class="flex-1 bg-warning p-sm text-center">.flex-1</div>
+          </div>
+          <p class="text-muted fs-sm mb-0">.d-flex .justify-space-between .items-center</p>
         </div>
 
-        <div class="d-flex flex-column g-sm my-md">
-          <div class="bg-link text-background p-sm">Column Item 1</div>
-          <div class="bg-muted text-background p-sm">Column Item 2</div>
+        <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
+          <h4 class="fs-md fw-bold mb-sm">Justify Variations</h4>
+          <div class="d-flex justify-center items-center g-sm mb-sm">
+            <div class="bg-primary text-background p-sm">.justify-center</div>
+            <div class="bg-secondary text-background p-sm">Item 2</div>
+            <div class="bg-warning p-sm">Item 3</div>
+          </div>
+          <div class="d-flex justify-start items-center g-sm mb-sm">
+            <div class="bg-link text-background p-sm">.justify-start</div>
+            <div class="bg-muted text-background p-sm">Item 2</div>
+            <div class="bg-danger text-background p-sm">Item 3</div>
+          </div>
+          <div class="d-flex justify-end items-center g-sm">
+            <div class="bg-primary text-background p-sm">.justify-end</div>
+            <div class="bg-secondary text-background p-sm">Item 2</div>
+          </div>
+        </div>
+
+        <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
+          <h4 class="fs-md fw-bold mb-sm">Flex Direction</h4>
+          <div class="d-flex flex-column g-sm mb-md">
+            <div class="bg-link text-background p-sm">.flex-column: Item 1</div>
+            <div class="bg-muted text-background p-sm">.flex-column: Item 2</div>
+            <div class="bg-warning p-sm">.flex-column: Item 3</div>
+          </div>
+          <div class="d-flex flex-row-reverse g-sm">
+            <div class="bg-primary text-background p-sm">.flex-row-reverse: Item 1</div>
+            <div class="bg-secondary text-background p-sm">.flex-row-reverse: Item 2</div>
+            <div class="bg-danger text-background p-sm">.flex-row-reverse: Item 3</div>
+          </div>
+        </div>
+
+        <div class="bg-background p-md" style="border: 1px solid var(--color-border);">
+          <h4 class="fs-md fw-bold mb-sm">Flex Wrap</h4>
+          <div class="d-flex flex-wrap g-sm" style="width: 200px;">
+            <div class="bg-primary text-background p-sm">.flex-wrap: Item 1</div>
+            <div class="bg-secondary text-background p-sm">.flex-wrap: Item 2</div>
+            <div class="bg-warning p-sm">.flex-wrap: Item 3</div>
+            <div class="bg-link text-background p-sm">.flex-wrap: Item 4</div>
+          </div>
+          <p class="text-muted fs-sm mt-sm mb-0">.d-flex .flex-wrap .g-sm (in 200px container)</p>
         </div>
       </div>
 
       <div class="mt-lg">
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">CSS Grid</h3>
-        <div class="d-grid grid-cols-3 g-sm">
-          <div class="bg-primary text-background p-md text-center">Grid 1</div>
-          <div class="bg-secondary text-background p-md text-center">Grid 2</div>
-          <div class="bg-warning p-md text-center">Grid 3</div>
-          <div class="col-span-2 bg-danger text-background p-md text-center">Span 2 columns</div>
-          <div class="bg-muted text-background p-md text-center">Grid 6</div>
+        
+        <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
+          <h4 class="fs-md fw-bold mb-sm">Grid Columns</h4>
+          <div class="d-grid grid-cols-2 g-sm mb-md">
+            <div class="bg-primary text-background p-sm text-center">.grid-cols-2: Item 1</div>
+            <div class="bg-secondary text-background p-sm text-center">.grid-cols-2: Item 2</div>
+          </div>
+          <div class="d-grid grid-cols-4 g-sm mb-md">
+            <div class="bg-warning p-sm text-center">.grid-cols-4: 1</div>
+            <div class="bg-link text-background p-sm text-center">.grid-cols-4: 2</div>
+            <div class="bg-muted text-background p-sm text-center">.grid-cols-4: 3</div>
+            <div class="bg-danger text-background p-sm text-center">.grid-cols-4: 4</div>
+          </div>
+          <div class="d-grid grid-cols-6 g-sm">
+            <div class="bg-primary text-background p-xs text-center">.grid-cols-6</div>
+            <div class="bg-secondary text-background p-xs text-center">2</div>
+            <div class="bg-warning p-xs text-center">3</div>
+            <div class="bg-link text-background p-xs text-center">4</div>
+            <div class="bg-muted text-background p-xs text-center">5</div>
+            <div class="bg-danger text-background p-xs text-center">6</div>
+          </div>
+        </div>
+
+        <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
+          <h4 class="fs-md fw-bold mb-sm">Column Spans</h4>
+          <div class="d-grid grid-cols-5 g-sm">
+            <div class="col-span-2 bg-primary text-background p-sm text-center">.col-span-2</div>
+            <div class="col-span-3 bg-secondary text-background p-sm text-center">.col-span-3</div>
+            <div class="bg-warning p-sm text-center">Regular</div>
+            <div class="col-span-4 bg-link text-background p-sm text-center">.col-span-4</div>
+            <div class="col-span-5 bg-danger text-background p-sm text-center">.col-span-5 (full width)</div>
+          </div>
+          <p class="text-muted fs-sm mt-sm mb-0">.d-grid .grid-cols-5 with various column spans</p>
+        </div>
+
+        <div class="bg-background p-md" style="border: 1px solid var(--color-border);">
+          <h4 class="fs-md fw-bold mb-sm">Grid Rows</h4>
+          <div class="d-grid grid-cols-3 grid-rows-3 g-sm" style="height: 200px;">
+            <div class="bg-primary text-background p-sm text-center d-flex items-center justify-center">.grid-rows-3: 1</div>
+            <div class="row-span-2 bg-secondary text-background p-sm text-center d-flex items-center justify-center">.row-span-2</div>
+            <div class="bg-warning p-sm text-center d-flex items-center justify-center">3</div>
+            <div class="bg-link text-background p-sm text-center d-flex items-center justify-center">4</div>
+            <div class="bg-muted text-background p-sm text-center d-flex items-center justify-center">6</div>
+            <div class="row-span-2 bg-danger text-background p-sm text-center d-flex items-center justify-center">.row-span-2</div>
+          </div>
+          <p class="text-muted fs-sm mt-sm mb-0">.d-grid .grid-cols-3 .grid-rows-3 with row spans</p>
         </div>
       </div>
     </section>
@@ -78,18 +161,18 @@ export function createSpacingSection(): string {
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Margins</h3>
           <div class="bg-border p-sm">
-            <div class="bg-primary text-background p-sm m-2xs">m-2xs (5px)</div>
-            <div class="bg-primary text-background p-sm m-xs">m-xs (10px)</div>
-            <div class="bg-primary text-background p-sm m-sm">m-sm (15px)</div>
-            <div class="bg-primary text-background p-sm m-md">m-md (20px)</div>
+            <div class="bg-primary text-background p-sm m-2xs">.m-2xs (5px)</div>
+            <div class="bg-primary text-background p-sm m-xs">.m-xs (10px)</div>
+            <div class="bg-primary text-background p-sm m-sm">.m-sm (15px)</div>
+            <div class="bg-primary text-background p-sm m-md">.m-md (20px)</div>
           </div>
         </div>
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Paddings</h3>
-          <div class="bg-primary text-background p-2xs my-sm">p-2xs (5px)</div>
-          <div class="bg-secondary text-background p-xs my-sm">p-xs (10px)</div>
-          <div class="bg-warning p-sm my-sm">p-sm (15px)</div>
-          <div class="bg-danger text-background p-md my-sm">p-md (20px)</div>
+          <div class="bg-primary text-background p-2xs my-sm">.p-2xs (5px)</div>
+          <div class="bg-secondary text-background p-xs my-sm">.p-xs (10px)</div>
+          <div class="bg-warning p-sm my-sm">.p-sm (15px)</div>
+          <div class="bg-danger text-background p-md my-sm">.p-md (20px)</div>
         </div>
       </div>
     </section>
@@ -104,19 +187,19 @@ export function createOpacitySection(): string {
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Opacity Classes</h3>
         <div class="d-flex g-md items-end">
           <div class="bg-primary text-background p-md text-center op-100" style="width: 120px;">
-            op-100<br/><span class="fs-xs">100%</span>
+            .op-100<br/><span class="fs-xs">100%</span>
           </div>
           <div class="bg-primary text-background p-md text-center op-75" style="width: 120px;">
-            op-75<br/><span class="fs-xs">75%</span>
+            .op-75<br/><span class="fs-xs">75%</span>
           </div>
           <div class="bg-primary text-background p-md text-center op-50" style="width: 120px;">
-            op-50<br/><span class="fs-xs">50%</span>
+            .op-50<br/><span class="fs-xs">50%</span>
           </div>
           <div class="bg-primary text-background p-md text-center op-25" style="width: 120px;">
-            op-25<br/><span class="fs-xs">25%</span>
+            .op-25<br/><span class="fs-xs">25%</span>
           </div>
           <div class="bg-primary text-background p-md text-center op-0" style="width: 120px;">
-            op-0<br/><span class="fs-xs">0%</span>
+            .op-0<br/><span class="fs-xs">0%</span>
           </div>
         </div>
         <div class="mt-md fs-sm text-muted">
@@ -136,8 +219,8 @@ export function createPositioningSizingSection(): string {
     <section class="m-xl">
       ${createSectionHeader('positioning-sizing', 'Positioning & Sizing')}
       <div class="ps-relative h-100 mt-sm" style="height: 200px; border: 1px solid var(--color-border);">
-        <div class="ps-absolute bg-primary text-background p-sm" style="top: 10px; left: 10px;">Absolute Top-Left</div>
-        <div class="ps-absolute bg-secondary text-background p-sm" style="bottom: 10px; right: 10px;">Absolute Bottom-Right</div>
+        <div class="ps-absolute bg-primary text-background p-sm" style="top: 10px; left: 10px;">.ps-absolute: Absolute Top-Left</div>
+        <div class="ps-absolute bg-secondary text-background p-sm" style="bottom: 10px; right: 10px;">.ps-absolute: Absolute Bottom-Right</div>
         <div class="d-flex justify-center items-center h-100">
           <div class="bg-warning p-md">Centered Content</div>
         </div>
@@ -153,11 +236,11 @@ export function createResponsiveSection(): string {
       <p class="text-muted m-sm">Resize your browser to see responsive behavior</p>
       <div class="d-flex flex-column sm:flex-row g-md">
         <div class="bg-primary text-background p-md flex-1">
-          <p>Mobile: Column layout</p>
-          <p>Desktop (sm+): Row layout</p>
+          <p>.d-flex .flex-column .sm:flex-row</p>
+          <p>Mobile: Column layout<br/>Desktop (sm+): Row layout</p>
         </div>
         <div class="bg-secondary text-background p-md flex-1">
-          <p class="fs-sm md:fs-lg">Responsive text size</p>
+          <p class="fs-sm md:fs-lg">.fs-sm .md:fs-lg: Responsive text size</p>
           <p>Small on mobile, large on tablet+</p>
         </div>
       </div>
@@ -171,17 +254,17 @@ export function createTextUtilitiesSection(): string {
       ${createSectionHeader('text-utilities', 'Text Utilities')}
       <div class="mt-sm d-grid grid-cols-3 g-md">
         <div>
-          <div class="text-left p-sm" style="border: 1px solid var(--color-border);">Left aligned</div>
-          <div class="text-center p-sm" style="border: 1px solid var(--color-border);">Center aligned</div>
-          <div class="text-right p-sm" style="border: 1px solid var(--color-border);">Right aligned</div>
+          <div class="text-left p-sm" style="border: 1px solid var(--color-border);">.text-left: Left aligned</div>
+          <div class="text-center p-sm" style="border: 1px solid var(--color-border);">.text-center: Center aligned</div>
+          <div class="text-right p-sm" style="border: 1px solid var(--color-border);">.text-right: Right aligned</div>
         </div>
         <div>
-          <div class="ws-nowrap p-sm" style="border: 1px solid var(--color-border); overflow: hidden; text-overflow: ellipsis;" title="This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling">This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling</div>
-          <div class="wb-break-all p-sm" style="border: 1px solid var(--color-border);">This is a demonstration of the word-break all utility class that allows text to break at any character position when the content exceeds the container width</div>
+          <div class="ws-nowrap p-sm" style="border: 1px solid var(--color-border); overflow: hidden; text-overflow: ellipsis;" title="This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling">.ws-nowrap: This is a very long sentence that demonstrates the nowrap utility class behavior with ellipsis overflow handling</div>
+          <div class="wb-break-all p-sm" style="border: 1px solid var(--color-border);">.wb-break-all: This is a demonstration of the word-break all utility class that allows text to break at any character position when the content exceeds the container width</div>
         </div>
         <div>
-          <div class="lh-xs p-sm" style="border: 1px solid var(--color-border);">Line height extra small (1.2)</div>
-          <div class="lh-md p-sm" style="border: 1px solid var(--color-border);">Line height medium (1.6)</div>
+          <div class="lh-xs p-sm" style="border: 1px solid var(--color-border);">.lh-xs: Line height extra small (1.2)</div>
+          <div class="lh-md p-sm" style="border: 1px solid var(--color-border);">.lh-md: Line height medium (1.6)</div>
         </div>
       </div>
     </section>
@@ -282,26 +365,26 @@ export function createCSSVariablesSection(): string {
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Text Colors</h4>
           <div class="mb-sm lh-sm">
-            <div class="text-primary">Primary text color</div>
-            <div class="text-secondary">Secondary text color</div>
-            <div class="text-heading">Heading text color</div>
-            <div class="text-body">Body text color</div>
-            <div class="text-link">Link text color</div>
-            <div class="text-muted">Muted text color</div>
-            <div class="text-warning">Warning text color</div>
-            <div class="text-danger">Danger text color</div>
+            <div class="text-primary">.text-primary: Primary text color</div>
+            <div class="text-secondary">.text-secondary: Secondary text color</div>
+            <div class="text-heading">.text-heading: Heading text color</div>
+            <div class="text-body">.text-body: Body text color</div>
+            <div class="text-link">.text-link: Link text color</div>
+            <div class="text-muted">.text-muted: Muted text color</div>
+            <div class="text-warning">.text-warning: Warning text color</div>
+            <div class="text-danger">.text-danger: Danger text color</div>
           </div>
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Background Colors</h4>
           <div class="d-grid grid-cols-2 g-xs">
-            <div class="bg-primary text-background p-xs text-center rounded-sm">Primary</div>
-            <div class="bg-secondary text-background p-xs text-center rounded-sm">Secondary</div>
-            <div class="bg-background text-body p-xs text-center rounded-sm border">Background</div>
-            <div class="bg-link text-background p-xs text-center rounded-sm">Link</div>
-            <div class="bg-muted text-background p-xs text-center rounded-sm">Muted</div>
-            <div class="bg-warning p-xs text-center rounded-sm">Warning</div>
-            <div class="bg-danger text-background p-xs text-center rounded-sm">Danger</div>
-            <div class="bg-border p-xs text-center rounded-sm">Border</div>
+            <div class="bg-primary text-background p-xs text-center rounded-sm">.bg-primary</div>
+            <div class="bg-secondary text-background p-xs text-center rounded-sm">.bg-secondary</div>
+            <div class="bg-background text-body p-xs text-center rounded-sm border">.bg-background</div>
+            <div class="bg-link text-background p-xs text-center rounded-sm">.bg-link</div>
+            <div class="bg-muted text-background p-xs text-center rounded-sm">.bg-muted</div>
+            <div class="bg-warning p-xs text-center rounded-sm">.bg-warning</div>
+            <div class="bg-danger text-background p-xs text-center rounded-sm">.bg-danger</div>
+            <div class="bg-border p-xs text-center rounded-sm">.bg-border</div>
           </div>
         </div>
 
