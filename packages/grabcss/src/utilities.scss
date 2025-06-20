@@ -3,15 +3,9 @@
 @use './variables' as variables;
 @use 'sass:list';
 
-// Playground examples:
-// .opacity-0    { opacity: 0; }
-// .opacity-25   { opacity: 0.25; }
-// .opacity-50   { opacity: 0.5; }
-// .opacity-75   { opacity: 0.75; }
-// .opacity-100  { opacity: 1; }
-
 // Define utility configurations for cleaner generation
 $utility-configs: (
+  // Colors
   'text': (
     variables.$colors,
     'color'
@@ -20,6 +14,7 @@ $utility-configs: (
     variables.$colors,
     'background-color'
   ),
+  // Typography
   'fs': (
     variables.$font-sizes,
     'font-size'
@@ -32,10 +27,15 @@ $utility-configs: (
     variables.$line-heights,
     'line-height'
   ),
-  'v': (
-    variables.$visibilities,
-    'visibility'
+  'ws': (
+    variables.$white-spaces,
+    'white-space'
   ),
+  'wb': (
+    variables.$word-breaks,
+    'word-break'
+  ),
+  // Layout
   'd': (
     variables.$displays,
     'display'
@@ -44,6 +44,20 @@ $utility-configs: (
     variables.$positions,
     'position'
   ),
+  'v': (
+    variables.$visibilities,
+    'visibility'
+  ),
+  // Sizing
+  'w': (
+    variables.$sizes,
+    'width'
+  ),
+  'h': (
+    variables.$sizes,
+    'height'
+  ),
+  // Spacing
   'g': (
     variables.$spaces,
     'gap'
@@ -56,22 +70,7 @@ $utility-configs: (
     variables.$spaces,
     'column-gap'
   ),
-  'w': (
-    variables.$sizes,
-    'width'
-  ),
-  'h': (
-    variables.$sizes,
-    'height'
-  ),
-  'ws': (
-    variables.$white-spaces,
-    'white-space'
-  ),
-  'wb': (
-    variables.$word-breaks,
-    'word-break'
-  ),
+  // Flexbox
   'flex-direction': (
     variables.$flex-directions,
     'flex-direction'
@@ -88,6 +87,7 @@ $utility-configs: (
     variables.$align-items-positions,
     'align-items'
   ),
+  // Grid
   'grid-template-cols': (
     variables.$grid-template-columns,
     'grid-template-columns'
@@ -116,16 +116,13 @@ $utility-configs: (
     variables.$place-self,
     'place-self'
   ),
+  // Visual effects
   'op': (
     variables.$opacities,
     'opacity'
   ),
-  'border': (
-    variables.$border-widths,
-    'border-width'
-  ),
   'rounded': (
-    variables.$border-radii,
+    variables.$border-radius,
     'border-radius'
   )
 );
@@ -150,6 +147,23 @@ $utility-configs: (
   }
 }
 
+// Generate border utilities
+@each $key, $value in variables.$border-widths {
+  @if $key == 'default' {
+    .border {
+      border-width: $value;
+      border-style: solid;
+      border-color: var(--color-border);
+    }
+  } @else {
+    .border-#{$key} {
+      border-width: $value;
+      border-style: solid;
+      border-color: var(--color-border);
+    }
+  }
+}
+
 // Fixed utilities
 .flex-1 {
   flex: 1;
@@ -157,12 +171,6 @@ $utility-configs: (
 
 .flex-shrink-0 {
   flex-shrink: 0;
-}
-
-// Border style utilities
-.border {
-  border-style: solid;
-  border-color: var(--color-border);
 }
 
 // Generate breakpoint utilities
@@ -189,6 +197,29 @@ $utility-configs: (
   }
 }
 
+// Generate breakpoint border utilities
+@each $breakpoint, $_ in mediaquery.$breakpoints {
+  @each $key, $value in variables.$border-widths {
+    @if $key == 'default' {
+      .#{$breakpoint}\:border {
+        @include mediaquery.mq($breakpoint) {
+          border-width: $value;
+          border-style: solid;
+          border-color: var(--color-border);
+        }
+      }
+    } @else {
+      .#{$breakpoint}\:border-#{$key} {
+        @include mediaquery.mq($breakpoint) {
+          border-width: $value;
+          border-style: solid;
+          border-color: var(--color-border);
+        }
+      }
+    }
+  }
+}
+
 // Breakpoint fixed utilities
 @each $breakpoint, $_ in mediaquery.$breakpoints {
   .#{$breakpoint}\:flex-1 {
@@ -200,13 +231,6 @@ $utility-configs: (
   .#{$breakpoint}\:flex-shrink-0 {
     @include mediaquery.mq($breakpoint) {
       flex-shrink: 0;
-    }
-  }
-
-  .#{$breakpoint}\:border {
-    @include mediaquery.mq($breakpoint) {
-      border-style: solid;
-      border-color: var(--color-border);
     }
   }
 }

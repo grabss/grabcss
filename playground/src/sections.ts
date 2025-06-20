@@ -196,21 +196,21 @@ export function createBorderSection(): string {
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Border Widths</h3>
           <div class="d-flex flex-direction-column g-md">
-            <div class="border border-none bg-background p-md">
-              <code class="bg-border p-xs rounded-sm">.border-none</code>
-              <span class="text-muted ml-sm">No border (0)</span>
+            <div class="border bg-background p-md">
+              <code class="bg-border p-xs rounded-sm">.border</code>
+              <span class="text-muted ml-sm">Default border (1px)</span>
             </div>
-            <div class="border border-sm bg-background p-md">
-              <code class="bg-border p-xs rounded-sm">.border-sm</code>
-              <span class="text-muted ml-sm">Small border (2px)</span>
-            </div>
-            <div class="border border-md bg-background p-md">
-              <code class="bg-border p-xs rounded-sm">.border-md</code>
-              <span class="text-muted ml-sm">Medium border (4px)</span>
-            </div>
-            <div class="border border-lg bg-background p-md">
+            <div class="border-lg bg-background p-md">
               <code class="bg-border p-xs rounded-sm">.border-lg</code>
-              <span class="text-muted ml-sm">Large border (8px)</span>
+              <span class="text-muted ml-sm">Large border (2px)</span>
+            </div>
+            <div class="border-xl bg-background p-md">
+              <code class="bg-border p-xs rounded-sm">.border-xl</code>
+              <span class="text-muted ml-sm">Extra Large border (4px)</span>
+            </div>
+            <div class="border-2xl bg-background p-md">
+              <code class="bg-border p-xs rounded-sm">.border-2xl</code>
+              <span class="text-muted ml-sm">2X Large border (8px)</span>
             </div>
           </div>
         </div>
@@ -218,13 +218,9 @@ export function createBorderSection(): string {
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Border Radius</h3>
           <div class="d-flex flex-direction-column g-md">
-            <div class="border bg-primary text-background p-md rounded-none">
-              <code class="bg-background text-body p-xs">.rounded-none</code>
-              <span class="ml-sm">No radius (0)</span>
-            </div>
             <div class="border bg-primary text-background p-md rounded-sm">
               <code class="bg-background text-body p-xs rounded-sm">.rounded-sm</code>
-              <span class="ml-sm">Small radius (2px)</span>
+              <span class="ml-sm">Small radius (4px)</span>
             </div>
             <div class="border bg-primary text-background p-md rounded-md">
               <code class="bg-background text-body p-xs rounded-md">.rounded-md</code>
@@ -260,10 +256,10 @@ export function createBorderSection(): string {
           <div class="border rounded-sm bg-background p-md">
             Card with border + rounded corners
           </div>
-          <div class="border border-md rounded-lg bg-warning p-md">
+          <div class="border-lg rounded-lg bg-warning p-md">
             Warning box with thick border
           </div>
-          <div class="border border-sm rounded-full bg-primary text-background p-md">
+          <div class="border rounded-full bg-primary text-background p-md">
             Pill button
           </div>
         </div>

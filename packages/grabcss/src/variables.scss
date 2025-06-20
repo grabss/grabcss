@@ -153,6 +153,83 @@ $spaces: ();
   );
 }
 
+// Border Widths
+$border-width-default: 1px !default;
+$border-width-lg: 2px !default;
+$border-width-xl: 4px !default;
+$border-width-2xl: 8px !default;
+
+$define-border-widths: (
+  'default': $border-width-default,
+  'lg': $border-width-lg,
+  'xl': $border-width-xl,
+  '2xl': $border-width-2xl
+) !default;
+
+$border-widths: ();
+@each $name, $value in $define-border-widths {
+  $border-widths: map.merge(
+    $border-widths,
+    (
+      $name: string.unquote('var(--border-width-#{$name})')
+    )
+  );
+}
+
+// Border Radius
+$border-radius-sm: 4px !default;
+$border-radius-md: 6px !default;
+$border-radius-lg: 8px !default;
+$border-radius-xl: 12px !default;
+$border-radius-2xl: 16px !default;
+$border-radius-3xl: 24px !default;
+$border-radius-full: 9999px !default;
+
+$define-border-radius: (
+  'sm': $border-radius-sm,
+  'md': $border-radius-md,
+  'lg': $border-radius-lg,
+  'xl': $border-radius-xl,
+  '2xl': $border-radius-2xl,
+  '3xl': $border-radius-3xl,
+  'full': $border-radius-full
+) !default;
+
+$border-radius: ();
+@each $name, $value in $define-border-radius {
+  $border-radius: map.merge(
+    $border-radius,
+    (
+      $name: string.unquote('var(--border-radius-#{$name})')
+    )
+  );
+}
+
+// Opacity
+$opacity-0: 0 !default;
+$opacity-25: 0.25 !default;
+$opacity-50: 0.5 !default;
+$opacity-75: 0.75 !default;
+$opacity-100: 1 !default;
+
+$define-opacities: (
+  '0': $opacity-0,
+  '25': $opacity-25,
+  '50': $opacity-50,
+  '75': $opacity-75,
+  '100': $opacity-100
+) !default;
+
+$opacities: ();
+@each $name, $value in $define-opacities {
+  $opacities: map.merge(
+    $opacities,
+    (
+      $name: $value
+    )
+  );
+}
+
 // The following maps are primarily using CSS keyword values
 $text-directions: (
   'left': left,
@@ -306,82 +383,3 @@ $place-self: (
   'center': center,
   'stretch': stretch
 ) !default;
-
-// Border Widths
-$border-width-none: 0 !default;
-$border-width-sm: 2px !default;
-$border-width-md: 4px !default;
-$border-width-lg: 8px !default;
-
-$define-border-widths: (
-  'none': $border-width-none,
-  'sm': $border-width-sm,
-  'md': $border-width-md,
-  'lg': $border-width-lg
-) !default;
-
-$border-widths: ();
-@each $name, $value in $define-border-widths {
-  $border-widths: map.merge(
-    $border-widths,
-    (
-      $name: string.unquote('var(--border-width-#{$name})')
-    )
-  );
-}
-
-// Border Radius
-$border-radius-none: 0 !default;
-$border-radius-sm: 2px !default;
-$border-radius-md: 6px !default;
-$border-radius-lg: 8px !default;
-$border-radius-xl: 12px !default;
-$border-radius-2xl: 16px !default;
-$border-radius-3xl: 24px !default;
-$border-radius-full: 9999px !default;
-
-$define-border-radius: (
-  'none': $border-radius-none,
-  'sm': $border-radius-sm,
-  'md': $border-radius-md,
-  'lg': $border-radius-lg,
-  'xl': $border-radius-xl,
-  '2xl': $border-radius-2xl,
-  '3xl': $border-radius-3xl,
-  'full': $border-radius-full
-) !default;
-
-$border-radii: ();
-@each $name, $value in $define-border-radius {
-  $border-radii: map.merge(
-    $border-radii,
-    (
-      $name: string.unquote('var(--border-radius-#{$name})')
-    )
-  );
-}
-
-// Opacity
-$opacity-0: 0 !default;
-$opacity-25: 0.25 !default;
-$opacity-50: 0.5 !default;
-$opacity-75: 0.75 !default;
-$opacity-100: 1 !default;
-
-$define-opacities: (
-  '0': $opacity-0,
-  '25': $opacity-25,
-  '50': $opacity-50,
-  '75': $opacity-75,
-  '100': $opacity-100
-) !default;
-
-$opacities: ();
-@each $name, $value in $define-opacities {
-  $opacities: map.merge(
-    $opacities,
-    (
-      $name: $value
-    )
-  );
-}

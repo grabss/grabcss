@@ -154,14 +154,13 @@ import "grabcss/grab.css";
 - `5xl`: 50px
 
 ### Border Widths
-- `none`: 0
-- `sm`: 2px
-- `md`: 4px
-- `lg`: 8px
+- `.border`: 1px
+- `lg`: 2px
+- `xl`: 4px
+- `2xl`: 8px
 
 ### Border Radius
-- `none`: 0
-- `sm`: 2px
+- `sm`: 4px
 - `md`: 6px
 - `lg`: 8px
 - `xl`: 12px
@@ -215,9 +214,8 @@ import "grabcss/grab.css";
 - `.op-{value}` - 0, 25, 50, 75, 100
 
 ### Borders
-- `.border-{width}` - none, sm, md, lg
-- `.rounded-{radius}` - none, sm, md, lg, xl, 2xl, 3xl, full
-- `.border` - adds solid border with default color
+- `.border`, `.border-{size}` - lg, xl, 2xl
+- `.rounded-{radius}` - sm, md, lg, xl, 2xl, 3xl, full
 
 ### Visibility
 `.v-{value}` - visible, hidden
