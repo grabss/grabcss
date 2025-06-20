@@ -4,7 +4,7 @@ export function createTypographySection(): string {
   return `
     <section class="m-xl">
       ${createSectionHeader('typography', 'Typography')}
-      <div class="d-grid grid-template-cols-2 g-md">
+      <div class="d-grid grid-cols-2 g-md">
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Font Sizes</h3>
           <div class="lh-sm">
@@ -44,13 +44,13 @@ export function createLayoutSection(): string {
 
       <div>
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Flexbox</h3>
-        <div class="d-flex justify-content-space-between align-items-center bg-background p-md" style="border: 1px solid var(--color-border);">
+        <div class="d-flex justify-space-between items-center bg-background p-md" style="border: 1px solid var(--color-border);">
           <div class="flex-1 bg-primary text-background p-sm">Item 1</div>
           <div class="flex-1 bg-secondary text-background p-sm">Item 2</div>
           <div class="flex-1 bg-warning p-sm">Item 3</div>
         </div>
 
-        <div class="d-flex flex-direction-column g-sm my-md">
+        <div class="d-flex flex-column g-sm my-md">
           <div class="bg-link text-background p-sm">Column Item 1</div>
           <div class="bg-muted text-background p-sm">Column Item 2</div>
         </div>
@@ -58,11 +58,11 @@ export function createLayoutSection(): string {
 
       <div class="mt-lg">
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">CSS Grid</h3>
-        <div class="d-grid grid-template-cols-3 g-sm">
+        <div class="d-grid grid-cols-3 g-sm">
           <div class="bg-primary text-background p-md text-center">Grid 1</div>
           <div class="bg-secondary text-background p-md text-center">Grid 2</div>
           <div class="bg-warning p-md text-center">Grid 3</div>
-          <div class="grid-col-span-2 bg-danger text-background p-md text-center">Span 2 columns</div>
+          <div class="col-span-2 bg-danger text-background p-md text-center">Span 2 columns</div>
           <div class="bg-muted text-background p-md text-center">Grid 6</div>
         </div>
       </div>
@@ -74,7 +74,7 @@ export function createSpacingSection(): string {
   return `
     <section class="m-xl">
       ${createSectionHeader('spacing', 'Spacing')}
-      <div class="d-grid grid-template-cols-2 g-lg">
+      <div class="d-grid grid-cols-2 g-lg">
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Margins</h3>
           <div class="bg-border p-sm">
@@ -102,7 +102,7 @@ export function createOpacitySection(): string {
       ${createSectionHeader('opacity', 'Opacity')}
       <div>
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Opacity Classes</h3>
-        <div class="d-flex g-md align-items-end">
+        <div class="d-flex g-md items-end">
           <div class="bg-primary text-background p-md text-center op-100" style="width: 120px;">
             op-100<br/><span class="fs-xs">100%</span>
           </div>
@@ -138,7 +138,7 @@ export function createPositioningSizingSection(): string {
       <div class="ps-relative h-100 mt-sm" style="height: 200px; border: 1px solid var(--color-border);">
         <div class="ps-absolute bg-primary text-background p-sm" style="top: 10px; left: 10px;">Absolute Top-Left</div>
         <div class="ps-absolute bg-secondary text-background p-sm" style="bottom: 10px; right: 10px;">Absolute Bottom-Right</div>
-        <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="d-flex justify-center items-center h-100">
           <div class="bg-warning p-md">Centered Content</div>
         </div>
       </div>
@@ -151,7 +151,7 @@ export function createResponsiveSection(): string {
     <section class="m-xl">
       ${createSectionHeader('responsive-design', 'Responsive Design')}
       <p class="text-muted m-sm">Resize your browser to see responsive behavior</p>
-      <div class="d-flex flex-direction-column sm:flex-direction-row g-md">
+      <div class="d-flex flex-column sm:flex-row g-md">
         <div class="bg-primary text-background p-md flex-1">
           <p>Mobile: Column layout</p>
           <p>Desktop (sm+): Row layout</p>
@@ -169,7 +169,7 @@ export function createTextUtilitiesSection(): string {
   return `
     <section class="m-xl">
       ${createSectionHeader('text-utilities', 'Text Utilities')}
-      <div class="mt-sm d-grid grid-template-cols-3 g-md">
+      <div class="mt-sm d-grid grid-cols-3 g-md">
         <div>
           <div class="text-left p-sm" style="border: 1px solid var(--color-border);">Left aligned</div>
           <div class="text-center p-sm" style="border: 1px solid var(--color-border);">Center aligned</div>
@@ -192,10 +192,10 @@ export function createBorderSection(): string {
   return `
     <section class="m-xl">
       ${createSectionHeader('border-utilities', 'Border Utilities')}
-      <div class="d-grid grid-template-cols-2 g-lg">
+      <div class="d-grid grid-cols-2 g-lg">
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Border Widths</h3>
-          <div class="d-flex flex-direction-column g-md">
+          <div class="d-flex flex-column g-md">
             <div class="border bg-background p-md">
               <code class="bg-border p-xs rounded-sm">.border</code>
               <span class="text-muted ml-sm">Default border (1px)</span>
@@ -217,7 +217,7 @@ export function createBorderSection(): string {
 
         <div>
           <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Border Radius</h3>
-          <div class="d-flex flex-direction-column g-md">
+          <div class="d-flex flex-column g-md">
             <div class="border bg-primary text-background p-md rounded-sm">
               <code class="bg-background text-body p-xs rounded-sm">.rounded-sm</code>
               <span class="ml-sm">Small radius (4px)</span>
@@ -275,7 +275,7 @@ export function createCSSVariablesSection(): string {
       <div class="my-md">
         <p class="text-muted m-sm">Use the theme toggle in the header to see CSS custom properties in action</p>
       </div>
-      <div class="d-grid grid-template-cols-2 g-md">
+      <div class="d-grid grid-cols-2 g-md">
         <div class="p-md rounded-md" style="border: 1px solid var(--color-border); background: var(--color-background);">
           <h3 class="text-heading mt-sm mb-sm">Dynamic Colors</h3>
           <p class="text-body mb-sm">All color utilities use CSS variables that adapt to theme changes.</p>
@@ -293,7 +293,7 @@ export function createCSSVariablesSection(): string {
           </div>
 
           <h4 class="fs-md fw-bold text-heading mb-xs">Background Colors</h4>
-          <div class="d-grid grid-template-cols-2 g-xs">
+          <div class="d-grid grid-cols-2 g-xs">
             <div class="bg-primary text-background p-xs text-center rounded-sm">Primary</div>
             <div class="bg-secondary text-background p-xs text-center rounded-sm">Secondary</div>
             <div class="bg-background text-body p-xs text-center rounded-sm border">Background</div>

@@ -78,11 +78,11 @@ import "grabcss/grab.css";
 
 ### Layout & Flexbox
 ```html
-<div class="d-flex justify-content-center align-items-center">
+<div class="d-flex justify-center items-center">
   <div class="flex-1">Flexible item</div>
 </div>
 
-<div class="d-grid grid-template-cols-3 g-md">
+<div class="d-grid grid-cols-3 g-md">
   <div>Grid item 1</div>
   <div>Grid item 2</div>
   <div>Grid item 3</div>
@@ -177,17 +177,17 @@ import "grabcss/grab.css";
 `.ps-{value}` - static, relative, absolute, fixed, sticky
 
 ### Flexbox
-- `.flex-direction-{value}` - row, row-reverse, column, column-reverse
+- `.flex-{value}` - row, row-reverse, column, column-reverse
 - `.flex-nowrap`, `.flex-wrap`, `.flex-wrap-reverse`
-- `.justify-content-{value}` - start, center, end, flex-start, flex-end, space-between, space-around
-- `.align-items-{value}` - start, center, end, flex-start, flex-end
+- `.justify-{value}` - start, center, end, flex-start, flex-end, space-between, space-around
+- `.items-{value}` - start, center, end, flex-start, flex-end
 - `.flex-1`, `.flex-shrink-0`
 
 ### Grid
-- `.grid-template-cols-{value}` - 1, 2, 3, 4, 5, 6, 12, none
-- `.grid-template-rows-{value}` - 1, 2, 3, 4, 6, none
-- `.grid-col-{value}` - auto, span-1 to span-6, span-full
-- `.grid-row-{value}` - auto, span-1 to span-6, span-full
+- `.grid-cols-{value}` - 1, 2, 3, 4, 5, 6, 12, none
+- `.grid-rows-{value}` - 1, 2, 3, 4, 5, 6, none
+- `.col-{value}` - auto, span-1 to span-6, span-full
+- `.row-{value}` - auto, span-1 to span-6, span-full
 - `.place-content-{value}`, `.place-items-{value}`, `.place-self-{value}`
 
 ### Spacing
@@ -251,7 +251,7 @@ import "grabcss/grab.css";
 
 ### Responsive Layout
 ```html
-<div class="d-flex flex-direction-column md:flex-direction-row g-md">
+<div class="d-flex flex-column md:flex-row g-md">
   <div class="flex-1 bg-primary text-background p-md">
     <h3 class="fs-lg mb-sm">Main Content</h3>
     <p class="fs-sm">This adapts from vertical stack on mobile to horizontal on tablets and up.</p>

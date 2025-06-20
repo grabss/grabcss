@@ -71,32 +71,32 @@ $utility-configs: (
     'column-gap'
   ),
   // Flexbox
-  'flex-direction': (
+  'flex': (
     variables.$flex-directions,
     'flex-direction'
   ),
-  'justify-content': (
+  'justify': (
     variables.$justify-content-positions,
     'justify-content'
   ),
-  'align-items': (
+  'items': (
     variables.$align-items-positions,
     'align-items'
   ),
   // Grid
-  'grid-template-cols': (
+  'grid-cols': (
     variables.$grid-template-columns,
     'grid-template-columns'
   ),
-  'grid-template-rows': (
+  'grid-rows': (
     variables.$grid-template-rows,
     'grid-template-rows'
   ),
-  'grid-col': (
+  'col': (
     variables.$grid-columns,
     'grid-column'
   ),
-  'grid-row': (
+  'row': (
     variables.$grid-rows,
     'grid-row'
   ),

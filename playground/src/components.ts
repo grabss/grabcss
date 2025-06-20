@@ -54,12 +54,12 @@ export function createHeaderLinks(): string {
 export function createHeader(): string {
   return `
     <header class="header">
-      <div class="d-flex justify-content-space-between align-items-center h-100">
-        <div class="d-flex align-items-center g-sm">
+      <div class="d-flex justify-space-between items-center h-100">
+        <div class="d-flex items-center g-sm">
           <h1 class="fs-lg fw-bold text-primary">grabcss</h1>
           <span class="version-badge">v${__GRABCSS_VERSION__}</span>
         </div>
-        <div class="d-flex align-items-center g-sm">
+        <div class="d-flex items-center g-sm">
           ${createThemeToggle()}
           ${createHeaderLinks()}
         </div>
@@ -88,7 +88,7 @@ export function createPageTitle(): string {
 export function createFooter(): string {
   return `
     <footer class="p-xl text-muted">
-      <div class="d-flex flex-direction-column md:flex-direction-row md:justify-content-space-between md:align-items-end g-sm">
+      <div class="d-flex flex-column md:flex-row md:justify-space-between md:align-items-end g-sm">
         <div>
           <p>Built with <strong>grabcss v${__GRABCSS_VERSION__}</strong></p>
           <p class="fs-sm mt-xs">A minimal, utility-first CSS framework for rapid UI development</p>
