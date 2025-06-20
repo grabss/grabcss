@@ -2,7 +2,7 @@ import { createSectionHeader } from './components'
 
 export function createTypographySection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('typography', 'Typography')}
       <div class="d-grid grid-cols-1 lg:grid-cols-2 g-md">
         <div>
@@ -61,12 +61,12 @@ export function createTypographySection(): string {
 
 export function createLayoutSection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('layout-display', 'Layout & Display')}
 
       <div>
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Flexbox</h3>
-        
+
         <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
           <h4 class="fs-md fw-bold mb-sm">Flex Direction & Justify</h4>
           <div class="d-flex justify-space-between items-center g-sm mb-sm">
@@ -123,7 +123,7 @@ export function createLayoutSection(): string {
 
       <div class="mt-lg">
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">CSS Grid</h3>
-        
+
         <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
           <h4 class="fs-md fw-bold mb-sm">Grid Columns</h4>
           <div class="d-grid grid-cols-2 g-sm mb-md">
@@ -177,7 +177,7 @@ export function createLayoutSection(): string {
 
 export function createSpacingSection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('spacing', 'Spacing')}
       <div class="d-grid grid-cols-1 md:grid-cols-2 g-lg">
         <div>
@@ -203,7 +203,7 @@ export function createSpacingSection(): string {
 
 export function createOpacitySection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('opacity', 'Opacity')}
       <div>
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Opacity Classes</h3>
@@ -224,13 +224,6 @@ export function createOpacitySection(): string {
             .op-0<br/><span class="fs-xs">0%</span>
           </div>
         </div>
-        <div class="mt-md fs-sm text-muted">
-          <code class="bg-border p-xs" style="border-radius: 3px;">.op-100</code>,
-          <code class="bg-border p-xs" style="border-radius: 3px;">.op-75</code>,
-          <code class="bg-border p-xs" style="border-radius: 3px;">.op-50</code>,
-          <code class="bg-border p-xs" style="border-radius: 3px;">.op-25</code>,
-          <code class="bg-border p-xs" style="border-radius: 3px;">.op-0</code>
-        </div>
       </div>
     </section>
   `
@@ -238,7 +231,7 @@ export function createOpacitySection(): string {
 
 export function createPositioningSizingSection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('positioning-sizing', 'Positioning & Sizing')}
       <div class="ps-relative h-100 mt-sm" style="height: 200px; border: 1px solid var(--color-border);">
         <div class="ps-absolute bg-primary text-background p-sm" style="top: 10px; left: 10px;">.ps-absolute: Absolute Top-Left</div>
@@ -253,7 +246,7 @@ export function createPositioningSizingSection(): string {
 
 export function createResponsiveSection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('responsive-design', 'Responsive Design')}
       <p class="text-muted m-sm">Resize your browser to see responsive behavior</p>
       <div class="d-flex flex-column sm:flex-row g-md">
@@ -272,7 +265,7 @@ export function createResponsiveSection(): string {
 
 export function createTextUtilitiesSection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('text-utilities', 'Text Utilities')}
       <div class="mt-sm d-grid grid-cols-1 lg:grid-cols-2 g-md">
         <div class="d-flex flex-column g-sm">
@@ -291,7 +284,7 @@ export function createTextUtilitiesSection(): string {
 
 export function createBorderSection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('border-utilities', 'Border Utilities')}
       <div class="d-grid grid-cols-1 lg:grid-cols-2 g-lg">
         <div>
@@ -371,7 +364,7 @@ export function createBorderSection(): string {
 
 export function createCSSVariablesSection(): string {
   return `
-    <section class="m-lg lg:m-xl">
+    <section class="m-2xs lg:m-xl">
       ${createSectionHeader('css-variables-theming', 'CSS Variables & Theming')}
       <div class="my-md">
         <p class="text-muted m-sm">Use the theme toggle in the header to see CSS custom properties in action</p>

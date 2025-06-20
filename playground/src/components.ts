@@ -80,7 +80,7 @@ export function createSectionHeader(id: string, title: string): string {
 
 export function createPageTitle(): string {
   return `
-    <div class="m-lg lg:m-xl">
+    <div class="m-2xs lg:m-xl">
       <h1 class="fs-2xl sm:fs-3xl lg:fs-4xl fw-bold text-primary">grabcss Playground</h1>
       <p class="fs-md sm:fs-lg text-muted m-sm">Utility-first CSS framework demonstration</p>
     </div>
@@ -89,7 +89,7 @@ export function createPageTitle(): string {
 
 export function createFooter(): string {
   return `
-    <footer class="p-lg lg:p-xl text-muted">
+    <footer class="p-2xs lg:p-xl text-muted">
       <div class="d-flex flex-column md:flex-row md:justify-space-between md:items-end g-sm">
         <div>
           <p>Built with <strong>grabcss v${__GRABCSS_VERSION__}</strong></p>

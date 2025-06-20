@@ -154,7 +154,7 @@ export const PLAYGROUND_STYLES = `
       margin-top: 50px;
       flex: 1;
       overflow: auto;
-      padding: 15px;
+      padding: 10px;
     }
 
     @media (min-width: 576px) {
