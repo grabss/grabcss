@@ -20,16 +20,38 @@ export function createTypographySection(): string {
           </div>
         </div>
         <div>
-          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Colors & Weights</h3>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Text Colors</h3>
           <div class="lh-sm">
-            <div class="text-primary fw-normal">.text-primary .fw-normal: Primary Color (Normal)</div>
-            <div class="text-secondary fw-bold">.text-secondary .fw-bold: Secondary Color (Bold)</div>
+            <div class="text-primary">.text-primary: Primary Color</div>
+            <div class="text-secondary">.text-secondary: Secondary Color</div>
             <div class="text-heading">.text-heading: Heading Color</div>
             <div class="text-body">.text-body: Body Color</div>
             <div class="text-link">.text-link: Link Color</div>
             <div class="text-muted">.text-muted: Muted Color</div>
             <div class="text-warning">.text-warning: Warning Color</div>
             <div class="text-danger">.text-danger: Danger Color</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-grid grid-cols-2 g-md mt-md">
+        <div>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Font Weights</h3>
+          <div class="lh-sm">
+            <div class="fw-normal">.fw-normal: Normal Weight</div>
+            <div class="fw-bold">.fw-bold: Bold Weight</div>
+          </div>
+        </div>
+        <div>
+          <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Line Heights</h3>
+          <div class="lh-sm">
+            <div class="lh-none">.lh-none: None (1)</div>
+            <div class="lh-xs">.lh-xs: Extra Small (1.2)</div>
+            <div class="lh-sm">.lh-sm: Small (1.4)</div>
+            <div class="lh-md">.lh-md: Medium (1.6)</div>
+            <div class="lh-lg">.lh-lg: Large (1.8)</div>
+            <div class="lh-xl">.lh-xl: Extra Large (2)</div>
+            <div class="lh-2xl">.lh-2xl: 2X Large (2.2)</div>
           </div>
         </div>
       </div>
