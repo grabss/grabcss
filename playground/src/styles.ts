@@ -1,6 +1,7 @@
 // CSS styles that will be injected into the page
 export const PLAYGROUND_STYLES = `
   <style>
+    /* Base styles */
     .header {
       height: 50px;
       border-bottom: 1px solid var(--color-border);
@@ -13,11 +14,11 @@ export const PLAYGROUND_STYLES = `
       z-index: 1000;
     }
 
-    @media (min-width: 576px) {
-      .header {
-        height: 60px;
-        padding: 0 20px;
-      }
+    .main-content {
+      margin-top: 50px;
+      flex: 1;
+      overflow: auto;
+      padding: 10px;
     }
 
     .version-badge {
@@ -28,6 +29,11 @@ export const PLAYGROUND_STYLES = `
       padding: 2px 6px;
     }
 
+    .section-link {
+      text-decoration: none;
+    }
+
+    /* Theme selector components */
     .theme-selector {
       position: relative;
       display: inline-block;
@@ -50,20 +56,12 @@ export const PLAYGROUND_STYLES = `
       user-select: none;
     }
 
-    @media (min-width: 576px) {
-      .theme-selector-trigger {
-        gap: 8px;
-        padding: 6px 12px;
-        font-size: 14px;
-      }
-    }
-
-    .theme-selector-trigger:hover {
+    .theme-selector-trigger:hover,
+    .theme-selector-trigger:focus {
       border-color: var(--color-primary);
     }
 
     .theme-selector-trigger:focus {
-      border-color: var(--color-primary);
       box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
     }
 
@@ -112,14 +110,6 @@ export const PLAYGROUND_STYLES = `
       font-size: 12px;
     }
 
-    @media (min-width: 576px) {
-      .theme-option {
-        gap: 8px;
-        padding: 8px 12px;
-        font-size: 14px;
-      }
-    }
-
     .theme-option:hover {
       background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
     }
@@ -146,21 +136,28 @@ export const PLAYGROUND_STYLES = `
       font-weight: 500;
     }
 
-    .section-link {
-      text-decoration: none;
-    }
-
-    .main-content {
-      margin-top: 50px;
-      flex: 1;
-      overflow: auto;
-      padding: 10px;
-    }
-
+    /* Responsive styles - consolidated */
     @media (min-width: 576px) {
+      .header {
+        height: 60px;
+        padding: 0 20px;
+      }
+
       .main-content {
         margin-top: 60px;
         padding: 25px;
+      }
+
+      .theme-selector-trigger {
+        gap: 8px;
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+
+      .theme-option {
+        gap: 8px;
+        padding: 8px 12px;
+        font-size: 14px;
       }
     }
   </style>
