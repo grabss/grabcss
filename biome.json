@@ -25,6 +25,9 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error"
+      },
       "style": {
         "noParameterAssign": "error",
         "useAsConstAssertion": "error",
