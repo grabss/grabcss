@@ -118,7 +118,7 @@ export function createFooter(): string {
       <div class="d-flex flex-column md:flex-row md:justify-space-between md:items-end g-sm">
         <div>
           <p>Built with <strong>grabcss v${__GRABCSS_VERSION__}</strong></p>
-          <p class="fs-sm mt-xs">A minimal, utility-first CSS framework for rapid UI development</p>
+          <p class="fs-sm mt-xs">A minimal, utility-first CSS framework for rapid UI development.</p>
         </div>
         <div class="md:text-right">
           <p class="fs-xs">Copyright © ${new Date().getFullYear()} grabss Inc.</p>

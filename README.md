@@ -2,7 +2,7 @@
 
 # grabcss
 
-*A minimal, utility-first CSS framework for rapid UI development*
+*A minimal, utility-first CSS framework for rapid UI development.*
 
 [![NPM Version](https://img.shields.io/npm/v/grabcss.svg)](https://www.npmjs.com/package/grabcss)
 [![License](https://img.shields.io/npm/l/grabcss.svg)](https://www.npmjs.com/package/grabcss)
