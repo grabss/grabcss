@@ -5,7 +5,7 @@
 *A minimal, utility-first CSS framework for rapid UI development.*
 
 [![NPM Version](https://img.shields.io/npm/v/grabcss.svg)](https://www.npmjs.com/package/grabcss)
-[![License](https://img.shields.io/npm/l/grabcss.svg)](https://www.npmjs.com/package/grabcss)
+[![License](https://img.shields.io/npm/l/grabcss.svg)](https://github.com/grabss/grabcss/blob/main/LICENSE)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/grabcss)](https://bundlephobia.com/package/grabcss)
 
 **[View Playground »](https://grabss.github.io/grabcss/)**
