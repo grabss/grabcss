@@ -265,8 +265,8 @@ import "grabcss/grab.css";
 
 ## License
 
-MIT License - see [LICENSE](./LICENSE) file for details.
+MIT License - see [LICENSE](https://github.com/grabss/grabcss/blob/main/LICENSE) file for details.
 
 ## Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+Contributions are welcome! Please see [CONTRIBUTING.md](https://github.com/grabss/grabcss/blob/main/CONTRIBUTING.md) for guidelines.
