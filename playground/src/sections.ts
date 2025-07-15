@@ -95,7 +95,7 @@ export function createLayoutSection(): string {
               <div class="bg-secondary text-background p-sm">Item 2</div>
               <div class="bg-secondary text-background p-sm">Item 3</div>
             </div>
-            <p class="text-muted fs-sm mt-2xs mb-0 text-center">.d-flex .justify-center .items-center</p>
+            <p class="text-muted fs-sm mt-2xs text-center">.d-flex .justify-center .items-center</p>
           </div>
           <div class="mb-sm">
             <div class="d-flex justify-start items-center g-sm">
@@ -103,14 +103,14 @@ export function createLayoutSection(): string {
               <div class="bg-secondary text-background p-sm">Item 2</div>
               <div class="bg-secondary text-background p-sm">Item 3</div>
             </div>
-            <p class="text-muted fs-sm mt-2xs mb-0 text-left">.d-flex .justify-start .items-center</p>
+            <p class="text-muted fs-sm mt-2xs text-left">.d-flex .justify-start .items-center</p>
           </div>
           <div>
             <div class="d-flex justify-end items-center g-sm">
               <div class="bg-secondary text-background p-sm">Item 1</div>
               <div class="bg-secondary text-background p-sm">Item 2</div>
             </div>
-            <p class="text-muted fs-sm mt-2xs mb-0 text-right">.d-flex .justify-end .items-center</p>
+            <p class="text-muted fs-sm mt-2xs text-right">.d-flex .justify-end .items-center</p>
           </div>
         `
         )}
@@ -124,7 +124,7 @@ export function createLayoutSection(): string {
               <div class="bg-primary text-background p-sm">Item 2</div>
               <div class="bg-primary text-background p-sm">Item 3</div>
             </div>
-            <p class="text-muted fs-sm mt-2xs mb-0">.d-flex .flex-column .g-sm</p>
+            <p class="text-muted fs-sm mt-2xs">.d-flex .flex-column .g-sm</p>
           </div>
           <div>
             <div class="d-flex flex-row-reverse g-sm">
@@ -132,7 +132,7 @@ export function createLayoutSection(): string {
               <div class="bg-secondary text-background p-sm">Item 2</div>
               <div class="bg-secondary text-background p-sm">Item 3</div>
             </div>
-            <p class="text-muted fs-sm mt-2xs mb-0 text-right">.d-flex .flex-row-reverse .g-sm</p>
+            <p class="text-muted fs-sm mt-2xs text-right">.d-flex .flex-row-reverse .g-sm</p>
           </div>
         `
         )}
@@ -177,7 +177,7 @@ export function createLayoutSection(): string {
             <div class="bg-primary text-background p-xs text-center">5</div>
             <div class="bg-primary text-background p-xs text-center">6</div>
           </div>
-          <p class="text-muted fs-sm mt-2xs mb-0">.d-grid .grid-cols-6 .g-sm</p>
+          <p class="text-muted fs-sm mt-2xs">.d-grid .grid-cols-6 .g-sm</p>
         `
         )}
 

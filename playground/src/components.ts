@@ -20,7 +20,7 @@ export function createDemoCard(
     <div class="bg-background p-md mb-md" style="border: 1px solid var(--color-border);">
       <h4 class="fs-md fw-bold mb-sm">${title}</h4>
       ${content}
-      ${description ? `<p class="text-muted fs-sm mt-2xs mb-0">${description}</p>` : ''}
+      ${description ? `<p class="text-muted fs-sm mt-2xs">${description}</p>` : ''}
     </div>
   `
 }
