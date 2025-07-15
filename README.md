@@ -153,6 +153,7 @@ import "grabcss/grab.css";
 - `5xl`: 50px
 
 ### Border Widths
+- `none`: 0px (Remove border)
 - `.border`: 1px
 - `lg`: 2px
 - `xl`: 4px
@@ -213,8 +214,11 @@ import "grabcss/grab.css";
 - `.op-{value}` - 0, 25, 50, 75, 100
 
 ### Borders
-- `.border`, `.border-{size}` - lg, xl, 2xl
-- `.rounded-{radius}` - sm, md, lg, xl, 2xl, 3xl, full
+- Border Width: `.border`, `.border-{size}` - none, lg, xl, 2xl
+- Individual Sides: `.border-{side}`, `.border-{side}-{size}` - top, right, bottom, left
+- Axis Groups: `.border-x`, `.border-y` - horizontal, vertical borders
+- Border Colors: `.border-{color}` - primary, secondary, warning, danger, etc.
+- Border Radius: `.rounded-{radius}` - sm, md, lg, xl, 2xl, 3xl, full
 
 ### Visibility
 `.v-{value}` - visible, hidden
@@ -236,15 +240,29 @@ import "grabcss/grab.css";
 <div class="border">Default border</div>
 <div class="border-lg">Large border</div>
 <div class="border-xl">Extra large border</div>
+<div class="border-none">No border</div>
+
+<!-- Individual border sides -->
+<div class="border-top">Top border only</div>
+<div class="border-left-lg">Thick left border</div>
+<div class="border-x">Horizontal borders</div>
+<div class="border-y-xl">Thick vertical borders</div>
+
+<!-- Border colors -->
+<div class="border border-primary">Primary border color</div>
+<div class="border-top-lg border-warning">Warning top border</div>
 
 <!-- Border radius -->
 <div class="rounded-sm">Small rounded corners</div>
 <div class="rounded-lg">Large rounded corners</div>
 <div class="rounded-full">Pill shape</div>
 
-<!-- Combined -->
+<!-- Combined examples -->
 <div class="border border-lg rounded-xl bg-background p-md">
   Bordered card with rounded corners
+</div>
+<div class="border-left-xl border-primary bg-background p-md">
+  Left accent card with primary color
 </div>
 ```
 
