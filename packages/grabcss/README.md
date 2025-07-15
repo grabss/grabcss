@@ -153,8 +153,8 @@ import "grabcss/grab.css";
 - `5xl`: 50px
 
 ### Border Widths
-- `none`: 0px (Remove border)
-- `.border`: 1px
+- `none`: 0 (Remove border)
+- `default`: 1px
 - `lg`: 2px
 - `xl`: 4px
 - `2xl`: 8px
