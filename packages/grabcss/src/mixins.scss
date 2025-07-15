@@ -92,3 +92,223 @@
     }
   }
 }
+
+@mixin generate-border-classes($prefix, $property) {
+  @each $key, $value in variables.$border-widths {
+    @if $key == 'default' {
+      .#{$prefix} {
+        #{$property}-width: $value;
+        #{$property}-style: solid;
+        #{$property}-color: var(--color-border);
+      }
+    } @else {
+      .#{$prefix}-#{$key} {
+        #{$property}-width: $value;
+        #{$property}-style: solid;
+        #{$property}-color: var(--color-border);
+      }
+    }
+    
+    // 個別辺のクラス
+    @if $key == 'default' {
+      .#{$prefix}-top {
+        #{$property}-top-width: $value;
+        #{$property}-top-style: solid;
+        #{$property}-top-color: var(--color-border);
+      }
+      .#{$prefix}-right {
+        #{$property}-right-width: $value;
+        #{$property}-right-style: solid;
+        #{$property}-right-color: var(--color-border);
+      }
+      .#{$prefix}-bottom {
+        #{$property}-bottom-width: $value;
+        #{$property}-bottom-style: solid;
+        #{$property}-bottom-color: var(--color-border);
+      }
+      .#{$prefix}-left {
+        #{$property}-left-width: $value;
+        #{$property}-left-style: solid;
+        #{$property}-left-color: var(--color-border);
+      }
+      .#{$prefix}-x {
+        #{$property}-right-width: $value;
+        #{$property}-right-style: solid;
+        #{$property}-right-color: var(--color-border);
+        #{$property}-left-width: $value;
+        #{$property}-left-style: solid;
+        #{$property}-left-color: var(--color-border);
+      }
+      .#{$prefix}-y {
+        #{$property}-top-width: $value;
+        #{$property}-top-style: solid;
+        #{$property}-top-color: var(--color-border);
+        #{$property}-bottom-width: $value;
+        #{$property}-bottom-style: solid;
+        #{$property}-bottom-color: var(--color-border);
+      }
+    } @else {
+      .#{$prefix}-top-#{$key} {
+        #{$property}-top-width: $value;
+        #{$property}-top-style: solid;
+        #{$property}-top-color: var(--color-border);
+      }
+      .#{$prefix}-right-#{$key} {
+        #{$property}-right-width: $value;
+        #{$property}-right-style: solid;
+        #{$property}-right-color: var(--color-border);
+      }
+      .#{$prefix}-bottom-#{$key} {
+        #{$property}-bottom-width: $value;
+        #{$property}-bottom-style: solid;
+        #{$property}-bottom-color: var(--color-border);
+      }
+      .#{$prefix}-left-#{$key} {
+        #{$property}-left-width: $value;
+        #{$property}-left-style: solid;
+        #{$property}-left-color: var(--color-border);
+      }
+      .#{$prefix}-x-#{$key} {
+        #{$property}-right-width: $value;
+        #{$property}-right-style: solid;
+        #{$property}-right-color: var(--color-border);
+        #{$property}-left-width: $value;
+        #{$property}-left-style: solid;
+        #{$property}-left-color: var(--color-border);
+      }
+      .#{$prefix}-y-#{$key} {
+        #{$property}-top-width: $value;
+        #{$property}-top-style: solid;
+        #{$property}-top-color: var(--color-border);
+        #{$property}-bottom-width: $value;
+        #{$property}-bottom-style: solid;
+        #{$property}-bottom-color: var(--color-border);
+      }
+    }
+  }
+}
+
+@mixin generate-breakpoint-border-classes($prefix, $property) {
+  @each $breakpoint, $_ in mediaquery.$breakpoints {
+    @each $key, $value in variables.$border-widths {
+      @if $key == 'default' {
+        .#{$breakpoint}\:#{$prefix} {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-width: $value;
+            #{$property}-style: solid;
+            #{$property}-color: var(--color-border);
+          }
+        }
+      } @else {
+        .#{$breakpoint}\:#{$prefix}-#{$key} {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-width: $value;
+            #{$property}-style: solid;
+            #{$property}-color: var(--color-border);
+          }
+        }
+      }
+      
+      // 個別辺のクラス
+      @if $key == 'default' {
+        .#{$breakpoint}\:#{$prefix}-top {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-top-width: $value;
+            #{$property}-top-style: solid;
+            #{$property}-top-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-right {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-right-width: $value;
+            #{$property}-right-style: solid;
+            #{$property}-right-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-bottom {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-bottom-width: $value;
+            #{$property}-bottom-style: solid;
+            #{$property}-bottom-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-left {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-left-width: $value;
+            #{$property}-left-style: solid;
+            #{$property}-left-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-x {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-right-width: $value;
+            #{$property}-right-style: solid;
+            #{$property}-right-color: var(--color-border);
+            #{$property}-left-width: $value;
+            #{$property}-left-style: solid;
+            #{$property}-left-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-y {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-top-width: $value;
+            #{$property}-top-style: solid;
+            #{$property}-top-color: var(--color-border);
+            #{$property}-bottom-width: $value;
+            #{$property}-bottom-style: solid;
+            #{$property}-bottom-color: var(--color-border);
+          }
+        }
+      } @else {
+        .#{$breakpoint}\:#{$prefix}-top-#{$key} {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-top-width: $value;
+            #{$property}-top-style: solid;
+            #{$property}-top-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-right-#{$key} {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-right-width: $value;
+            #{$property}-right-style: solid;
+            #{$property}-right-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-bottom-#{$key} {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-bottom-width: $value;
+            #{$property}-bottom-style: solid;
+            #{$property}-bottom-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-left-#{$key} {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-left-width: $value;
+            #{$property}-left-style: solid;
+            #{$property}-left-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-x-#{$key} {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-right-width: $value;
+            #{$property}-right-style: solid;
+            #{$property}-right-color: var(--color-border);
+            #{$property}-left-width: $value;
+            #{$property}-left-style: solid;
+            #{$property}-left-color: var(--color-border);
+          }
+        }
+        .#{$breakpoint}\:#{$prefix}-y-#{$key} {
+          @include mediaquery.mq($breakpoint) {
+            #{$property}-top-width: $value;
+            #{$property}-top-style: solid;
+            #{$property}-top-color: var(--color-border);
+            #{$property}-bottom-width: $value;
+            #{$property}-bottom-style: solid;
+            #{$property}-bottom-color: var(--color-border);
+          }
+        }
+      }
+    }
+  }
+}

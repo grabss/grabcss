@@ -349,6 +349,12 @@ export function createBorderSection(): string {
         <code class="bg-border p-xs rounded-sm">.border-2xl</code>
         <span class="text-muted ml-sm">2X Large border (8px)</span>
       </div>
+      <div class="border-none bg-background p-md" style="border: 2px solid var(--color-border);">
+        <div class="border-none p-xs">
+          <code class="bg-border p-xs rounded-sm">.border-none</code>
+          <span class="text-muted ml-sm">Remove border (0px)</span>
+        </div>
+      </div>
     </div>
   `
 
@@ -392,16 +398,95 @@ export function createBorderSection(): string {
       ${createGridSection(`<div>${borderWidthsContent}</div><div>${borderRadiusContent}</div>`, 'grid-cols-1 lg:grid-cols-2')}
 
       <div class="mt-lg">
+        <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Individual Border Sides</h3>
+        <div class="d-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 g-md">
+          <div class="border-top bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-top</code>
+            <div class="text-muted fs-sm mt-xs">Top border only</div>
+          </div>
+          <div class="border-right bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-right</code>
+            <div class="text-muted fs-sm mt-xs">Right border only</div>
+          </div>
+          <div class="border-bottom bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-bottom</code>
+            <div class="text-muted fs-sm mt-xs">Bottom border only</div>
+          </div>
+          <div class="border-left bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-left</code>
+            <div class="text-muted fs-sm mt-xs">Left border only</div>
+          </div>
+          <div class="border-x bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-x</code>
+            <div class="text-muted fs-sm mt-xs">Horizontal borders</div>
+          </div>
+          <div class="border-y bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-y</code>
+            <div class="text-muted fs-sm mt-xs">Vertical borders</div>
+          </div>
+          <div class="border-top-lg bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-top-lg</code>
+            <div class="text-muted fs-sm mt-xs">Thick top border</div>
+          </div>
+          <div class="border-left-xl bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-left-xl</code>
+            <div class="text-muted fs-sm mt-xs">Extra thick left</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-lg">
+        <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Border Colors</h3>
+        <div class="d-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 g-md">
+          <div class="border border-primary bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-primary</code>
+            <div class="text-muted fs-sm mt-xs">Primary border color</div>
+          </div>
+          <div class="border border-secondary bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-secondary</code>
+            <div class="text-muted fs-sm mt-xs">Secondary border color</div>
+          </div>
+          <div class="border border-warning bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-warning</code>
+            <div class="text-muted fs-sm mt-xs">Warning border color</div>
+          </div>
+          <div class="border border-danger bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-danger</code>
+            <div class="text-muted fs-sm mt-xs">Danger border color</div>
+          </div>
+          <div class="border-top-lg border-primary bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-top-lg .border-primary</code>
+            <div class="text-muted fs-sm mt-xs">Combined utilities</div>
+          </div>
+          <div class="border-left-xl border-secondary bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-left-xl .border-secondary</code>
+            <div class="text-muted fs-sm mt-xs">Thick left + color</div>
+          </div>
+          <div class="border-x border-warning bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-x .border-warning</code>
+            <div class="text-muted fs-sm mt-xs">Horizontal + warning</div>
+          </div>
+          <div class="border-y-lg border-danger bg-background p-md text-center">
+            <code class="bg-border p-xs rounded-sm">.border-y-lg .border-danger</code>
+            <div class="text-muted fs-sm mt-xs">Thick vertical + danger</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-lg">
         <h3 class="fs-lg fw-bold text-heading mt-sm mb-sm">Combined Examples</h3>
         <div class="d-flex flex-wrap g-md">
           <div class="border rounded-sm bg-background p-md">
             Card with border + rounded corners
           </div>
-          <div class="border-lg rounded-lg bg-warning p-md">
+          <div class="border-lg border-warning rounded-lg bg-warning p-md">
             Warning box with thick border
           </div>
-          <div class="border rounded-full bg-primary text-background p-md">
+          <div class="border border-primary rounded-full bg-primary text-background p-md">
             Pill button
+          </div>
+          <div class="border-left-xl border-primary bg-background p-md">
+            Left accent card
           </div>
         </div>
       </div>
