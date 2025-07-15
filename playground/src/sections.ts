@@ -349,12 +349,6 @@ export function createBorderSection(): string {
         <code class="bg-border p-xs rounded-sm">.border-2xl</code>
         <span class="text-muted ml-sm">2X Large border (8px)</span>
       </div>
-      <div class="border-none bg-background p-md" style="border: 2px solid var(--color-border);">
-        <div class="border-none p-xs">
-          <code class="bg-border p-xs rounded-sm">.border-none</code>
-          <span class="text-muted ml-sm">Remove border (0px)</span>
-        </div>
-      </div>
     </div>
   `
 
