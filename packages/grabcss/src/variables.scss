@@ -164,6 +164,7 @@ $border-width-xl: 4px !default;
 $border-width-2xl: 8px !default;
 
 $define-border-widths: (
+  'none': 0,
   'default': $border-width-default,
   'lg': $border-width-lg,
   'xl': $border-width-xl,

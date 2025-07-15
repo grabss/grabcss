@@ -161,19 +161,12 @@ $utility-configs: (
 }
 
 // Generate border utilities
-@each $key, $value in variables.$border-widths {
-  @if $key == 'default' {
-    .border {
-      border-width: $value;
-      border-style: solid;
-      border-color: var(--color-border);
-    }
-  } @else {
-    .border-#{$key} {
-      border-width: $value;
-      border-style: solid;
-      border-color: var(--color-border);
-    }
+@include mixins.generate-border-classes('border', 'border');
+
+// Generate border color utilities
+@each $key, $value in variables.$colors {
+  .border-#{$key} {
+    border-color: $value;
   }
 }
 
@@ -236,23 +229,14 @@ $utility-configs: (
 }
 
 // Generate breakpoint border utilities
+@include mixins.generate-breakpoint-border-classes('border', 'border');
+
+// Generate breakpoint border color utilities
 @each $breakpoint, $_ in mediaquery.$breakpoints {
-  @each $key, $value in variables.$border-widths {
-    @if $key == 'default' {
-      .#{$breakpoint}\:border {
-        @include mediaquery.mq($breakpoint) {
-          border-width: $value;
-          border-style: solid;
-          border-color: var(--color-border);
-        }
-      }
-    } @else {
-      .#{$breakpoint}\:border-#{$key} {
-        @include mediaquery.mq($breakpoint) {
-          border-width: $value;
-          border-style: solid;
-          border-color: var(--color-border);
-        }
+  @each $key, $value in variables.$colors {
+    .#{$breakpoint}\:border-#{$key} {
+      @include mediaquery.mq($breakpoint) {
+        border-color: $value;
       }
     }
   }
