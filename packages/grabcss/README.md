@@ -171,7 +171,7 @@ import "grabcss/grab.css";
 ## Available Utilities
 
 ### Display
-`.d-{value}` - none, block, inline, inline-block, flex, inline-flex, grid, inline-grid, table-cell, contents
+`.d-{value}` - none, block, inline, inline-block, flex, inline-flex, grid, inline-grid, table, table-row, table-cell, contents
 
 ### Position
 `.ps-{value}` - static, relative, absolute, fixed, sticky
