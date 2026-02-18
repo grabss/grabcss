@@ -1,11 +1,10 @@
 @use 'sass:map';
 
 $breakpoints: (
-  'xs': 'screen and (max-width: 575px)',
-  'sm': 'screen and (min-width: 576px)',
+  'sm': 'screen and (min-width: 640px)',
   'md': 'screen and (min-width: 768px)',
-  'lg': 'screen and (min-width: 992px)',
-  'xl': 'screen and (min-width: 1200px)'
+  'lg': 'screen and (min-width: 1024px)',
+  'xl': 'screen and (min-width: 1280px)'
 ) !default;
 
 @mixin mq($breakpoint: md) {
