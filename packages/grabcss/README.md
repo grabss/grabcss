@@ -15,7 +15,7 @@
 
 - **Lightweight**: Minimal footprint with only essential utilities
 - **Customizable**: Easy theming with CSS custom properties and SCSS variables
-- **Responsive**: Mobile-first breakpoint system (xs, sm, md, lg, xl)
+- **Responsive**: Mobile-first breakpoint system (sm, md, lg, xl)
 - **Utility-First**: Compose designs directly in your markup
 - **Modern**: Built with modern CSS features and SCSS
 - **Focused**: Core utilities without unnecessary bloat
@@ -108,13 +108,12 @@ import "grabcss/grab.css";
 
 ## Breakpoints
 
-| Breakpoint | Min Width | Usage |
-|------------|-----------|-------|
-| `xs` | - (max 575px) | Mobile |
-| `sm` | 576px | Small tablets |
-| `md` | 768px | Tablets |
-| `lg` | 992px | Desktops |
-| `xl` | 1200px | Large desktops |
+| Breakpoint | Min Width | Usage           |
+|------------|-----------|-----------------|
+| `sm`       | 640px     | Small devices   |
+| `md`       | 768px     | Tablets         |
+| `lg`       | 1024px    | Desktops        |
+| `xl`       | 1280px    | Large desktops  |
 
 ## Design Tokens
 

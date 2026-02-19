@@ -137,7 +137,7 @@ export const PLAYGROUND_STYLES = `
     }
 
     /* Responsive styles - consolidated */
-    @media (min-width: 576px) {
+    @media (min-width: 640px) {
       .header {
         height: 60px;
         padding: 0 20px;
