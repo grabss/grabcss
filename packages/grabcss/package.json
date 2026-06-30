@@ -14,7 +14,7 @@
     "url": "https://github.com/grabss/grabcss/issues"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=24.0.0"
   },
   "keywords": [
     "css",
@@ -38,11 +38,11 @@
     "dev": "vite build --watch"
   },
   "devDependencies": {
-    "@types/node": "^22.7.6",
+    "@types/node": "^24.13.2",
     "sass-embedded": "^1.98.0",
     "the-new-css-reset": "^1.11.3",
     "typescript": "^5.5.3",
-    "vite": "^6.4.1"
+    "vite": "^6.4.3"
   },
-  "packageManager": "pnpm@10.12.1"
+  "packageManager": "pnpm@11.9.0"
 }
