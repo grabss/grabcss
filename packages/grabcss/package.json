@@ -38,7 +38,7 @@
     "dev": "vite build --watch"
   },
   "devDependencies": {
-    "@types/node": "^22.7.6",
+    "@types/node": "^24.13.2",
     "sass-embedded": "^1.98.0",
     "the-new-css-reset": "^1.11.3",
     "typescript": "^5.5.3",
